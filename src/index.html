@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Project name</title>
+	<title>Virtuality Club</title>
 
 	<!-- Meta tags -->
 	<meta charset="UTF-8">
@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<meta name="author" content="Serhii 'winde' Kuptsov">
+
 	
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -24,10 +24,12 @@
 	<meta name="msapplication-navbutton-color" content="#000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
-	<!-- All libs styles -->
-<!-- 	<link rel="stylesheet" href="css/libs.min.css"> -->
+
 	<!-- Main file with styles -->
+	
+	<link rel="stylesheet" href="css/global-blocks.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,38 +45,640 @@
 		<!-- Header -->
 		<header class="header">
 	<div class="container">
-		<div class="row align-vertical-center header__row">
-			<!-- NAV -->
-			<nav class="nav">
-	<ul class="nav__list">
-		<li class="nav__item"><a href="#" class="nav__link">Link 1</a></li>
-		<li class="nav__item"><a href="#" class="nav__link">Link 2</a></li>
-		<li class="nav__item"><a href="#" class="nav__link">Link 3</a></li>
-		<li class="nav__item"><a href="#" class="nav__link">Link 4</a></li>
-	</ul>
-</nav>
-			<!-- //NAV -->
+		<div class="row align-vertical-center align-horisontal-between header__row">
+			<a href="index.html" class="logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+
+
+			<div class="header-tools">
+				<div class="row align-vertical-center align-horisontal-end row-nowrap header-tools__row">
+
+					<div class="header-tools__nav row align-vertical-center align-horisontal-end row-nowrap">
+
+						<div class="search-wrapper">
+							<button class="btn-search js-open-search-form-btn" type="button">
+								<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+									<path d="M9.68833 0C4.34633 0 0 4.34633 0 9.68833C0 15.0306 4.34633 19.3767 9.68833 19.3767C15.0306 19.3767 19.3767 15.0306 19.3767 9.68833C19.3767 4.34633 15.0306 0 9.68833 0ZM9.68833 17.5881C5.33246 17.5881 1.78862 14.0442 1.78862 9.68838C1.78862 5.33251 5.33246 1.78862 9.68833 1.78862C14.0442 1.78862 17.5881 5.33246 17.5881 9.68833C17.5881 14.0442 14.0442 17.5881 9.68833 17.5881Z" />
+									<path d="M21.7381 20.4734L16.6107 15.346C16.2613 14.9966 15.6955 14.9966 15.3461 15.346C14.9968 15.6951 14.9968 16.2615 15.3461 16.6106L20.4735 21.738C20.6482 21.9126 20.8769 22 21.1058 22C21.3344 22 21.5634 21.9126 21.7381 21.738C22.0875 21.3889 22.0875 20.8225 21.7381 20.4734Z" />
+								</svg>
+							</button>
+
+							<div class="search-form js-search-form">
+								<form>
+									<div class="search-form__group">
+										<input type="text" name="s" class="search-form__input" requried>
+										<button class="btn-search btn-search__submit" type="submit">
+											<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+												<path d="M9.68833 0C4.34633 0 0 4.34633 0 9.68833C0 15.0306 4.34633 19.3767 9.68833 19.3767C15.0306 19.3767 19.3767 15.0306 19.3767 9.68833C19.3767 4.34633 15.0306 0 9.68833 0ZM9.68833 17.5881C5.33246 17.5881 1.78862 14.0442 1.78862 9.68838C1.78862 5.33251 5.33246 1.78862 9.68833 1.78862C14.0442 1.78862 17.5881 5.33246 17.5881 9.68833C17.5881 14.0442 14.0442 17.5881 9.68833 17.5881Z" />
+												<path d="M21.7381 20.4734L16.6107 15.346C16.2613 14.9966 15.6955 14.9966 15.3461 15.346C14.9968 15.6951 14.9968 16.2615 15.3461 16.6106L20.4735 21.738C20.6482 21.9126 20.8769 22 21.1058 22C21.3344 22 21.5634 21.9126 21.7381 21.738C22.0875 21.3889 22.0875 20.8225 21.7381 20.4734Z" />
+											</svg>
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<button class="btn-menu js-open-menu-btn" type="button">
+							<span>Меню</span>
+							<span class="btn-menu__lines">
+								<span class="btn-menu__line"></span>
+								<span class="btn-menu__line"></span>
+								<span class="btn-menu__line"></span>
+							</span>
+						</button>
+					</div>
+
+					<div class="header-tools__contacts row align-vertical-center align-horisontal-end">
+						<!-- Worktime -->
+						<div class="worktime-tooltip tooltip">
+
+							<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+								<path d="M14.9216 12.9429L11.8542 10.6423V5.95607C11.8542 5.48488 11.4733 5.104 11.0021 5.104C10.5309 5.104 10.15 5.48488 10.15 5.95607V11.0684C10.15 11.3368 10.2761 11.5899 10.4909 11.7501L13.899 14.3062C14.0524 14.4213 14.2314 14.4766 14.4094 14.4766C14.6693 14.4766 14.9249 14.3599 15.0919 14.135C15.3749 13.7592 15.2982 13.2249 14.9216 12.9429Z" />
+								<path d="M11 0C4.93423 0 0 4.93423 0 11C0 17.0658 4.93423 22 11 22C17.0658 22 22 17.0658 22 11C22 4.93423 17.0658 0 11 0ZM11 20.2959C5.8749 20.2959 1.7041 16.1251 1.7041 11C1.7041 5.8749 5.8749 1.7041 11 1.7041C16.126 1.7041 20.2959 5.8749 20.2959 11C20.2959 16.1251 16.1251 20.2959 11 20.2959Z"/>
+							</svg>
+
+							
+							<div class="worktime-tooltip__content tooltip-content">
+								<p class="tooltip-content__title">Время работы:</p>
+								<p>Пн-Вск: 10:00-23:00</p>
+							</div>
+
+						</div>
+						<!-- //Worktime -->
+
+						<!-- Phone link -->
+						<a href="tel:+8 (499) 112-09-41" class="phone-link">
+							<span>8 (499) 112-09-41</span>
+							<svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+								<path d="M20.2347 14.4404C18.8878 14.4404 17.5652 14.2298 16.312 13.8156C15.6979 13.6062 14.9429 13.7983 14.5681 14.1833L12.0945 16.0506C9.22571 14.5193 7.45861 12.7527 5.94818 9.90553L7.76059 7.49631C8.23147 7.02606 8.40037 6.33913 8.19801 5.69461C7.78208 4.43476 7.57079 3.11288 7.57079 1.76538C7.57084 0.791941 6.7789 0 5.80552 0H1.76532C0.791941 0 0 0.791941 0 1.76532C0 12.9228 9.07715 21.9999 20.2347 21.9999C21.2081 21.9999 22 21.208 22 20.2346V16.2057C21.9999 15.2324 21.208 14.4404 20.2347 14.4404Z"/>
+							</svg>
+
+						</a>
+						<!-- //Phone link -->
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 </header>
+
+
+<div class="menu-wrapper js-menu">
+	<div class="menu">
+
+		<div class="menu-aside">
+
+			<div class="menu-aside__content">
+				<!-- 	<p class="menu-aside__title">Vr Клуб</p> -->
+
+				<nav class="menu-aside__list">
+					<ul>
+						<li><a href="#">Магазин</a></li>
+						<li><a href="#" class="is-active">VR Клуб</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">VR бизнес</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div class="decor-circles"></div>
+		</div>
+
+		<div class="menu-content">
+			<!-- Close menu btn -->
+			<button class="btn-close js-close-menu-btn" type="button">
+				<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+					<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+					<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+				</svg>
+
+			</button>
+			<!-- //Close menu btn -->
+
+			<nav class="menu-categories">
+				<ul>
+					<li>
+						<a href="#">
+							<span>О Клубе</span>
+							<img src="img/categories/1.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Цены</span>
+							<img src="img/categories/2.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Услуги</span>
+							<img src="img/categories/3.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Акции</span>
+							<img src="img/categories/4.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Абонементы</span>
+							<img src="img/categories/5.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Подарочные сертификаты</span>
+							<img src="img/categories/6.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Правила клуба</span>
+							<img src="img/categories/1.jpg" alt="">
+						</a>
+					</li>
+					<li class="has-sublist">
+						<a href="#">Аренда</a>
+
+						<ul>
+							<li><a href="#">Аренда клуба на мероприятие </a></li>
+							<li><a href="#">Аренда клуба на детский праздник</a></li>
+							<li><a href="#">Аренда оборудования на дом</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+</div>
+
 		<!-- //Header -->
 
 		<!-- Main -->
 		<main class="main">
-			<div class="content">
-				<ol>
-					<li>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Текст приставка взобравшись предупредила продолжил, путь заманивший скатился до правилами маленькая несколько, по всей бросил, всеми силуэт курсивных семь даль. Первую!</li>
-					<li>Подзаголовок страну которое предупредила путь над диких силуэт лучше живет букв то, использовало если своих ее lorem приставка послушавшись строчка толку свое дорогу образ переулка безопасную. Свое курсивных, приставка силуэт!</li>
-					<li>Заманивший меня ты продолжил вопрос своего океана. Переписывается скатился, они ведущими, заглавных семь моей. Всеми алфавит инициал все маленький подпоясал правилами пустился, пояс использовало, рыбного сих предупредила взгляд страну однажды.</li>
-					<li>Ipsum все коварных буквоград, путь страну, щеке его мир переписали страна составитель, раз вершину жаренные по всей семантика знаках. Грустный его переулка, большого, необходимыми своих буквоград собрал наш деревни маленькая о.</li>
-					<li>Дороге заглавных силуэт не журчит живет языкового. Грамматики маленькая несколько гор знаках океана, необходимыми она заманивший по всей одна, однажды ручеек своих запятых вскоре первую над мир пор безопасную города жизни.</li>
-					<li>Свою коварный рукопись силуэт пустился оксмокс лучше предложения, алфавит залетают буквоград агенство, вопроса запятой языкового подпоясал если, текстами подзаголовок. Свое, которой проектах правилами мир одна! Последний, имени, жизни. От всех, рекламных.</li>
-					<li>Одна агенство живет там ручеек своих журчит инициал щеке рекламных скатился первую ты подзаголовок дороге коварный страна он дал все алфавит, свой? Приставка инициал до, речью. Страна свой одна, себя.</li>
-					<li>Переулка курсивных даль однажды рекламных обеспечивает букв прямо за продолжил последний его предупредила, вскоре речью, назад он составитель живет одна! Алфавит взобравшись напоивший щеке на берегу! Бросил, путь, сбить! Взобравшись, вопроса.</li>
-					<li>Себя меня всемогущая языкового имени грустный семантика ему переписывается парадигматическая свой точках строчка диких продолжил она назад речью повстречался его на берегу несколько, своих, пор бросил, ipsum букв рыбного буквоград! Ручеек.</li>
-					<li>Деревни его большой подпоясал эта продолжил за страна образ буквенных, пояс путь, грустный то мир толку единственное рыбными если имеет. Страну текстами точках заголовок приставка рыбными сих до повстречался запятой.</li>
-				</ol>
+
+			<div id="fullpage">
+
+				<section class="section sect__promo">
+
+					<div class="promo-slider">
+						<div class="swiper-container js-promo-slider">
+							<div class="swiper-wrapper">
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="promo-slide">
+										<div class="container">
+											<div class="promo-slide__content">
+												<div class="column row-wrap promo-slide__row">
+													<div class="promo-slide__text">
+														<h2 class="title title-h2-size">VR Арена со свободным перемещением</h2>
+														<h3 class="title title-h3-size subtitle">Hереальные корпоративные<br>скидки 20%</h3>
+													</div>
+
+													<!-- Video link -->
+													<a href="video/status.mp4" class="video-link" data-fancybox="video">
+														<span class="video-link__poster bg" style="background-image: url('img/video-poster.png');"></span>
+													</a>
+													<!-- //Video link -->
+
+												</div>
+
+											</div>
+
+
+											<div class="promo-slide__img">
+												<img src="img/promo/1.png" alt="">
+
+												<button class="btn" type="button"><span>Забронировать</span></button>
+
+												<div class="decor-circles"></div>
+
+											</div>
+
+
+											<!-- Slider controls -->
+											<button class="btn-arrow js-promo-slider-btn-next" type="button">
+												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+												</svg>
+											</button>
+
+										</div>
+										<!-- //container -->
+									</div>
+								</div>
+								<!-- //Slide -->
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="promo-slide promo-slide__right-offset">
+										<div class="container">
+											<div class="promo-slide__content">
+												<div class="column row-wrap promo-slide__row">
+													<div class="promo-slide__text">
+														<h2 class="title title-h2-size">VR Квесты</h2>
+														<h3 class="title title-h3-size subtitle">Hереальные корпоративные<br>скидки 20%</h3>
+													</div>
+
+													<!-- Video link -->
+													<a href="#" class="video-link" data-fancybox="video">
+														<span class="video-link__poster bg" style="background-image: url('img/video-poster.png');"></span>
+													</a>
+													<!-- //Video link -->
+
+												</div>
+											</div>
+
+
+											<div class="promo-slide__img">
+												<img src="img/promo/2.png" alt="">
+
+												<button class="btn" type="button"><span>Забронировать</span></button>
+
+												<div class="decor-circles"></div>
+
+											</div>
+
+											<!-- Slider controls -->
+											<button class="btn-arrow js-promo-slider-btn-next" type="button">
+												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+												</svg>
+											</button>
+
+										</div>
+										<!-- //container -->
+									</div>
+								</div>
+								<!-- //Slide -->
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<div class="promo-slide">
+										<div class="container">
+											<div class="promo-slide__content">
+												<div class="row row-wrap align-horisontal-between promo-slide__row">
+													<div class="promo-slide__text">
+														<h2 class="title title-h2-size">VR Аркады</h2>
+														<h3 class="title title-h3-size subtitle">Hереальные корпоративные<br>скидки 20%</h3>
+													</div>
+
+													<!-- Video link -->
+													<a href="#" class="video-link" data-fancybox="video">
+														<span class="video-link__poster bg" style="background-image: url('img/video-poster.png');"></span>
+													</a>
+													<!-- //Video link -->
+
+												</div>
+											</div>
+
+
+											<div class="promo-slide__img">
+												<img src="img/promo/3.png" alt="">
+
+												<button class="btn" type="button"><span>Забронировать</span></button>
+
+												<div class="decor-circles"></div>
+
+
+											</div>
+
+
+											<!-- Slider controls -->
+											<button class="btn-arrow js-promo-slider-btn-next" type="button">
+												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+												</svg>
+											</button>
+
+										</div>
+										<!-- //container -->
+									</div>
+								</div>
+								<!-- //Slide -->
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<!-- //sect promo -->
+
+				<section class="section sect__advantages gradient-bg">
+					<div class="section-content">
+						<div class="advantages-wrapper">
+							<div class="container">
+								<div class="row row-nowrap advantages-wrapper__row full-height">
+
+									<div class="advantages-content">
+										<div class="advantages-content__text">
+											<h2 class="title title-h2-size">Клуб виртуальной реальности Virtuality Club</h2>
+											<p class="sect-subtitle">Незабываемые эмоции от погружения в<br> виртуальные миры</p>
+										</div>
+
+										<div class="advantages-items">
+											<!-- Adv item -->
+											<div class="advantage-item text-center">
+												<div class="advantage-item__inner">
+													<span class="advantage-item__ic" style="background-image: url('img/icons/svg/advantages/1.svg');"></span>
+													<p>Игры для всех возрастов</p>
+												</div>
+											</div>
+											<!-- //Adv item -->
+
+											<!-- Adv item -->
+											<div class="advantage-item text-center">
+												<div class="advantage-item__inner">
+													<span class="advantage-item__ic" style="background-image: url('img/icons/svg/advantages/2.svg');"></span>
+													<p>Вместимость до 12 человек при аренде</p>
+												</div>
+											</div>
+											<!-- //Adv item -->
+
+											<!-- Adv item -->
+											<div class="advantage-item text-center">
+												<div class="advantage-item__inner">
+													<span class="advantage-item__ic" style="background-image: url('img/icons/svg/advantages/3.svg');"></span>
+													<p>Уникальные услуги - VR-Mix</p>
+												</div>
+											</div>
+											<!-- //Adv item -->
+
+											<!-- Adv item -->
+											<div class="advantage-item text-center">
+												<div class="advantage-item__inner">
+													<span class="advantage-item__ic" style="background-image: url('img/icons/svg/advantages/4.svg');"></span>
+													<p>VR без проводов</p>
+												</div>
+											</div>
+											<!-- //Adv item -->
+
+											<!-- Adv item -->
+											<div class="advantage-item text-center">
+												<div class="advantage-item__inner">
+													<span class="advantage-item__ic" style="background-image: url('img/icons/svg/advantages/5.svg');"></span>
+													<p>Человек одновременно</p>
+												</div>
+											</div>
+											<!-- //Adv item -->
+										</div>
+									</div>
+
+									<div class="advantages-text bg" style="background-image: url('img/advantages-text-bg.png');">
+										<p>Lorem ipsum dolor sit amet, mei in facete urbanitas assentior, cu purto volumus mel, ut mea labore hendrerit. Volumus gubergren ut sed. Ut mea vitae accusamus consequat. Ex affert rationibus eos, sed in interpretaris signiferumque, electram ocurreret ei qui.</p>
+
+
+									</div>
+								</div>
+							</div>
+							<!-- //container -->
+						</div>
+					</div>
+				</section>
+				<!-- //sect advantages -->
+
+				<section class="section sect__include">
+					<div class="section-content ">
+						<div class="container full-height includes-wrapper sect-gutter-top">
+							<h2 class="title title-h2-size text-right title-decor">У нас вы найдете</h2>
+
+
+							<div class="includes__row row align-vertical-end row-nowrap">
+								<div class="includes-img">
+									<img src="img/includes.png" alt="">
+
+									<div class="decor-circles"></div>
+								</div>
+								<div class="includes-slider">
+									<div class="swiper-container js-includes-slider">
+										<div class="swiper-wrapper">
+											<!-- Slide -->
+											<div class="swiper-slide">
+												<div class="include-slide text-center">
+													<div class="include-slide__img thumbnail ">
+														<img src="img/includes/1.jpg" alt="">
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+													</div>
+
+													<h3 class="include-slide__title">Аркадные игры – лучшее</h3>
+												</div>
+											</div>
+											<!-- //Slide -->
+
+											<!-- Slide -->
+											<div class="swiper-slide">
+												<div class="include-slide text-center">
+													<div class="include-slide__img thumbnail ">
+														<img src="img/includes/2.jpg" alt="">
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+													</div>
+
+													<h3 class="include-slide__title">VR Арена со свободным перемещением</h3>
+												</div>
+											</div>
+											<!-- //Slide -->
+
+											<!-- Slide -->
+											<div class="swiper-slide">
+												<div class="include-slide text-center">
+													<div class="include-slide__img thumbnail ">
+														<img src="img/includes/1.jpg" alt="">
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+													</div>
+
+													<h3 class="include-slide__title">Аркадные игры – лучшее</h3>
+												</div>
+											</div>
+											<!-- //Slide -->
+
+											<!-- Slide -->
+											<div class="swiper-slide">
+												<div class="include-slide text-center">
+													<div class="include-slide__img thumbnail ">
+														<img src="img/includes/2.jpg" alt="">
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis.</p>
+													</div>
+
+													<h3 class="include-slide__title">VR Арена со свободным перемещением</h3>
+												</div>
+											</div>
+											<!-- //Slide -->
+
+										</div>
+									</div>
+
+									<!-- Slider controls -->
+									<div class="slider-controls">	
+										<button class="btn-arrow btn-arrow__prev js-includes-slider-btn-prev" type="button">
+											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+											</svg>
+										</button>
+										<button class="btn-arrow js-includes-slider-btn-next" type="button">
+											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+											</svg>
+										</button>
+									</div>
+									<!-- //Slider controls -->
+								</div>
+							</div>
+						</div>
+						<!-- //container -->
+					</div>
+				</section>
+				<!-- //sect include -->
+
+				<section class="section sect__how-to-play gradient-bg">
+					<div class="section-content">	
+						<div class="container full-height">	
+							<div class="how-to-play">
+								<h2 class="title text-center title-h2-size">Как играть в виртуальную реальность?</h2>
+
+
+								<div class="how-to-play__imgs">
+									<div class="how-to-play__scheme">
+										<img src="img/how-to-play.png" alt="">
+									</div>
+
+									<div class="how-to-play__dude">
+										<img src="img/dude.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!-- //sect how-to-play -->
+
+				<section class="section sect__top-games">
+					<div class="section-content">
+						<div class="container full-height sect-gutter-top">
+							<h2 class="title title-h2-size">ТОП ИГРЫ</h2>
+
+							<div class="top-games__slider">
+								<div class="swiper-container js-top-games-slider">
+									<div class="swiper-wrapper">
+										<!-- Slide -->
+										<div class="swiper-slide">
+											<div class="top-game">
+												<div class="top-game__inner">
+													<a href="video/status.mp4" data-fancybox class="top-game__poster has-trailer">
+														<img src="img/top-game-poster.jpg" alt="">
+													</a>
+													<div class="top-game__content">
+														<h3 class="top-game__title">beyond medusa’s gate</h3>
+														<p class="top-game__category">VR Квест</p>
+
+														<div class="top-game__description">
+															<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
+														</div>
+
+														<button class="permalink js-open-top-game-details-btn" type="button">
+															<span>Подробнее</span>
+															<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+																<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+															</svg>
+														</button>
+
+														<div class="top-game__params">
+															<span class="game-param game-param__rating">4,5</span>
+															<span class="game-param game-param__age">2 — 4</span>
+															<span class="game-param game-param__playtime">60 минут</span>
+														</div>
+
+														<div class="top-game__btn">
+															<button class="btn-default" type="button">Записаться</button>
+
+
+															<span class="game-age">10+</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //Slide -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //sect top games -->
+			</div>
+
+
+
+			<div class="page-nav" >
+				<ul class="page-nav__list" id="pageNav">
+					<li class="page-nav__item" >
+						<a href="#sect-promo" data-menuanchor="sect-promo" class="page-nav__link" title="Домой">
+							<svg  viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M25 10.592V23.8238C25 24.9082 24.1358 25.7951 23.0518 25.8232L18.2713 25.9469C17.1468 25.976 16.2195 25.0724 16.2195 23.9476V18.9091C16.2195 17.8045 15.3241 16.9091 14.2195 16.9091H11.1951C10.0906 16.9091 9.19512 17.8045 9.19512 18.9091V24C9.19512 25.1046 8.29969 26 7.19512 26H3C1.89543 26 1 25.1046 1 24V10.7276C1 10.1107 1.28464 9.5284 1.77137 9.14946L11.1 1.88677C11.78 1.35734 12.7227 1.32306 13.4394 1.80172L24.1108 8.92885C24.6664 9.29991 25 9.92391 25 10.592Z" stroke="#0095D9" stroke-width="1.5" stroke-linejoin="round"/>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="page-nav__item" >
+						<a href="#sect-advantages" data-menuanchor="sect-advantages" class="page-nav__link" title="Преимущества">
+							<svg  viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.5415 6.2501C13.5415 6.82536 13.0751 7.2917 12.4999 7.2917C11.9246 7.2917 11.4583 6.82536 11.4583 6.2501C11.4583 5.67484 11.9246 5.2085 12.4999 5.2085C13.0751 5.2085 13.5415 5.67484 13.5415 6.2501Z" fill="#0095D9"/>
+								<path d="M12.4999 19.7916C12.0686 19.7916 11.7186 19.4416 11.7186 19.0104V10.9375H10.677C10.2458 10.9375 9.89575 10.5875 9.89575 10.1562C9.89575 9.725 10.2458 9.375 10.677 9.375H12.4999C12.9311 9.375 13.2811 9.725 13.2811 10.1562V19.0104C13.2811 19.4416 12.9311 19.7916 12.4999 19.7916Z" fill="#0095D9"/>
+								<path d="M12.5 25C5.60722 25 0 19.3928 0 12.5C0 5.60722 5.60722 0 12.5 0C19.3928 0 25 5.60722 25 12.5C25 19.3928 19.3928 25 12.5 25ZM12.5 1.5625C6.46877 1.5625 1.5625 6.46877 1.5625 12.5C1.5625 18.5312 6.46877 23.4375 12.5 23.4375C18.5312 23.4375 23.4375 18.5312 23.4375 12.5C23.4375 6.46877 18.5312 1.5625 12.5 1.5625Z" fill="#0095D9"/>
+								<path d="M14.8438 19.7915H10.1562C9.725 19.7915 9.375 19.4415 9.375 19.0103C9.375 18.579 9.725 18.229 10.1562 18.229H14.8438C15.275 18.229 15.625 18.579 15.625 19.0103C15.625 19.4415 15.275 19.7915 14.8438 19.7915Z" fill="#0095D9"/>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="page-nav__item" >
+						<a href="#sect-include" data-menuanchor="sect-include" class="page-nav__link" title="У вас вы найдете">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.22565 19.9091H2.7408C1.22888 19.9091 0 18.6817 0 17.1715V2.73755C0 1.22742 1.22888 0 2.7408 0H17.441C18.9529 0 20.1818 1.22742 20.1818 2.73755V7.21708C20.1818 7.6292 19.847 7.96367 19.4343 7.96367C19.0217 7.96367 18.6869 7.6292 18.6869 7.21708V2.73755C18.6869 2.05166 18.1277 1.49318 17.441 1.49318H2.7408C2.0541 1.49318 1.49495 2.05166 1.49495 2.73755V17.1715C1.49495 17.8574 2.0541 18.4159 2.7408 18.4159H7.22565C7.63826 18.4159 7.97312 18.7504 7.97312 19.1625C7.97312 19.5746 7.63826 19.9091 7.22565 19.9091Z" fill="#0095D9"/>
+								<path d="M15 21C11.6909 21 9 18.3091 9 15C9 11.6909 11.6909 9 15 9C18.3091 9 21 11.6909 21 15C21 18.3091 18.3091 21 15 21ZM15 10.5C12.5189 10.5 10.5 12.5189 10.5 15C10.5 17.4811 12.5189 19.5 15 19.5C17.4811 19.5 19.5 17.4811 19.5 15C19.5 12.5189 17.4811 10.5 15 10.5Z" fill="#0095D9"/>
+								<path d="M23.2543 24C23.0635 24 22.8729 23.9274 22.7278 23.7816L18.2183 19.2721C17.9272 18.9811 17.9272 18.5094 18.2183 18.2184C18.5093 17.9272 18.9811 17.9272 19.2722 18.2184L23.7817 22.7276C24.0728 23.0186 24.0728 23.4904 23.7817 23.7816C23.6357 23.9274 23.4451 24 23.2543 24Z" fill="#0095D9"/>
+							</svg>
+						</a>
+					</li>
+
+					<li class="page-nav__item" >
+						<a href="#sect-how-to-play" data-menuanchor="sect-how-to-play" class="page-nav__link" title="Как играть">
+							<svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M30.9833 14.7674C30.9061 12.9913 30.5972 11.0221 30.1339 9.16872C29.6705 7.39258 29.0914 5.73227 28.3963 4.45808C25.6935 -0.291174 22.759 0.442451 19.2453 1.36913C18.1256 1.63942 16.9286 1.94831 15.6931 2.06415H15.3069C14.0714 1.94831 12.8744 1.63942 11.7547 1.36913C8.24098 0.481063 5.30648 -0.291173 2.60365 4.49669C1.90864 5.77088 1.29085 7.43119 0.866122 9.20733C0.40278 11.0607 0.0938859 13.0299 0.0166623 14.806C-0.0605614 16.7753 0.132498 18.2039 0.557228 19.2078C0.981958 20.1345 1.59975 20.7137 2.41059 20.9453C3.14422 21.1384 3.99368 21.0612 4.88175 20.675C6.38761 20.0573 8.12514 18.7445 9.82406 17.1614C11.021 16.003 13.2605 15.4238 15.5 15.4238C17.7395 15.4238 19.979 16.003 21.1759 17.1614C22.8749 18.7445 24.6124 20.0573 26.1182 20.675C27.0063 21.0226 27.8558 21.1384 28.5894 20.9453C29.3616 20.7137 30.018 20.1731 30.4428 19.1692C30.8675 18.2039 31.0606 16.7753 30.9833 14.7674ZM29.13 18.6286C28.8983 19.1692 28.5894 19.4781 28.2033 19.5939C27.7786 19.7098 27.238 19.6325 26.6202 19.4009C25.2688 18.8603 23.6857 17.6633 22.1412 16.1961C20.674 14.7288 18.087 13.9952 15.5 13.9952C12.913 13.9952 10.326 14.7288 8.82016 16.1189C7.23707 17.5861 5.65399 18.8217 4.34119 19.3236C3.7234 19.5553 3.18283 19.6711 2.7581 19.5167C2.37198 19.4009 2.06309 19.092 1.83142 18.5514C1.52252 17.8178 1.36808 16.6208 1.4453 14.8447C1.52252 13.1844 1.79281 11.2924 2.25615 9.51623C2.68088 7.85592 3.22144 6.31145 3.87784 5.15309C6.00149 1.33052 8.47265 1.94831 11.4071 2.72055C12.6041 3.02944 13.8397 3.33834 15.1911 3.45417C15.2297 3.45417 15.2297 3.45417 15.2683 3.45417H15.6931C15.7317 3.45417 15.7317 3.45417 15.7703 3.45417C17.1603 3.33834 18.3959 3.02944 19.5929 2.72055C22.5274 1.98692 24.9985 1.33052 27.1222 5.15309C27.7786 6.31145 28.3191 7.81731 28.7439 9.51623C29.1686 11.2924 29.4775 13.1457 29.5547 14.8447C29.6319 16.6208 29.4775 17.8178 29.13 18.6286Z" fill="#0095D9"/>
+								<path d="M11.9482 7.23798C11.5621 6.89048 11.0987 6.62019 10.5581 6.58158C10.5195 6.07963 10.2879 5.57767 9.94036 5.23017L9.90175 5.19156C9.47702 4.76683 8.93645 4.53516 8.31866 4.53516C7.70087 4.53516 7.1217 4.80544 6.73558 5.19156C6.38807 5.53906 6.11779 6.04102 6.07918 6.58158C5.53861 6.62019 5.07527 6.85187 4.68915 7.19937L4.65054 7.23798C4.22581 7.66271 3.99414 8.20328 3.99414 8.82107C3.99414 9.43886 4.26442 10.018 4.65054 10.4042C5.03666 10.7903 5.5 11.0219 6.07918 11.0606C6.11779 11.6011 6.34946 12.1031 6.73558 12.4506C7.16031 12.8753 7.70087 13.107 8.31866 13.107C8.93645 13.107 9.51563 12.8367 9.90175 12.4506C10.2493 12.0645 10.5195 11.6011 10.5581 11.0606C11.0987 11.0219 11.6007 10.7903 11.9482 10.4042C12.3729 9.97942 12.6046 9.43886 12.6046 8.82107C12.6046 8.20328 12.3343 7.6241 11.9482 7.23798ZM10.9829 9.40024C10.8284 9.55469 10.6354 9.63192 10.4037 9.63192H9.86314C9.47702 9.63192 9.12951 9.94081 9.12951 10.3655V10.8675C9.12951 11.0992 9.05229 11.2922 8.89784 11.4467C8.74339 11.6011 8.55033 11.6783 8.31866 11.6783C8.08699 11.6783 7.89393 11.6011 7.73949 11.4467C7.58504 11.2922 7.50782 11.0992 7.50782 10.8675V10.3269C7.50782 9.94081 7.19892 9.5933 6.77419 9.5933H6.23363C6.00195 9.5933 5.8089 9.51608 5.65445 9.36163C5.53861 9.2458 5.42278 9.05274 5.42278 8.82107C5.42278 8.5894 5.5 8.39634 5.65445 8.24189C5.65445 8.24189 5.65445 8.24189 5.69306 8.20328C5.84751 8.08744 6.04057 8.01022 6.23363 8.01022H6.77419C7.16031 8.01022 7.50782 7.70132 7.50782 7.27659V6.73603C7.50782 6.50436 7.58504 6.3113 7.73949 6.15685C7.89393 6.0024 8.08699 5.92518 8.31866 5.92518C8.55033 5.92518 8.74339 6.0024 8.89784 6.15685C8.89784 6.15685 8.89784 6.15685 8.93645 6.19546C9.05229 6.34991 9.12951 6.54297 9.12951 6.73603V7.27659C9.12951 7.66271 9.43841 8.01022 9.86314 8.01022H10.4037C10.6354 8.01022 10.8284 8.08744 10.9829 8.24189C11.1373 8.39634 11.2145 8.5894 11.2145 8.82107C11.2145 9.05274 11.1373 9.2458 10.9829 9.40024Z" fill="#0095D9"/>
+								<path d="M22.2191 7.4311C22.9655 7.4311 23.5705 6.82605 23.5705 6.07969C23.5705 5.33332 22.9655 4.72827 22.2191 4.72827C21.4727 4.72827 20.8677 5.33332 20.8677 6.07969C20.8677 6.82605 21.4727 7.4311 22.2191 7.4311Z" fill="#0095D9"/>
+								<path d="M22.2191 12.914C22.9655 12.914 23.5705 12.309 23.5705 11.5626C23.5705 10.8162 22.9655 10.2112 22.2191 10.2112C21.4727 10.2112 20.8677 10.8162 20.8677 11.5626C20.8677 12.309 21.4727 12.914 22.2191 12.914Z" fill="#0095D9"/>
+								<path d="M19.4769 10.1726C20.2233 10.1726 20.8283 9.56751 20.8283 8.82114C20.8283 8.07478 20.2233 7.46973 19.4769 7.46973C18.7305 7.46973 18.1255 8.07478 18.1255 8.82114C18.1255 9.56751 18.7305 10.1726 19.4769 10.1726Z" fill="#0095D9"/>
+								<path d="M24.9605 10.1726C25.7069 10.1726 26.312 9.56751 26.312 8.82114C26.312 8.07478 25.7069 7.46973 24.9605 7.46973C24.2142 7.46973 23.6091 8.07478 23.6091 8.82114C23.6091 9.56751 24.2142 10.1726 24.9605 10.1726Z" fill="#0095D9"/>
+							</svg>
+
+						</a>
+					</li>
+
+					<li class="page-nav__item" >
+						<a href="#sect-top-games" data-menuanchor="sect-top-games" class="page-nav__link" title="Топ игры">
+							<svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<mask id="path-1-outside-1_2_764" maskUnits="userSpaceOnUse" x="0.000244141" y="0" width="27" height="30" fill="black">
+									<rect fill="white" x="0.000244141" width="27" height="30"/>
+									<path d="M26.0821 5.8817C26.0186 5.16965 25.4317 4.63268 24.7168 4.63268H21.1702V4.11002H21.2393C21.7457 4.11002 22.1577 3.69801 22.1577 3.19164V1.91838C22.1577 1.41201 21.7457 1 21.2393 1H10.8009C10.5738 1 10.3896 1.18407 10.3896 1.41124C10.3896 1.63841 10.5738 1.82248 10.8009 1.82248H21.2393C21.2922 1.82248 21.3352 1.86547 21.3352 1.91838V3.19164C21.3352 3.24455 21.2922 3.28754 21.2393 3.28754H5.86401C5.81109 3.28754 5.76805 3.24455 5.76805 3.19164V1.91838C5.76805 1.86547 5.81109 1.82248 5.86401 1.82248H8.8727C9.09981 1.82248 9.28394 1.63841 9.28394 1.41124C9.28394 1.18407 9.09981 1 8.8727 1H5.86401C5.35758 1 4.94557 1.41201 4.94557 1.91838V3.19164C4.94557 3.69801 5.35758 4.11002 5.86401 4.11002H5.93304V4.63268H2.3865C1.6716 4.63268 1.08462 5.16965 1.02113 5.8817C1.01279 5.9748 0.828009 8.19128 1.73564 10.6461C2.56608 12.8921 4.47127 15.76 8.83645 16.8855C9.53918 17.4407 10.3416 17.8752 11.2122 18.1567L11.4192 18.4984C11.8104 19.1443 12.0172 19.9078 12.0172 20.7064C12.0172 21.1943 11.9394 21.6709 11.7861 22.1229L11.4987 22.9699H10.5423C9.56095 22.9699 8.76248 23.7684 8.76248 24.7498V25.6113H7.26579C6.84342 25.6113 6.49978 25.955 6.49978 26.3773V28.3091C6.49978 28.7314 6.84342 29.0751 7.26579 29.0751H19.8375C20.2599 29.0751 20.6035 28.7314 20.6035 28.3091V26.3773C20.6035 25.955 20.2599 25.6113 19.8375 25.6113H18.3408V24.7498C18.3408 23.7684 17.5424 22.9699 16.561 22.9699H15.6046L15.3172 22.1229C15.1639 21.6709 15.0861 21.1943 15.0861 20.7064C15.0861 19.9079 15.2929 19.1443 15.6841 18.4984L15.8911 18.1567C16.7617 17.8752 17.564 17.4407 18.2668 16.8855C22.632 15.76 24.5372 12.8921 25.3676 10.6461C26.2752 8.19128 26.0905 5.97486 26.0821 5.8817ZM6.08531 12.4245C5.31854 11.7066 4.73112 10.8161 4.32937 9.75471C4.05022 9.01722 3.86752 8.2165 3.7862 7.37428H5.93304V10.9061C5.93304 11.4259 5.98562 11.9337 6.08531 12.4245ZM2.50713 10.3609C1.66299 8.07783 1.83275 6.04038 1.84037 5.95479C1.86576 5.66999 2.10055 5.45522 2.3865 5.45522H5.93304V6.55186H3.75215C3.52997 6.55186 3.31678 6.646 3.1672 6.81017C3.01745 6.97456 2.94343 7.19586 2.9641 7.41738C3.05068 8.3453 3.2512 9.22969 3.56013 10.0459C4.17024 11.6579 5.15782 12.9165 6.50965 13.8126C6.77564 14.4546 7.12695 15.0526 7.54949 15.5924C4.57002 14.3574 3.16682 12.1451 2.50713 10.3609ZM19.781 26.4337V28.2526H7.32221V26.4337H19.781ZM16.561 23.7924C17.0888 23.7924 17.5183 24.2219 17.5183 24.7498V25.6113H9.58497V24.7498C9.58497 24.2219 10.0145 23.7924 10.5423 23.7924H16.561ZM14.5384 22.3871L14.7361 22.9699H12.3671L12.5649 22.3871C12.7471 21.8498 12.8396 21.2844 12.8396 20.7064C12.8396 19.8975 12.6588 19.1165 12.315 18.4238C12.7176 18.4898 13.1306 18.5247 13.5516 18.5247C13.9726 18.5247 14.3856 18.4898 14.7882 18.4238C14.4444 19.1165 14.2636 19.8975 14.2636 20.7064C14.2637 21.2844 14.3561 21.8498 14.5384 22.3871ZM13.5516 17.7022C9.80424 17.7022 6.75552 14.6535 6.75552 10.9061V4.11002H20.3477V10.9061C20.3477 14.6535 17.299 17.7022 13.5516 17.7022ZM24.5962 10.3609C23.9365 12.1451 22.5332 14.3577 19.5536 15.5927C19.9769 15.0519 20.3288 14.4527 20.595 13.8094C21.7557 13.0387 22.6496 12.0006 23.2652 10.7007C23.3624 10.4955 23.2748 10.2502 23.0695 10.1531C22.8644 10.0559 22.6192 10.1434 22.5219 10.3487C22.1408 11.1535 21.6382 11.8468 21.0176 12.427C21.1176 11.9354 21.1703 11.4269 21.1703 10.9062V7.37434H23.3172C23.2763 7.79748 23.2083 8.21711 23.115 8.62221C23.0641 8.84356 23.2022 9.06432 23.4235 9.1152C23.6447 9.16642 23.8656 9.02807 23.9165 8.80672C24.0204 8.3555 24.0953 7.88806 24.1393 7.41738C24.1599 7.19586 24.0859 6.97456 23.9362 6.81017C23.7866 6.646 23.5734 6.55186 23.3512 6.55186H21.1703V5.45522H24.7169C25.0028 5.45522 25.2376 5.66999 25.263 5.95485C25.2705 6.04038 25.4403 8.07783 24.5962 10.3609Z"/>
+								</mask>
+								<path d="M26.0821 5.8817C26.0186 5.16965 25.4317 4.63268 24.7168 4.63268H21.1702V4.11002H21.2393C21.7457 4.11002 22.1577 3.69801 22.1577 3.19164V1.91838C22.1577 1.41201 21.7457 1 21.2393 1H10.8009C10.5738 1 10.3896 1.18407 10.3896 1.41124C10.3896 1.63841 10.5738 1.82248 10.8009 1.82248H21.2393C21.2922 1.82248 21.3352 1.86547 21.3352 1.91838V3.19164C21.3352 3.24455 21.2922 3.28754 21.2393 3.28754H5.86401C5.81109 3.28754 5.76805 3.24455 5.76805 3.19164V1.91838C5.76805 1.86547 5.81109 1.82248 5.86401 1.82248H8.8727C9.09981 1.82248 9.28394 1.63841 9.28394 1.41124C9.28394 1.18407 9.09981 1 8.8727 1H5.86401C5.35758 1 4.94557 1.41201 4.94557 1.91838V3.19164C4.94557 3.69801 5.35758 4.11002 5.86401 4.11002H5.93304V4.63268H2.3865C1.6716 4.63268 1.08462 5.16965 1.02113 5.8817C1.01279 5.9748 0.828009 8.19128 1.73564 10.6461C2.56608 12.8921 4.47127 15.76 8.83645 16.8855C9.53918 17.4407 10.3416 17.8752 11.2122 18.1567L11.4192 18.4984C11.8104 19.1443 12.0172 19.9078 12.0172 20.7064C12.0172 21.1943 11.9394 21.6709 11.7861 22.1229L11.4987 22.9699H10.5423C9.56095 22.9699 8.76248 23.7684 8.76248 24.7498V25.6113H7.26579C6.84342 25.6113 6.49978 25.955 6.49978 26.3773V28.3091C6.49978 28.7314 6.84342 29.0751 7.26579 29.0751H19.8375C20.2599 29.0751 20.6035 28.7314 20.6035 28.3091V26.3773C20.6035 25.955 20.2599 25.6113 19.8375 25.6113H18.3408V24.7498C18.3408 23.7684 17.5424 22.9699 16.561 22.9699H15.6046L15.3172 22.1229C15.1639 21.6709 15.0861 21.1943 15.0861 20.7064C15.0861 19.9079 15.2929 19.1443 15.6841 18.4984L15.8911 18.1567C16.7617 17.8752 17.564 17.4407 18.2668 16.8855C22.632 15.76 24.5372 12.8921 25.3676 10.6461C26.2752 8.19128 26.0905 5.97486 26.0821 5.8817ZM6.08531 12.4245C5.31854 11.7066 4.73112 10.8161 4.32937 9.75471C4.05022 9.01722 3.86752 8.2165 3.7862 7.37428H5.93304V10.9061C5.93304 11.4259 5.98562 11.9337 6.08531 12.4245ZM2.50713 10.3609C1.66299 8.07783 1.83275 6.04038 1.84037 5.95479C1.86576 5.66999 2.10055 5.45522 2.3865 5.45522H5.93304V6.55186H3.75215C3.52997 6.55186 3.31678 6.646 3.1672 6.81017C3.01745 6.97456 2.94343 7.19586 2.9641 7.41738C3.05068 8.3453 3.2512 9.22969 3.56013 10.0459C4.17024 11.6579 5.15782 12.9165 6.50965 13.8126C6.77564 14.4546 7.12695 15.0526 7.54949 15.5924C4.57002 14.3574 3.16682 12.1451 2.50713 10.3609ZM19.781 26.4337V28.2526H7.32221V26.4337H19.781ZM16.561 23.7924C17.0888 23.7924 17.5183 24.2219 17.5183 24.7498V25.6113H9.58497V24.7498C9.58497 24.2219 10.0145 23.7924 10.5423 23.7924H16.561ZM14.5384 22.3871L14.7361 22.9699H12.3671L12.5649 22.3871C12.7471 21.8498 12.8396 21.2844 12.8396 20.7064C12.8396 19.8975 12.6588 19.1165 12.315 18.4238C12.7176 18.4898 13.1306 18.5247 13.5516 18.5247C13.9726 18.5247 14.3856 18.4898 14.7882 18.4238C14.4444 19.1165 14.2636 19.8975 14.2636 20.7064C14.2637 21.2844 14.3561 21.8498 14.5384 22.3871ZM13.5516 17.7022C9.80424 17.7022 6.75552 14.6535 6.75552 10.9061V4.11002H20.3477V10.9061C20.3477 14.6535 17.299 17.7022 13.5516 17.7022ZM24.5962 10.3609C23.9365 12.1451 22.5332 14.3577 19.5536 15.5927C19.9769 15.0519 20.3288 14.4527 20.595 13.8094C21.7557 13.0387 22.6496 12.0006 23.2652 10.7007C23.3624 10.4955 23.2748 10.2502 23.0695 10.1531C22.8644 10.0559 22.6192 10.1434 22.5219 10.3487C22.1408 11.1535 21.6382 11.8468 21.0176 12.427C21.1176 11.9354 21.1703 11.4269 21.1703 10.9062V7.37434H23.3172C23.2763 7.79748 23.2083 8.21711 23.115 8.62221C23.0641 8.84356 23.2022 9.06432 23.4235 9.1152C23.6447 9.16642 23.8656 9.02807 23.9165 8.80672C24.0204 8.3555 24.0953 7.88806 24.1393 7.41738C24.1599 7.19586 24.0859 6.97456 23.9362 6.81017C23.7866 6.646 23.5734 6.55186 23.3512 6.55186H21.1703V5.45522H24.7169C25.0028 5.45522 25.2376 5.66999 25.263 5.95485C25.2705 6.04038 25.4403 8.07783 24.5962 10.3609Z" fill="#0095D9"/>
+								<path d="M26.0821 5.8817C26.0186 5.16965 25.4317 4.63268 24.7168 4.63268H21.1702V4.11002H21.2393C21.7457 4.11002 22.1577 3.69801 22.1577 3.19164V1.91838C22.1577 1.41201 21.7457 1 21.2393 1H10.8009C10.5738 1 10.3896 1.18407 10.3896 1.41124C10.3896 1.63841 10.5738 1.82248 10.8009 1.82248H21.2393C21.2922 1.82248 21.3352 1.86547 21.3352 1.91838V3.19164C21.3352 3.24455 21.2922 3.28754 21.2393 3.28754H5.86401C5.81109 3.28754 5.76805 3.24455 5.76805 3.19164V1.91838C5.76805 1.86547 5.81109 1.82248 5.86401 1.82248H8.8727C9.09981 1.82248 9.28394 1.63841 9.28394 1.41124C9.28394 1.18407 9.09981 1 8.8727 1H5.86401C5.35758 1 4.94557 1.41201 4.94557 1.91838V3.19164C4.94557 3.69801 5.35758 4.11002 5.86401 4.11002H5.93304V4.63268H2.3865C1.6716 4.63268 1.08462 5.16965 1.02113 5.8817C1.01279 5.9748 0.828009 8.19128 1.73564 10.6461C2.56608 12.8921 4.47127 15.76 8.83645 16.8855C9.53918 17.4407 10.3416 17.8752 11.2122 18.1567L11.4192 18.4984C11.8104 19.1443 12.0172 19.9078 12.0172 20.7064C12.0172 21.1943 11.9394 21.6709 11.7861 22.1229L11.4987 22.9699H10.5423C9.56095 22.9699 8.76248 23.7684 8.76248 24.7498V25.6113H7.26579C6.84342 25.6113 6.49978 25.955 6.49978 26.3773V28.3091C6.49978 28.7314 6.84342 29.0751 7.26579 29.0751H19.8375C20.2599 29.0751 20.6035 28.7314 20.6035 28.3091V26.3773C20.6035 25.955 20.2599 25.6113 19.8375 25.6113H18.3408V24.7498C18.3408 23.7684 17.5424 22.9699 16.561 22.9699H15.6046L15.3172 22.1229C15.1639 21.6709 15.0861 21.1943 15.0861 20.7064C15.0861 19.9079 15.2929 19.1443 15.6841 18.4984L15.8911 18.1567C16.7617 17.8752 17.564 17.4407 18.2668 16.8855C22.632 15.76 24.5372 12.8921 25.3676 10.6461C26.2752 8.19128 26.0905 5.97486 26.0821 5.8817ZM6.08531 12.4245C5.31854 11.7066 4.73112 10.8161 4.32937 9.75471C4.05022 9.01722 3.86752 8.2165 3.7862 7.37428H5.93304V10.9061C5.93304 11.4259 5.98562 11.9337 6.08531 12.4245ZM2.50713 10.3609C1.66299 8.07783 1.83275 6.04038 1.84037 5.95479C1.86576 5.66999 2.10055 5.45522 2.3865 5.45522H5.93304V6.55186H3.75215C3.52997 6.55186 3.31678 6.646 3.1672 6.81017C3.01745 6.97456 2.94343 7.19586 2.9641 7.41738C3.05068 8.3453 3.2512 9.22969 3.56013 10.0459C4.17024 11.6579 5.15782 12.9165 6.50965 13.8126C6.77564 14.4546 7.12695 15.0526 7.54949 15.5924C4.57002 14.3574 3.16682 12.1451 2.50713 10.3609ZM19.781 26.4337V28.2526H7.32221V26.4337H19.781ZM16.561 23.7924C17.0888 23.7924 17.5183 24.2219 17.5183 24.7498V25.6113H9.58497V24.7498C9.58497 24.2219 10.0145 23.7924 10.5423 23.7924H16.561ZM14.5384 22.3871L14.7361 22.9699H12.3671L12.5649 22.3871C12.7471 21.8498 12.8396 21.2844 12.8396 20.7064C12.8396 19.8975 12.6588 19.1165 12.315 18.4238C12.7176 18.4898 13.1306 18.5247 13.5516 18.5247C13.9726 18.5247 14.3856 18.4898 14.7882 18.4238C14.4444 19.1165 14.2636 19.8975 14.2636 20.7064C14.2637 21.2844 14.3561 21.8498 14.5384 22.3871ZM13.5516 17.7022C9.80424 17.7022 6.75552 14.6535 6.75552 10.9061V4.11002H20.3477V10.9061C20.3477 14.6535 17.299 17.7022 13.5516 17.7022ZM24.5962 10.3609C23.9365 12.1451 22.5332 14.3577 19.5536 15.5927C19.9769 15.0519 20.3288 14.4527 20.595 13.8094C21.7557 13.0387 22.6496 12.0006 23.2652 10.7007C23.3624 10.4955 23.2748 10.2502 23.0695 10.1531C22.8644 10.0559 22.6192 10.1434 22.5219 10.3487C22.1408 11.1535 21.6382 11.8468 21.0176 12.427C21.1176 11.9354 21.1703 11.4269 21.1703 10.9062V7.37434H23.3172C23.2763 7.79748 23.2083 8.21711 23.115 8.62221C23.0641 8.84356 23.2022 9.06432 23.4235 9.1152C23.6447 9.16642 23.8656 9.02807 23.9165 8.80672C24.0204 8.3555 24.0953 7.88806 24.1393 7.41738C24.1599 7.19586 24.0859 6.97456 23.9362 6.81017C23.7866 6.646 23.5734 6.55186 23.3512 6.55186H21.1703V5.45522H24.7169C25.0028 5.45522 25.2376 5.66999 25.263 5.95485C25.2705 6.04038 25.4403 8.07783 24.5962 10.3609Z" stroke="#0095D9" stroke-width="0.2" mask="url(#path-1-outside-1_2_764)"/>
+								<path d="M12.1442 8.72966L12.0545 8.6854L12.5819 7.61684C12.5819 7.61684 12.5819 7.61684 12.5819 7.61684C12.7651 7.2457 13.1366 7.01475 13.5505 7.01475C13.9644 7.01475 14.3359 7.2457 14.5191 7.61684L15.0464 8.68536C15.0548 8.70235 15.071 8.71417 15.0899 8.71695L12.1442 8.72966ZM12.1442 8.72966L12.0545 8.6854C12.0461 8.70245 12.0299 8.71422 12.0111 8.71695L12.0111 8.71695L10.8319 8.8883C10.8319 8.8883 10.8319 8.8883 10.8319 8.8883C10.4223 8.94778 10.0878 9.22974 9.95995 9.62339C9.83205 10.017 9.93688 10.4418 10.2333 10.7307L10.2333 10.7307L11.0865 11.5624C11.1002 11.5756 11.1064 11.5947 11.1031 11.6135L10.9017 12.788L12.1442 8.72966ZM15.3007 10.8303L15.3007 10.8303L16.154 9.99848C16.154 9.99848 16.154 9.99848 16.154 9.99848C16.1677 9.98512 16.1708 9.97439 16.1717 9.96704C16.173 9.95771 16.1713 9.94781 16.1686 9.93962L16.1685 9.93935C16.1658 9.93107 16.1613 9.92205 16.1548 9.9152C16.1497 9.90981 16.1409 9.90291 16.122 9.90015L15.3007 10.8303ZM15.3007 10.8303C15.0461 11.0784 14.93 11.4358 14.99 11.7863L14.99 11.7863L15.1915 12.9608C15.1947 12.9797 15.1909 12.9902 15.1873 12.9967C15.1828 13.005 15.1756 13.0121 15.1685 13.0173L15.1684 13.0173C15.1614 13.0224 15.1525 13.0271 15.1432 13.0288C15.136 13.0302 15.1249 13.0306 15.1079 13.0217L15.1078 13.0216L14.0531 12.4671C13.8957 12.3844 13.7231 12.343 13.5504 12.343C13.3778 12.343 13.2051 12.3844 13.0478 12.4671L13.0943 12.5556L13.0478 12.4671L11.9931 13.0216L11.993 13.0217C11.9761 13.0306 11.965 13.0302 11.9577 13.0288C11.9484 13.0271 11.9394 13.0224 11.9322 13.0172L11.8736 13.0981M15.3007 10.8303L16.122 9.90015L14.9427 9.7288C14.9427 9.7288 14.9427 9.7288 14.9427 9.7288C14.5908 9.67768 14.2868 9.45675 14.1294 9.13795L14.2164 9.09504L14.1294 9.13795L13.6021 8.06938L13.602 8.06936C13.5936 8.05218 13.5843 8.04596 13.5776 8.04277C13.5691 8.03871 13.5591 8.03723 13.5504 8.03723C13.5416 8.03723 13.5317 8.03871 13.5231 8.04277C13.5164 8.04596 13.5072 8.05218 13.4987 8.06936L13.4987 8.06938L12.9713 9.13795L12.8844 9.09504L12.9713 9.13795C12.814 9.45676 12.5099 9.67762 12.1581 9.7288L12.158 9.7288L10.9788 9.90015C10.9599 9.90291 10.9511 9.90981 10.946 9.9152C10.9395 9.92205 10.935 9.93107 10.9323 9.93935L10.9323 9.93949C10.9296 9.94773 10.9279 9.95766 10.9291 9.96701C10.9301 9.97437 10.9331 9.98513 10.9469 9.99853C10.9469 9.99853 10.9469 9.99853 10.9469 9.99854L11.8002 10.8302L11.8002 10.8302C12.0548 11.0784 12.171 11.4358 12.1108 11.7863L11.9094 12.9607C11.9062 12.9797 11.91 12.9902 11.9136 12.9967C11.9181 13.005 11.9253 13.0121 11.9324 13.0173L11.8736 13.0981M11.8736 13.0981C11.9032 13.1196 11.9642 13.1499 12.0396 13.1101L12.0123 11.7694L11.8108 12.9439C11.7965 13.028 11.8439 13.0766 11.8736 13.0981ZM10.8372 9.9085C10.8258 9.94331 10.816 10.0106 10.8771 10.0701L10.8372 9.9085ZM10.8372 9.9085C10.8485 9.87368 10.8801 9.81347 10.9644 9.80119L10.8372 9.9085ZM16.2691 8.8883L15.0899 8.71696L15.9978 11.6134C15.9946 11.5946 16.0008 11.5756 16.0144 11.5624L16.0144 11.5624L16.8678 10.7306C17.1641 10.4417 17.269 10.0169 17.1411 9.62333C17.0132 9.22973 16.6786 8.94778 16.2691 8.8883C16.2691 8.8883 16.2691 8.8883 16.2691 8.8883ZM16.1993 12.7879L15.9978 11.6134L15.1356 13.9517C15.338 13.9517 15.539 13.8883 15.7108 13.7634L15.7696 13.8443C15.7696 13.8443 15.7696 13.8443 15.7696 13.8443C16.1044 13.601 16.2693 13.1958 16.1993 12.7879C16.1993 12.7879 16.1993 12.7879 16.1993 12.7879Z" fill="#0095D9" stroke="#0095D9" stroke-width="0.2"/>
+							</svg>
+
+
+						</a>
+					</li>
+				</ul>
 			</div>
 		</main>
 		<!-- //Main -->
@@ -91,7 +695,7 @@
 <!-- Google map -->
 <!-- <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script> -->
 <!-- All libs scripts -->
-<!-- 	<script src="js/libs.min.js"></script> -->
+<script src="js/libs.min.js"></script>
 <!-- Main file with scripts -->
 <script src="js/common.min.js"></script>
 </body>

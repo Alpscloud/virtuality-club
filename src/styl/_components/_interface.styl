@@ -1,0 +1,205 @@
+.svg-ic
+	svg()
+	fill $accent-color
+	width 22px
+	height 22px
+	&:hover
+		fill $text-color
+
+.phone-link
+	display inline-block
+	font 18px $Bold
+	color $accent-color
+	padding-right 35px
+	position relative
+	line-height 1
+	.svg-ic
+		position absolute
+		right 0
+		vertical-center()
+	&:hover
+		color $text-color
+		.svg-ic
+			fill $text-color
+			
+// Tooltip
+.tooltip
+	position relative
+	&-content
+		position absolute
+		top 100%
+		horisontal-center()
+		transition all .17s ease-in-out
+		width 200px
+		border-radius 10px
+		background-color $color-bg 
+		padding 10px
+		font 16px $Bold
+		box-shadow 5px 0 10px 10px rgba($basic-black-color, .05)
+		
+		opacity 0
+		visibility hidden
+		margin-top 20px
+		&:before
+			pseudo()
+			position absolute	
+			bottom 100%
+			horisontal-center()
+			width 0
+			height 0
+			border-style solid
+			border-width 0 7.5px 10px 7.5px
+			border-color transparent transparent $color-bg transparent
+		&__title
+			font-family $Med
+			margin-bottom 5px
+			
+	&:hover
+		cursor pointer
+		.tooltip-content
+			opacity 1
+			visibility visible
+			margin-top 12px
+		
+			
+.worktime-tooltip
+	position relative
+	width 22px
+	height 22px
+	
+	&:hover
+		cursor pointer
+		.svg-ic
+			fill $text-color
+	
+			
+
+// Video link
+
+.video-link
+	display inline-block
+	width 205px
+	height 205px
+	border-radius 50%
+	position relative
+	&:before,
+	&:after
+		pseudo()
+		position absolute
+		position-center()
+		background-repeat no-repeat
+		background-size contain
+		background-position 50%
+	
+	&:before
+		width 100%
+		height 100%
+		background-image url('../img/decor/video/outer.svg')
+		animation rotate 20s linear infinite forwards
+		
+	&:after
+		width 94.15%
+		height 94.15%
+		background-image url('../img/decor/video/inner.svg')
+		animation rotate 10s linear infinite forwards
+		
+	&__poster
+		display block
+		width 71.7%
+		height 71.7%
+		border-radius 50%
+		overflow hidden
+		position absolute
+		position-center()
+		will-change transform
+		transition transform .2s ease-in-out
+		&:before
+			pseudo()
+			fullSize()
+			position absolute
+			background linear-gradient(90.87deg, rgba(3, 37, 90, 0.5) 0.74%, rgba(3, 37, 90, 0.25) 52.08%, rgba(3, 37, 90, 0.5) 99.32%)
+		&:after
+			pseudo()
+			position absolute
+			position-center()
+			z-index 1
+			width 20.4%
+			height 20.4%
+			background url('../img/icons/svg/play.svg') 50% no-repeat / contain
+			
+	&:hover
+		.video-link__poster
+			transform translate(-50%, -50%) scale(1.04, 1.04)
+			
+@keyframes rotate
+	to
+		transform translate(-50%, -50%) rotate(360deg)
+		
+@keyframes rotate-reverse	
+	to
+		transform translate(-50%, -50%) rotate(-360deg)
+		
+
+		
+
+// permalink
+.permalink
+	display inline-block
+	color $secondary-color
+	font 16px $Reg
+	position relative
+	padding-right 15px
+	svg
+		svg()
+		width 12px
+		height 9px
+		fill currentColor
+		position absolute
+		right 0
+		vertical-center()
+		transition margin .17s ease-in-out
+	span
+		display block
+		border-bottom 1px solid currentColor
+	&:hover
+		color $accent-color
+		svg
+			margin-right -5px
+
+
+.game-param
+	display inline-block
+	position relative
+	font 20px $Reg
+	color $secondary-color
+	white-space nowrap
+	padding-left 30px
+	&:before
+		pseudo()
+		position absolute
+		left 0
+		vertical-center()
+		background-repeat no-repeat
+		background-size contain
+		background-position 50%
+		width 25px
+		height 25px
+		
+	&__rating
+		&:before
+			background-image url('../img/icons/svg/rating.svg')
+	&__age
+		&:before
+			background-image url('../img/icons/svg/age.svg')
+	&__playtime
+		&:before
+			background-image url('../img/icons/svg/playtime.svg')
+			
+.game-age
+	flex-col-center()
+	width 54px
+	height 54px
+	border-radius 50%
+	border 1px solid currentColor
+	color $secondary-color
+	font 24px $Reg

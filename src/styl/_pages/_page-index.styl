@@ -1,0 +1,273 @@
+.section-content
+	height 100%
+	padding-top 105px
+
+
+
+.promo-slider
+	height 100%
+	
+.promo-slide
+	position relative
+	padding-top 165px
+	height 100vh
+	
+	.container
+		position relative
+		height 100%
+	
+
+	.btn-arrow
+		vertical-center()
+		right 130px
+		z-index 3
+		position absolute	
+
+	&__content
+		position relative
+		z-index 2
+		
+	&__text
+		position relative
+		
+		.subtitle
+			margin-top 15px
+			
+	.video-link
+		margin-top 40px
+		
+	&__row
+		&.align-horisontal-between
+			.promo-slide__text
+				order 2
+				text-align right
+				max-width 420px
+			.video-link
+				margin-top 0
+				order 1
+		
+	&__img
+		position absolute
+		horisontal-center()
+		top 0
+		bottom 0
+		width 100%
+		
+		img
+			display block
+			width auto
+			height 100%
+			position relative
+			horisontal-center()
+			
+		
+		.btn
+			position absolute
+			z-index 5
+			bottom 6%
+			left 130px
+			
+		.decor-circles
+			z-index -1
+			top 0
+			horisontal-center()
+			
+			
+	&__right-offset
+		.promo-slide__img
+			margin-left 100px
+			
+		.video-link
+			margin-left 70px
+			
+		.btn
+			margin-left -100px
+			bottom 12%
+
+.decor-circles
+	display block
+	width 530px
+	height 530px
+	background url('../img/decor/promo/figure.svg') no-repeat 50% / contain
+	position absolute
+	animation rotate-center 25s linear infinite forwards
+				
+@keyframes rotate-center
+	to
+		transform translateX(-50%) rotate(-360deg)
+		
+// Advantages
+.full-height
+	height calc(100vh - 105px)
+	
+.advantages
+	&-content
+		flex 1
+		padding-top 75px
+		padding-right 30px
+		&__text
+			max-width 700px
+		
+	&-text
+		//width 575px
+		width 1100px
+		flex none
+		background-position left center
+		display flex
+		align-items flex-end
+		padding 0 95px 140px
+		font 20px $Bold
+		line-height 24px
+		color #F4F2F5
+		position relative
+		svg
+			display block
+			position absolute
+			width 53px
+			height 100%
+			top 0
+			left -10px
+			stroke $accent-color
+			fill none
+		// &:before
+		// 	pseudo()
+		// 	position absolute
+		// 	top 0
+		// 	bottom 0
+		// 	width 53px
+		// 	background url('../img/decor/advantages-decor.svg') 50% no-repeat / 100% auto
+		// 	left -10px
+		
+	&-wrapper
+		.container
+			padding-right 0
+			
+
+.advantages-items
+	position relative
+	width 610px
+	height 500px
+	
+.advantage-item
+	position absolute
+	font 14px $Bold
+	line-height 17px
+	width 200px
+	height 200px
+	&__inner
+		width 82.5%
+		height 82.5%
+	&:nth-child(1)
+		left 0
+		top 100px
+		width 160px
+		height 160px
+		.advantage-item__ic
+			width 40px
+			height 40px
+			
+	&:nth-child(2)
+		right 0
+		top 50px
+	&:nth-child(3)
+		top 150px
+		right 190px
+		
+	&:nth-child(4)
+		bottom 0
+		left 0
+	&:nth-child(5)
+		right 0
+		bottom 40px
+		
+	p
+		max-width 120px
+		
+	&__ic
+		background-position 50%
+		background-repeat no-repeat
+		background-size contain
+		width 55px
+		height 55px
+		margin-bottom 10px
+	&__inner
+		border-radius 50%
+		overflow hidden
+		flex-col-center()
+		position relative
+		width 165px
+		height 165px
+		&:after
+			pseudo()
+			position absolute
+			position-center()
+			width 100%
+			height 100%
+			background-repeat no-repeat
+			background-size contain
+			background-position 50%
+			animation rotate 20s linear infinite forwards
+			
+		&:before
+			pseudo()
+			position absolute
+			fullSize()
+			background-color rgba(5, 9, 30, 0.3)
+			filter blur(1px)
+	
+
+// Sect includes
+.includes-wrapper
+	position relative
+	
+.includes
+	&__row
+		width 100%
+		position absolute
+		bottom 0
+		height 	100%
+		left 0
+		padding-left 130px
+		padding-right 130px
+		z-index 1
+	&-img
+		flex none
+		max-width 505px
+		height 100%
+		max-height 744px
+		display flex
+		align-items flex-end
+		position relative	
+		
+		.decor-circles
+			position absolute	
+			z-index -1
+			top -100px
+			right -240px
+		img
+			display block
+			height 100%
+			width auto
+			max-width 505px
+			max-height 744px
+			
+// How to play
+
+.how-to-play
+	padding-top 75px
+	&__imgs
+		position relative
+		padding-left 100px
+		margin-top 40px
+		
+	&__scheme
+		
+		width 577px
+		height 577px
+
+		img
+			width 100%
+			display block
+			
+
+			

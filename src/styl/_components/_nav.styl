@@ -7,3 +7,62 @@
 	&__link
 		display block
 		color $text-color
+		
+
+.page-nav
+	position fixed
+	left 20px
+	bottom 0
+	z-index 15
+	padding-bottom 150px
+	&:before
+		pseudo()
+		height 125px
+		width 2px
+		background-color $accent-color
+		position absolute
+		bottom 0
+		left 11.5px
+		
+	&__item
+		display block
+		margin-bottom 20px
+		&:last-child
+			margin-bottom 0
+			
+		
+		
+	&__link
+		display block
+		width 25px
+		height 25px
+		position relative
+		&:before
+			pseudo()
+			position absolute
+			position-center()
+			width 10px
+			height 10px
+			border-radius 50%
+			background-color $accent-color
+			transition opacity .17s ease-in-out, background-color .17s ease-in-out
+			
+		&:hover
+			&:before
+				background-color $secondary-color
+		svg
+			svg()
+			opacity 0
+			visibility hidden
+			
+		&.active
+
+			svg
+				opacity 1
+				visibility visible
+			&:before
+				opacity 0
+				visibility hidden
+			
+
+			

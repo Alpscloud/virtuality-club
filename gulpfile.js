@@ -57,6 +57,42 @@ gulp.task('styl', function() {
 		
 });
 
+gulp.task('global-blocks', function() {
+	return combiner(
+		gulp.src('./src/styl/global-blocks.styl').pipe(stylus({
+			'include css': true
+		})),
+		debug({title:'SRC'}),
+		stylus({linenos: false}),	
+		debug({title:'STYLUS'}),
+		autoprefixer([
+			'Android 2.3',
+			'Android >= 4',
+			'Chrome >= 20',
+			'Firefox >= 24',
+			'Explorer >= 8',
+			'iOS >= 6',
+			'Opera >= 12',
+			'Safari >= 6'
+		]),
+		debug({title:'AUTOPREFIXER'}),
+		cssmin(),
+		debug({title:'CSSMIN'}),
+		rename({
+			suffix: '.min'
+		}),
+		debug({title:'RENAME'}),
+		gulp.dest('./src/css/'),
+		debug({title:'DESTINATION'}),
+		browserSync.reload({stream: true})
+	).on('error', function(err) {
+		console.log(err.message);
+		this.end();
+	});
+	
+		
+});
+
 // Html
 
 gulp.task('twig', function () {
@@ -129,6 +165,7 @@ gulp.task('watch', ['serve'], function() {
 	gulp.watch('./src/templates/parts/**/*.html', ['twig']);
 	gulp.watch('./src/*.html', browserSync.reload);
 	gulp.watch("./src/styl/**/*.styl", ['styl']);
+	gulp.watch("./src/styl/**/*.styl", ['global-blocks']);
 	gulp.watch("./src/js/common.js", ['jsCommon']);
 	gulp.watch('./src/css/libs/*.css', ['cssLibs']);
 });

@@ -25,16 +25,41 @@
 	margin-bottom 40px
 	
 .title
-	font-family $Bold
+	font-family $MBold
 	&-h1-size
 		font-size 36px
 		line-height 38px
 	&-h2-size
-		font-size 32px
-		line-height 34px
+		font-size 44px
+		line-height 50px
 	&-h3-size
-		font-size 28px
-		line-height 32px
+		font-size 26px
+		line-height 31px
+		font-family $Bold
+		
+	&-decor
+		position relative
+		z-index 1
+		&:before
+			pseudo()
+			position absolute
+			right 0
+			top 100%
+			margin-top -60px
+			z-index -1
+			width 124px
+			height 124px
+			background url('../img/decor/title-decor.svg') 50% no-repeat / contain
+			border-radius 50%
+			will-change transform
+			animation rotate-z 10s linear infinite forwards
+		
+.sect-subtitle
+	font 20px $Reg
+	line-height 24px
+	
+.sect-gutter-top
+	padding-top 75px
 		
 .text-center
 	text-align center
@@ -85,6 +110,10 @@
 		
 .color-bg
 	background-color $color-bg
+	
+.gradient-bg
+	background radial-gradient(35.22% 79.78% at 50% 50%, #022140 0%, #05091D 100%)
+	color $light-accent-color
 	
 .visually-hidden
 	position absolute
