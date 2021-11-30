@@ -24,6 +24,21 @@
 		span
 			background-color $secondary-color
 			
+	&-sm
+		font-size 18px
+		span
+			padding 20px 50px
+			
+	&-accent
+		background-color $accent-color
+		border none
+		color $basic-white-color
+		padding 15px 35px
+		border 1px solid $accent-color
+		&:hover
+			background-color $secondary-color
+			border-color $secondary-color
+			
 	&-default
 		display inline-block
 		text-align center
@@ -41,8 +56,8 @@
 		width 95px
 		height 95px
 		position relative
-		&__prev
-			transform scaleX(-1)
+		border-radius 50%
+		
 		&:before,
 		&:after
 			pseudo()
@@ -55,12 +70,25 @@
 			width 100%
 			height 100%
 			background-image url('../img/decor/btn/outer.svg')
-			animation rotate 20s linear infinite forwards
+			
 		&:after
 			width 94.15%
 			height 94.15%
 			background-image url('../img/decor/btn/inner.svg')
-			animation rotate 10s linear infinite forwards
+		
+			
+		&__next
+			&:before
+				animation rotate 20s linear infinite forwards
+			&:after
+				animation rotate 10s linear infinite forwards
+				
+		&__prev
+			&:before
+				animation rotate-reverse 20s linear infinite forwards
+			&:after
+				animation rotate-reverse 10s linear infinite forwards
+				
 			
 		svg
 			svg()
@@ -70,6 +98,46 @@
 			
 			position absolute
 			position-center()
+			
+		&__fill
+			background-color $basic-white-color
+			
+		&__sm
+			width 65px
+			height 65px
+			svg
+				width 12px
+				height 20px
+				
+		&__dark
+			&:before
+				background-image url('../img/decor/btn/outer-dark.svg')
+			&:after
+				background-image url('../img/decor/btn/inner-dark.svg')
+				
+			svg
+				fill $dark-color
+			span
+				display block
+				position absolute
+				border-radius 50%
+				position-center()
+				width 100%
+				height 100%
+				background rgba(255, 255, 255, 0.5)
+				filter blur(10px)
+				backdrop-filter blur(10px)
+			
+		&-simple
+			display inline-block
+			width 20px
+			height 20px
+			svg
+				svg()
+				fill $accent-color
+			&:hover
+				svg
+					fill $secondary-color
 		
 		
 	&-close
@@ -96,6 +164,19 @@
 		&:hover
 			svg
 				stroke $secondary-color
+				
+		&-simple
+			display inline-block
+			width 36px
+			height 36px
+			svg
+				svg()
+				fill none
+				stroke $secondary-color
+				stroke-width 2px
+			&:hover
+				svg
+					stroke $accent-color
 				
 	&-close-fancy
 		width 40px

@@ -1,4 +1,17 @@
 .slider
+	position relative
+	padding-left 95px
+	padding-right 95px
+	.btn-arrow
+		position absolute
+		vertical-center()
+		z-index 1
+		&__prev
+			left 0
+		&__next
+			right 0
+			
+
 	&__loader
 		position absolute
 		fullSize()
@@ -17,6 +30,9 @@
 			opacity 0
 			visibility hidden
 			pointer-events none
+			
+.slick-slide .slick-slide
+	padding 0 !important
 			
 .swiper-container
 	*
@@ -42,18 +58,22 @@
 .includes-slider
 	position relative
 	z-index 2
-	//width calc(100% + 1920px)
 	min-width 0
 	padding-left 30px
 	padding-bottom 100px
-	margin-right 	-130px
 	
-	.slider-controls
-		position absolute	
-		left 30px
-		bottom 65px
-		z-index 1
+	width 100%
+	&__wrapper
+		position relative
+		flex 1
+		margin-right -130px
 	
+		.slider-controls
+			position absolute	
+			left 30px
+			bottom 65px
+			z-index 2
+		
 	&:before
 		pseudo()
 		position absolute
@@ -63,23 +83,25 @@
 		width 100%
 		background-color $color-bg
 		border-radius 20px 20px 0 0
-	.swiper-slide
-		width 320px
-	
+	.slick-slide
+		//width 320px
+		width 450px
+		margin-right 30px
 		padding-top 80px
-		&-active
-			.include-slide
-				transform translateY(-50px)
-				&__img
-					&:before,
-					p
-						opacity 1
+	.slick-current
+		.include-slide
+			transform translateY(-50px)
+			&__img
+				&:before,
+				p
+					opacity 1
 					
 	
 		
 .include-slide
 	will-change transform
 	transition transform .23s ease-in-out
+	margin 0 auto
 	&__title
 		font 20px $MBold
 		line-height 21px
@@ -107,14 +129,53 @@
 			opacity 0
 			
 // top games
-.top-games__slider
-	position relative
-	padding-left 110px
-	padding-right 110px
-	margin-top 55px
+.top-games-slider
+
 	
-	.swiper-slide
+	&__wrapper
+		position relative
+		margin-top 55px
+		margin-left -130px
+		margin-right -130px
+		
+		.btn-arrow
+			position absolute
+			vertical-center()
+			z-index 2
+			&__prev
+				left 120px
+			&__next
+				right 120px
+	
+	.slick-slide
 		height auto
+		width 1070px
+		padding-left 75px
+		padding-right 75px
+
+				
+		&:not(.slick-center),
+		&:not(.slick-current)
+			.top-game
+				opacity .4
+				pointer-events none
+				
+		&.slick-current,
+		&.slick-center
+			.top-game
+				opacity 1
+				pointer-events auto
+				
+	.slick-track
+		flex-wrap nowrap
+		display flex
+		
+		.slick-slide
+			float none
+			display block !important
+		
+	
+		
 	
 .top-game
 	border 1px solid $accent-color
@@ -123,6 +184,10 @@
 	height 100%
 	color $secondary-color
 	min-height 540px
+	position relative
+	transition opacity .3s ease-in-out
+	display flex
+	flex-direction column
 	&__inner
 		background-color $color-bg
 		border-radius 10px
@@ -130,6 +195,9 @@
 		display flex
 		flex-wrap nowrap
 		height 100%
+		flex 1
+		
+	
 		
 	&__poster
 		width 57.3%
@@ -157,27 +225,9 @@
 		width 42.7%
 		padding 25px 20px
 		
-	&__title
-		font 30px $MReg
+	
 		
-		line-height 32px
-		text-transform uppercase
-		margin-bottom 20px
-		
-	&__category
-		font 22px $Bold
-		line-height 26px
-		margin-bottom 20px
-		text-transform uppercase
-		
-	&__description
-		font-size 14px
-		line-height 17px
-		margin-bottom 13px
-		p
-			margin-bottom 10px
-			&:last-child
-				margin-bottom 0
+
 				
 	&__btn
 		display flex
@@ -185,13 +235,557 @@
 		justify-content space-between
 		align-items center
 		
-	&__params
-		display flex
-		justify-content space-between
-		flex-wrap nowrap
-		margin-bottom 20px
+	
 		
 	
 				
 	.permalink
 		margin-bottom 38px
+		
+	&__details
+		position absolute
+		z-index 1
+		top 15px
+		right 15px
+		left 15px
+		bottom 15px
+		background-color $color-bg
+		border-radius 10px
+		padding 30px 30px 10px
+		
+		opacity 0
+		visibility hidden
+		pointer-events none
+		
+		transition all .2s ease-in-out
+		
+		&.is-opened
+			opacity 1
+			visibility visible
+			pointer-events auto
+		
+		&--btn
+			position relative
+			
+			.game__age
+				position absolute
+				vertical-center()
+				right 0
+		
+		.game-params
+			margin-bottom 27px
+			
+		.game-param
+			margin-right 50px
+		
+		
+		
+		.btn-close-simple
+			position absolute
+			top 20px
+			right 20px
+			
+// Catalog
+
+.catalog-games__slider
+	height 100%
+	.slick-slide
+		padding 22.5px
+		display flex !important
+		justify-content center
+		flex-direction column
+		align-items center
+		
+		> div
+			height 50%
+			&:first-child
+				margin-bottom 25px
+			
+	
+		
+			
+	.slick-track,
+	.slick-list
+		height 100%
+		position static
+
+		
+.catalog-slider
+	height 100%
+	position relative
+	padding 2px
+	
+
+
+.catalog-game-card
+	//width 190px
+	transition transform .2s ease-in-out
+	backface-visibility hidden
+	//will-change transform
+	display flex
+	flex-direction column
+	
+	&:hover
+		cursor pointer
+		transform scale(1.05, 1.05)
+	&__thumbnail
+		border-radius 5px
+		display block
+		overflow hidden
+		//padding-top 142%
+		margin-bottom 13px
+		padding-top 0
+		flex 1
+		width 270px
+		img
+			position relative
+			transform none
+			width 100%
+			height auto
+			top auto
+			left auto
+		&:before
+			pseudo()
+			position absolute
+			height 75px
+			background linear-gradient(180deg, rgba(3, 37, 90, 0) 0%, rgba(3, 37, 90, 0.6) 45.76%, rgba(3, 37, 90, 0.8) 100%)
+			bottom 0
+			width 100%
+			z-index 1
+		
+	&__title
+		font 18px $MBold
+		line-height 19px
+		color $secondary-color
+		text-align center
+		flex none
+	&__params
+		position absolute
+		bottom 10px
+		padding-left 10px
+		padding-right 10px
+		z-index 3
+		display flex
+		justify-content space-between
+		align-items center
+		width 100%
+		
+
+	.game__age
+		color $alternate-light-text-color
+		width 34px
+		height 34px
+		font-size 14px
+		
+	.game-param
+		color $alternate-light-text-color
+		font-size 15px
+		
+	&__details
+		border-radius 10px
+		border 1px solid $accent-color
+		position absolute
+		top 1px
+		right 1px
+		bottom 1px
+		left 1px
+		z-index 5
+		height 300px
+		width 100%
+
+
+.catalog-categories
+	padding-left 95px
+	padding-right 95px
+	position relative
+	.btn-arrow-simple
+		position absolute
+		vertical-center()
+		&__prev
+			left 0
+		&__next
+			right 0
+	
+.catalog-category
+	&__title
+		padding 14px 40px
+		text-align center
+		font 24px $MBold
+		color $secondary-color
+		transition all .17s ease-in-out
+		border-radius 10px
+		&:hover
+			cursor pointer
+			background-color $accent-color
+			color $basic-white-color
+		
+	&.is-active
+		.catalog-category__title
+			background-color $accent-color
+			color $basic-white-color
+			
+
+// Gallery
+.gallery-slider
+	position absolute
+	top 105px
+	bottom 0
+	left 0
+	right 0
+	z-index 1
+	pointer-events none
+	
+	&-thumbnails
+		width 840px
+		
+		.slick-slide
+			padding-right 20px
+			
+	&-controls
+		width 190px
+		display flex
+		flex-wrap nowrap
+		justify-content space-between
+		margin-bottom 20px
+	
+.gallery-slide
+	display block
+	height 100vh
+	&-thumbnail
+		border-radius 5px
+		
+		padding-top 66%
+		
+
+// Stocks
+.stocks-slider
+	.slick-slide
+		margin-right 30px
+		> div
+			margin-bottom 30px
+			&:last-child
+				margin-bottom 0
+				
+// Sertificates
+.sertificates-slider
+	margin-left -130px
+	margin-right -130px
+	flex 1
+	.slick-track,
+	.slick-list
+		height 100%
+
+	.slick-slide
+		width 570px
+		padding-left 15px
+		padding-right 15px
+		> div
+			height 100%
+			
+		&:not(.slick-active)
+			.sertificate-slide
+				opacity .3
+				pointer-events none
+		
+	.slick-track
+		left -235px
+		
+.sertificate-slide
+	height 100%
+	display flex !important
+	flex-direction column
+	transition opacity .17s ease-in-out
+	&__img
+		flex 1
+		padding-top 0
+		border-radius 5px 5px 0 0
+		&:before
+			pseudo()
+			fullSize()
+			position absolute
+			background linear-gradient(0deg, #03255A, #03255A)
+			opacity 0
+			z-index 1
+			transition opacity .17s ease-in-out
+		p
+			position absolute
+			z-index 3
+			vertical-center()
+			padding 40px
+			text-align center
+			color $alternate-light-text-color
+			font 22px $MReg
+			line-height 27px
+			transition opacity .17s ease-in-out
+			opacity 0
+			
+	&:hover
+		.sertificate-slide__img
+			&:before
+				opacity 0.7
+				
+			p
+				opacity 1
+		
+		
+			
+		
+	&__content
+		flex none
+		background-color $color-bg
+		padding 10px 20px 20px
+		text-align center
+		border-radius 0 0 5px 5px
+	&__title
+		font 22px $MBold
+		line-height 23px
+		margin-bottom 23px
+		
+// Subscription
+.subscription-slider
+	width 100%
+	flex 1
+	.slick-track, 
+	.slick-list
+		height 100%
+		
+	.slick-list
+		margin-left -15px
+		margin-right -15px
+		
+	.slick-slide
+		width 570px
+		padding-left 15px
+		padding-right 15px
+		> div
+			height 100%
+
+		
+	&__wrapper
+		flex 1
+		display flex
+		flex-direction column
+		align-items center
+		
+		.slider-controls
+			flex none
+			margin-top 15px
+			
+.subscription-slide
+	height 100%
+	padding 15px
+	position relative
+	svg
+		display block
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		fill none
+		stroke $accent-color
+		pointer-events none
+		
+	&__inner
+		height 100%
+		display flex
+		flex-direction column
+		
+	&__img
+		flex 1
+		padding-top 0
+		border-radius 5px 5px 0 0
+		//min-height 390px
+		&:before
+			pseudo()
+			z-index 1
+			position absolute
+			width 100%
+			left 0
+			bottom 0
+			height 130px
+			background linear-gradient(180deg, rgba(9, 14, 29, 0) 0%, rgba(9, 14, 29, 0.9) 66.67%)
+		p
+			position absolute
+			z-index 2
+			bottom 20px
+			left 20px
+			right 20px
+			color $alternate-light-text-color
+			font 27px $MBold
+			text-shadow 0 0 25px currentColor
+			filter blur(1px)
+			
+				
+	&__content
+		background url('../img/decor/subscribe/bg.svg') top center no-repeat
+		background-size 100%
+		padding 20px 15px 15px
+		color #8EC8E1
+		font-size 14px
+		line-height 17px
+		border-radius 0 0 5px 5px
+		p
+			margin-bottom 16px
+		
+	&__title
+		font 20px $MBold
+		line-height 21px
+		margin-bottom 15px
+		
+
+// FAqs
+.faq-slider
+	.slick-slide
+		padding 15px
+.faq-slide
+	height 200px
+	border-radius 5px
+	text-align center
+	color $light-accent-color
+	font 18px $Bold
+	line-height 21px
+	width 160px !important
+	margin 0 auto
+	padding 10px
+	position relative
+	display flex !important
+	align-items flex-end
+	justify-content center
+	transition transform .17s ease-in-out
+	p, h3
+		position relative
+		z-index 1
+	&:hover
+		cursor pointer
+		transform scale(1.05, 1.05)
+		
+	&__overlay
+		color $secondary-color
+		&:before
+			pseudo()
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+			height 80px
+			background linear-gradient(180deg, rgba(231, 231, 231, 0) 0%, rgba(231, 231, 231, 0.48) 20.83%, rgba(231, 231, 231, 0.64) 43.75%, rgba(231, 231, 231, 0.8) 100%)
+
+// Feedbacks
+.feedback-slide
+	width 285px
+	height 100%
+	display flex !important
+	flex-direction column
+	&__content
+		border-radius 5px
+		background-color $color-bg
+		margin-top -1px
+		position relative
+		z-index 1
+		padding 20px
+		color $secondary-color
+		display flex
+		flex-direction column
+		flex 1
+		
+	&__author
+		display flex
+		align-items center
+		flex-wrap nowrap
+		justify-content space-between
+		margin-bottom 10px
+		&-information
+			display flex
+			flex-wrap nowrap
+			align-items center
+			justify-content flex-start
+			&_photo
+				display block
+				border-radius 50%
+				bg(50%, 50%)
+				width 45px
+				height 45px
+				flex none
+				margin-right 15px
+			&_name
+				font 16px $Bold
+				
+		&-stars
+			position relative
+			display inline-block
+			padding-left 25px
+			font 16px $Reg
+			&:before
+				pseudo()
+				position absolute
+				vertical-center()
+				left 0
+				width 21px
+				height 21px
+				background url('../img/icons/svg/star.svg') 50% no-repeat / contain
+		
+	&__header
+		border-radius 5px 5px 0 0
+		display flex
+		flex-wrap nowrap
+		height 55px
+		background-color rgba(#D7EAF3, .5)
+		flex none
+		
+	&__src
+		flex-col-center()
+		width auto
+		background-color #D7EAF3
+		padding 10px 40px 10px 20px
+		clip-path polygon(0 0, 90% 0%, 100% 100%, 0% 100%)
+		
+		img
+			display block
+			@extends .content-img
+			
+	&__link
+		font 14px $Bold
+		color $secondary-color
+		&:hover
+			color $accent-color
+		&-wrapper
+			flex-col-center()
+			flex 1
+			text-align center
+			
+	&__text
+		font 14px $Bold
+		line-height 17px
+		flex 1
+	&__gallery
+		flex none
+		margin-top 10px
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		margin-left -5px
+		margin-right -5px
+		&--item
+			width 25%
+			padding 5px
+			&_link
+				display block
+				border-radius 5px
+				width 100%
+				padding-top 100%
+				
+.feedbacks-slider
+	.slick-slide
+		float none !important
+		height auto !important
+		padding-left 15px
+		padding-right 15px
+		> div
+			height 100%
+	.slick-track
+		display flex
+		flex-wrap nowrap
+		justify-content flex-start
+		margin-left -15px
+		margin-right -15px
