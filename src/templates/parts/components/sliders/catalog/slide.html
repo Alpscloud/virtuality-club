@@ -1,5 +1,6 @@
-<div class="catalog-game-card">
-	<div class="catalog-game-card__content">
+<div class="catalog-game-card js-popup-content-parent">
+
+	<div class="catalog-game-card__content js-open-popup-template-btn" data-popup-lightmode="true" >
 		<div class="catalog-game-card__thumbnail thumbnail">
 			<img src="img/catalog/mini-1.png" alt="">
 
@@ -13,7 +14,89 @@
 		<h4 class="catalog-game-card__title">Doom 3 VR Edition</h4>
 	</div>
 
-	<div class="catalog-game-card__details">
-		<div class="catalog-game-card__details--inner popup-inner"></div>
+	<!-- Details -->
+	<div class="hidden-popup-content js-popup-content">
+
+		<div class="popup-content catalog-game-card__details">
+
+			<div class="catalog-game-card__gallery">
+				<div class="catalog-game-card__gallery--video_col catalog-game-card__gallery--col">
+
+					<a href="img/video/status.mp4" class="thumbnail catalog-game-card__gallery--video video-ic" data-fancybox="game-video-1">
+						<img src="img/top-game-poster.jpg" alt="">
+					</a>
+
+					<div class="thumbnail catalog-game-card__gallery--poster">
+						<img src="img/top-game-poster.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="catalog-game-card__gallery--imgs_col catalog-game-card__gallery--col">
+					<div>
+						<p class="popup__title">Doom 3 VR Edition</p>
+						<p class="game__category">Шутеры</p>
+					</div>
+
+					<div class="catalog-game-card__gallery--imgs">
+						<div class="catalog-game-card__gallery--imgs_item">
+							<a href="img/top-game-poster.jpg" class="thumbnail" data-fancybox="game-gallery-1">
+								<img src="img/top-game-poster.jpg" alt="">
+							</a>
+						</div>
+						<div class="catalog-game-card__gallery--imgs_item">
+							<a href="img/top-game-poster.jpg" class="thumbnail" data-fancybox="game-gallery-1">
+								<img src="img/top-game-poster.jpg" alt="">
+							</a>
+						</div>
+						<div class="catalog-game-card__gallery--imgs_item">
+							<a href="img/top-game-poster.jpg" class="thumbnail" data-fancybox="game-gallery-1">
+								<img src="img/top-game-poster.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="popup__description">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus sed vulputate. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In aliquam sem fringilla ut. Cursus sit amet dictum sit amet justo donec enim. Cras sed felis eget velit. Diam donec adipiscing tristique risus nec feugiat. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget.</p>
+			</div>
+
+
+			<button class="permalink js-close-popup-btn" type="button">
+				<span>Назад</span>
+				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+				</svg>
+			</button>
+
+			<div class="catalog-game-card__info">
+				<div class="row align-vertical-center align-horisontal-between">
+
+					<div class="game-params align-horisontal-start">
+						<span class="game-param game-param__rating">4,5</span>
+						<span class="game-param game-param__quantity">2 — 4</span>
+					</div>
+
+					<div class="catalog-game-card__btn">
+						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+					</div>
+
+
+					<div class="game-params align-horisontal-start">
+						<span class="game-param game-param__playtime">60 минут</span>
+						<span class="game__age">10+</span>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
 	</div>
+	<!-- //Details -->
 </div>

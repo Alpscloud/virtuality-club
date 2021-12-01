@@ -130,13 +130,21 @@
 			
 // top games
 .top-games-slider
-
+	height 100%
+	
+	.slick-track, .slick-list
+		height 100%
+		
+	.slick-slide
+		> div
+			height 100%
 	
 	&__wrapper
 		position relative
 		margin-top 55px
 		margin-left -130px
 		margin-right -130px
+		flex 1
 		
 		.btn-arrow
 			position absolute
@@ -243,27 +251,10 @@
 		margin-bottom 38px
 		
 	&__details
-		position absolute
-		z-index 1
-		top 15px
-		right 15px
-		left 15px
-		bottom 15px
-		background-color $color-bg
-		border-radius 10px
-		padding 30px 30px 10px
 		
-		opacity 0
-		visibility hidden
-		pointer-events none
-		
-		transition all .2s ease-in-out
-		
-		&.is-opened
-			opacity 1
-			visibility visible
-			pointer-events auto
-		
+		.permalink
+			margin-bottom 20px
+
 		&--btn
 			position relative
 			
@@ -382,17 +373,72 @@
 		font-size 15px
 		
 	&__details
-		border-radius 10px
-		border 1px solid $accent-color
-		position absolute
-		top 1px
-		right 1px
-		bottom 1px
-		left 1px
-		z-index 5
-		height 300px
-		width 100%
-
+		.game-params
+			margin-bottom 0
+			align-items center
+			
+		.game-param
+			margin-right 40px
+			&:last-child
+				margin-right 0
+				
+	&__gallery
+		display flex
+		flex-wrap nowrap
+		margin-bottom 30px
+		margin-left -10px
+		margin-right -10px
+		&--video
+			padding-top 0
+			margin-right 20px
+			flex 1
+			border-radius 5px
+			&_col
+				display flex
+				flex-wrap nowrap
+				justify-content space-between
+				width 60.7%
+		&--poster
+			width 160px
+			flex none
+			border-radius 5px
+		&--imgs
+			display flex
+			flex-wrap wrap
+			justify-content flex-start
+			margin-left -10px
+			margin-right -10px
+			margin-top 15px
+			&_item
+				width 33.333333%
+				padding 10px
+				.thumbnail
+					border-radius 5px
+					padding-top 100%
+					width 100%
+					display block
+			&_col
+				width 39.3%
+				display flex
+				flex-direction column
+				justify-content space-between
+				margin-bottom -10px
+		&--col
+			padding-left 10px
+			padding-right 10px
+			
+			
+		.popup__title
+			margin-bottom 6px
+			max-width 230px
+			
+		.game__category
+			font-size 22px
+			margin-bottom 0
+			
+			
+	&__info
+		margin-top 50px
 
 .catalog-categories
 	padding-left 95px
@@ -503,7 +549,7 @@
 			pseudo()
 			fullSize()
 			position absolute
-			background linear-gradient(0deg, #03255A, #03255A)
+			background-color #03255A
 			opacity 0
 			z-index 1
 			transition opacity .17s ease-in-out
@@ -638,27 +684,31 @@
 .faq-slider
 	.slick-slide
 		padding 15px
+		
 .faq-slide
-	height 200px
-	border-radius 5px
-	text-align center
-	color $light-accent-color
-	font 18px $Bold
-	line-height 21px
 	width 160px !important
-	margin 0 auto
-	padding 10px
-	position relative
-	display flex !important
-	align-items flex-end
-	justify-content center
-	transition transform .17s ease-in-out
-	p, h3
+	
+		
+	&__content
+		height 200px
+		border-radius 5px
+		text-align center
+		color $light-accent-color
+		font 18px $Bold
+		line-height 21px
+		margin 0 auto
+		padding 10px
 		position relative
-		z-index 1
-	&:hover
-		cursor pointer
-		transform scale(1.05, 1.05)
+		display flex !important
+		align-items flex-end
+		justify-content center
+		transition transform .17s ease-in-out
+		p, h3
+			position relative
+			z-index 1
+		&:hover
+			cursor pointer
+			transform scale(1.05, 1.05)
 		
 	&__overlay
 		color $secondary-color
@@ -671,6 +721,29 @@
 			height 80px
 			background linear-gradient(180deg, rgba(231, 231, 231, 0) 0%, rgba(231, 231, 231, 0.48) 20.83%, rgba(231, 231, 231, 0.64) 43.75%, rgba(231, 231, 231, 0.8) 100%)
 
+.faq-details
+	margin -30px
+	&__content
+		padding 30px
+		flex 1
+		min-height 300px
+	&__img
+		width 285px
+		flex none
+		position relative
+		.btn
+			position absolute
+			horisontal-center()
+			bottom 45px
+			z-index 1
+			
+			
+	.popup__title
+		text-transform none
+	
+	.popup__description
+		font-size 14px
+		line-height 17px
 // Feedbacks
 .feedback-slide
 	width 285px

@@ -284,11 +284,7 @@
 	.top-games__slider
 		flex 1
 		
-		.swiper-container,
-		.swiper-wrapper
-			height 100%
-			
-		.swiper-slide,
+		
 		.top-game
 			height 100%
 			
@@ -394,6 +390,23 @@
 		font 36px $MBold
 	&:last-child
 		margin-bottom 0
+		
+	&-details
+		&__gallery
+			margin-left -10px
+			margin-right -10px
+			margin-bottom 30px
+			display flex
+			flex-wrap wrap
+			justify-content flex-start
+			&--item
+				width 25%
+				padding 0 10px 10px
+				.thumbnail
+					border-radius 5px
+					display block
+					width 100%
+					padding-top 65%
 		
 // Sertificates
 .sertificates

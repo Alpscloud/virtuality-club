@@ -75,6 +75,28 @@
 			
 
 // Video link
+.video-ic
+	position relative
+	overflow hidden
+	&:before
+		pseudo()
+		position absolute
+		fullSize()
+		z-index 1
+		opacity 0
+		background-color rgba($secondary-color, .25)
+		transition opacity .17s ease-in-out
+	&:after
+		pseudo()
+		position absolute
+		position-center()
+		z-index 2
+		width 50px
+		height 50px
+		background url('../img/icons/svg/play.svg') 50% no-repeat / contain
+	&:hover
+		&:before
+			opacity 1
 
 .video-link
 	display inline-block
@@ -255,3 +277,85 @@
 		display flex
 		flex-wrap nowrap
 		margin-bottom 20px
+		
+//socials
+.socials
+	margin-top 17px
+	white-space nowrap
+	display flex
+	justify-content space-between
+	font-size 0
+	flex-wrap nowrap
+	li
+		display inline-block
+		margin-right 15px
+		&:last-child
+			margin-right 0
+			
+	a
+		display inline-block
+		svg
+			svg()
+			fill #747577
+		&:hover
+			svg
+				fill $accent-color
+				
+
+// Scrols
+.nicescroll-rails 
+	border-radius 5px
+	width 4px
+	background-color #ADC9D6
+	display flex
+	
+	
+	.nicescroll-cursors
+		float none
+		margin 0 auto
+		background-color $accent-color
+		
+
+.iScrollVerticalScrollbar
+	width 4px !important
+	border-radius 5px !important
+	background-color #ADC9D6 !important
+	.iScrollIndicator
+		width 100% !important
+		background $accent-color !important
+		
+
+// Fancybox
+.fancybox 
+	.fancybox-bg
+		background $basic-black-color
+	
+	&-is-open 
+		.fancybox-bg
+			opacity .5
+
+.fancybox-container		
+	.fancybox-button
+		display inline-block
+		background none
+		opacity 1
+		width 30px
+		height 30px
+		padding 0
+		color $alternate-light-text-color
+		svg
+			svg()
+			
+			path
+				stroke $alternate-light-text-color
+				stroke-width 2px
+				
+	.fancybox-navigation
+		svg
+			path
+				stroke-width 0
+				
+	
+			
+.fancybox-caption, .fancybox-infobar, .fancybox-navigation .fancybox-button, .fancybox-toolbar
+	opacity 1 !important

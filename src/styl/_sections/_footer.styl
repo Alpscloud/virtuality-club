@@ -1,2 +1,164 @@
 .footer
 	background-color $footer-bg
+	padding 60px 0 35px
+	color $footer-color
+	font-family $Bold
+	font-size 12px
+	&__row
+		margin-bottom 50px
+		&:last-child
+			margin-bottom 0
+			
+	&-bottom
+		margin-top 	45px
+	
+	.logo
+		margin-bottom 25px
+		margin-right 	0
+		
+	.support
+		margin-top 15px
+		display flex
+		white-space nowrap
+		flex-wrap nowrap
+		align-items center
+		justify-content flex-start
+		&__link
+			display inline-block
+			color inherit
+			position relative
+			padding-left 27px
+			margin-left 18px
+			line-height 1
+			svg
+				svg()
+				position absolute
+				top 50%
+				transform translateY(-50%)
+				left 0
+				width 20px
+				height 20px
+				fill currentColor
+			&:hover
+				color $accent-color
+				svg
+					fill $accent-color
+					
+.footer-col
+	&:nth-child(1)
+		width 42.8%
+	&:nth-child(2)
+		width 57.2%
+		.footer-col__item
+			&:nth-child(1)
+				width 190px
+				flex none
+			&:nth-child(2)
+				flex 1
+			&:nth-child(3)
+				width 240px
+				flex none
+		
+
+.footer-nav
+
+	li
+		margin-bottom 16px
+		&:last-child
+			margin-bottom 0
+			
+	a
+		text-transform uppercase	
+		color #E4E4E4
+		font-size 12px
+		&:hover,
+		&.is-active
+			color $accent-color
+			
+
+	&__main
+		ul
+			column-count 1
+		a
+			font 16px $MBold
+			line-height 17px
+			color inherit
+			text-transform none
+			&.is-active,
+			&:hover
+				color $accent-color
+				
+.footer-subnav
+	li
+		display inline-block
+		margin-right 26px
+		&:last-child
+			margin-right 0
+	a
+		color inherit
+		&:hover,
+		&.is-active
+			color $accent-color
+				
+
+
+.footer-search
+	&__group
+		position relative
+		.btn-search
+			position absolute
+			vertical-center()
+			left 15px
+			width 19px
+			height 19px
+			svg
+				fill $footer-color
+			&:hover
+				svg
+					fill $accent-color
+	&__input
+		display block
+		width 100%
+		border 1px solid $footer-color
+		color $basic-white-color
+		text-align center
+		font 14px $Bold
+		border-radius 5px
+		height 45px
+		padding 5px 10px 5px 40px
+		&:focus,
+		&:hover
+			border-color $accent-color
+		&::-webkit-input-placeholder
+			font 14px $Bold
+			color $footer-color
+		&::-moz-placeholder
+			font 14px $Bold
+			color $footer-color
+		&:-moz-placeholder
+			font 14px $Bold
+			color $footer-color
+		&:-ms-input-placeholder
+			font 14px $Bold
+			color $footer-color
+			
+
+.simple-phone
+	display inline-block
+	color #E4E4E4
+	white-space nowrap
+	font 18px $Bold
+	margin-top 14px
+	&:hover
+		color $accent-color
+	
+.footer-contacts
+	line-height 19px
+	a
+		color inherit
+		&:hover
+			color $accent-color
+	p
+		margin-bottom 14px
+		&:last-child
+			margin-bottom 0
