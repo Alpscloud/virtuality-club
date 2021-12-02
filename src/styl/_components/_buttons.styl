@@ -87,6 +87,10 @@
 			width 94.15%
 			height 94.15%
 			background-image url('../img/decor/btn/inner.svg')
+			
+		&:hover
+			svg
+				fill $secondary-color
 		
 			
 		&__next
@@ -150,8 +154,20 @@
 			&:hover
 				svg
 					fill $secondary-color
-					
 	
+
+	&-tab
+		display inline-block
+		text-align center
+		font 18px $MBold
+		border 1px solid transparent
+		color $secondary-color
+		border-radius 5px
+		padding 14px 28px
+		&:hover,
+		&.is-active
+			border-color $accent-color
+			color $accent-color
 		
 		
 	&-close
@@ -163,9 +179,17 @@
 			pseudo()
 			position absolute	
 			position-center()
+			width 90%
+			height 90%
+			background url('../img/decor/close/figure.svg') 50% no-repeat / contain
+			animation rotate-reverse 15s linear infinite forwards
+		&:after
+			pseudo()
+			position absolute
+			position-center()
 			width 100%
 			height 100%
-			background url('../img/decor/close/figure.svg') 50% no-repeat / contain
+			background url('../img/decor/close/figure-outer.svg') 50% no-repeat / contain
 			animation rotate 10s linear infinite forwards
 		svg
 			svg()
@@ -191,6 +215,38 @@
 			&:hover
 				svg
 					stroke $accent-color
+					
+	&-skew
+		display inline-block
+		width 230px
+		height 72px
+		position relative
+		&:before,
+		&:after
+			pseudo()
+			position absolute
+			width 100%
+			height 100%
+			top 0
+			left 0
+			background-repeat no-repeat
+			background-size contain
+			background-position 50%
+			transition opacity .17s ease-in-out
+		&:before
+			background-image url('../img/decor/skew-btn.svg')
+		&:after
+			opacity 0
+			z-index 1
+			background-image url('../img/decor/skew-btn-hover.svg')
+		span
+			display none
+			
+		&:hover
+			&:before
+				opacity 0
+			&:after
+				opacity 1
 				
 	&-close-fancy
 		width 40px

@@ -223,22 +223,24 @@
 // Sect includes
 .includes-wrapper
 	position relative
+	display flex
+	flex-direction column
+	.title
+		flex none
 	
 .includes
 	&__row
 		width 100%
-		position absolute
-		bottom 0
-		height 	100%
-		left 0
-		padding-left 130px
+		flex 1
+		height 100%
+		//padding-left 130px
 		padding-right 130px
 		z-index 1
 	&-img
 		flex none
-		max-width 505px
+		//max-width 505px
 		height 100%
-		max-height 744px
+		//max-height 744px
 		display flex
 		align-items flex-end
 		position relative	
@@ -252,27 +254,47 @@
 			display block
 			height 100%
 			width auto
-			max-width 505px
-			max-height 744px
+			//max-width 505px
+			//max-height 744px
 			
 // How to play
 
 .how-to-play
-	padding-top 75px
+	display flex
+	flex-direction column
+	height 100%
 	&__imgs
 		position relative
-		padding-left 100px
-		margin-top 40px
+		width 100%
+		max-width 1100px
+		margin 40px auto 0
+		flex 1
+		padding-bottom 50px
 		
 	&__scheme
-		
-		width 577px
 		height 577px
-
+		width 577px
+		display block
+		position relative
+		.btn-skew
+			position absolute
+			bottom -35px
+			left 152px
 		img
-			width 100%
+			width auto
+			height 100%
 			display block
 
+	&__dude
+		position absolute
+		top 0
+		height 100%
+		left 577px
+		img
+			display block
+			width auto
+			height 100%
+		
 
 // top games
 .top-games__wrapper
@@ -296,6 +318,7 @@
 	
 	&-games
 		flex 1
+		padding-bottom 50px
 		
 	
 		

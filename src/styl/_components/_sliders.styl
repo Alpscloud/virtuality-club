@@ -61,12 +61,21 @@
 	min-width 0
 	padding-left 30px
 	padding-bottom 100px
+	height 100%
 	
 	width 100%
 	&__wrapper
 		position relative
 		flex 1
 		margin-right -130px
+		height 100%
+		
+		.slick-list,
+		.slick-track,
+		.slick-slide
+			height 100%
+			> div
+				height 100%
 	
 		.slider-controls
 			position absolute	
@@ -102,13 +111,18 @@
 	will-change transform
 	transition transform .23s ease-in-out
 	margin 0 auto
+	height 100%
+	display flex !important
+	flex-direction column
 	&__title
 		font 20px $MBold
 		line-height 21px
 	&__img
 		border-radius 5px
 		margin-bottom 15px
-		padding-top 138%
+		//padding-top 138%
+		padding-top 0
+		flex 1
 		&:before
 			pseudo()
 			fullSize()
@@ -127,6 +141,7 @@
 			line-height 46px
 			transition opacity .17s ease-in-out
 			opacity 0
+			flex-col-center()
 			
 // top games
 .top-games-slider
@@ -298,13 +313,12 @@
 	.slick-track,
 	.slick-list
 		height 100%
-		position static
+	
 
 		
 .catalog-slider
 	height 100%
-	position relative
-	padding 2px
+
 	
 
 
@@ -731,6 +745,7 @@
 		width 285px
 		flex none
 		position relative
+		border-radius 0 5px 5px 0
 		.btn
 			position absolute
 			horisontal-center()

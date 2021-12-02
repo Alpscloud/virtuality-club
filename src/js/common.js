@@ -6,7 +6,7 @@ $(document).ready(function() {
 	// ========= =========== =========== ===========
 
 
-	// Fancybox
+	// Functions
 	function fancyboxInit() {
 		$('[data-fancybox]').fancybox({
 			loop: false,
@@ -23,7 +23,13 @@ $(document).ready(function() {
 		});
 	}
 
+	function initPhoneMask() {
+		$("input[type=tel]").inputmask({"mask": "+7 (999) 999-9999","clearIncomplete": false});
+	}
+
 	fancyboxInit();
+
+
 
 
 
@@ -63,7 +69,23 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.js-popup').removeClass('is-lightmode');
 			$('.js-popup').removeClass('is-outer');
+			$('.js-popup').removeClass('is-close-offset');
 		}, 310);
+		
+
+	});
+
+	$('.js-popup').on('click', '.js-open-popup-order-btn', function() {
+		$(this).parents('.js-popup').stop().fadeOut(300);
+
+		setTimeout(function() {
+			$('.js-popup').removeClass('is-lightmode');
+			$('.js-popup').removeClass('is-outer');
+			$('.js-popup').removeClass('is-close-offset');
+		}, 310);
+
+
+		$('.js-popup-order').stop().fadeIn(300);
 		
 
 	});
@@ -81,6 +103,7 @@ $(document).ready(function() {
 			setTimeout(function() {
 				$('.js-popup').removeClass('is-lightmode');
 				$('.js-popup').removeClass('is-outer');
+				$('.js-popup').removeClass('is-close-offset');
 			}, 310);
 	
 		}
@@ -103,6 +126,10 @@ $(document).ready(function() {
 			$('.js-popup-template').addClass('is-outer');
 		}
 
+		if ($(this).attr('data-popup-close-offset')) {
+			$('.js-popup-template').addClass('is-close-offset');
+		}
+
 
 		$('.js-popup-template .popup-content').empty().append(popupContent);
 		$('.html').addClass('is-fixed');
@@ -112,6 +139,15 @@ $(document).ready(function() {
 		fancyboxInit();
 		
 		
+	});
+
+
+	$('.js-open-popup-order-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('.html').addClass('is-fixed');
+
+		$('.js-popup-order').stop().fadeIn(300);
 	});
 
 
@@ -209,7 +245,7 @@ $(document).ready(function() {
 			self.slick({
 				rows: 2,
 				infinite: true,
-				slidesToShow: 4,
+				slidesToShow: 5,
 				nextArrow: self.parents('.catalog-games__slider').find('.js-catalog-games-slider-btn-next'),
 				prevArrow: self.parents('.catalog-games__slider').find('.js-catalog-games-slider-btn-prev'),
 			});
@@ -326,7 +362,73 @@ $(document).ready(function() {
 		});
 	}
 	
+
+	// forms
+	$('.js-required-input').on('focus',function() {
+		if($(this).hasClass('is-error')) {
+			$(this).removeClass('is-error');
+		}
+	});
+
+
+	$('.js-input-date').datepicker({
+		monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		minDate: 0,
+		format: 'dd.mm.yyyy',
+		setDate: new Date()
+	});
+
+	$('.js-select').selectmenu();
+
+
+	var durationTooltip = $('<span class="form-range__tooltip"></span>');
+	var peopleTooltip = $('<span class="form-range__tooltip"></span>');
+
+	$('.js-duration-range').slider({
+		animate: "slow",
+		range: "min",
+		min: 10,
+		max: 100,
+		steps: 20,
+		value: 10,
+		slide: function(event, ui) {
+			$('.js-duration-range-value').val(ui.value).trigger('change');
+			durationTooltip.text(ui.value + ' минут(ы)');
+		}
+	}).find('.ui-slider-handle').append(durationTooltip);
+
+	$('.js-people-range').slider({
+		animate: "slow",
+		range: "min",
+		min: 10,
+		max: 100,
+		steps: 5,
+		value: 10,
+		slide: function(event, ui) {
+			$('.js-people-range-value').val(ui.value).trigger('change');
+			peopleTooltip.text(ui.value + ' человек(а)');
+		}
+	}).find('.ui-slider-handle').append(peopleTooltip);
+
+
+	$('.js-order-tab-content').not(":first").hide();
+	$('.js-order-tab-btn:first').addClass('is-active');
+
+	$('.js-order-tab-btn').on('click', function(e) {
+		e.preventDefault();
+		$('.js-order-tab-content').removeClass('is-active');
+		$('.js-order-tab-btn').removeClass('is-active').eq($(this).index()).addClass('is-active');
+		$('.js-order-tab-content').hide().eq($(this).index()).fadeIn().addClass('is-active');
+	}).eq(0).addClass('is-active');
+
+
+	initPhoneMask();
+
+
+
 	
+		
 
 
 	

@@ -22,6 +22,7 @@
 
 
 	<!-- Main file with styles -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 	
 	<link rel="stylesheet" href="css/global-blocks.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
@@ -251,7 +252,7 @@
 								<div class="promo-slide__img">
 									<img src="img/promo/1.png" alt="">
 
-									<button class="btn" type="button"><span>Забронировать</span></button>
+									<button class="btn js-open-popup-order-btn" type="button"><span>Забронировать</span></button>
 
 									<div class="decor-circles"></div>
 
@@ -294,7 +295,7 @@
 								<div class="promo-slide__img">
 									<img src="img/promo/2.png" alt="">
 
-									<button class="btn" type="button"><span>Забронировать</span></button>
+									<button class="btn js-open-popup-order-btn" type="button"><span>Забронировать</span></button>
 
 									<div class="decor-circles"></div>
 
@@ -336,7 +337,7 @@
 								<div class="promo-slide__img">
 									<img src="img/promo/3.png" alt="">
 
-									<button class="btn" type="button"><span>Забронировать</span></button>
+									<button class="btn js-open-popup-order-btn" type="button"><span>Забронировать</span></button>
 
 									<div class="decor-circles"></div>
 
@@ -544,13 +545,15 @@
 				<section class="section sect__how-to-play gradient-bg">
 					<div class="section-content">	
 						<div class="container full-height">	
-							<div class="how-to-play">
+							<div class="how-to-play sect-gutter-top">
 								<h2 class="title text-center title-h2-size">Как играть в виртуальную реальность?</h2>
 
 
 								<div class="how-to-play__imgs">
 									<div class="how-to-play__scheme">
 										<img src="img/how-to-play.png" alt="">
+
+										<button class="btn-skew js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 									</div>
 
 									<div class="how-to-play__dude">
@@ -601,7 +604,7 @@
 			</div>
 
 			<div class="top-game__btn">
-				<button class="btn-default" type="button">Записаться</button>
+				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
 
 
 				<span class="game__age">10+</span>
@@ -680,86 +683,7 @@
 			</div>
 
 			<div class="top-game__btn">
-				<button class="btn-default" type="button">Записаться</button>
-
-
-				<span class="game__age">10+</span>
-			</div>
-		</div>
-	</div>
-
-	<!-- Details -->
-	<div class="hidden-popup-content js-popup-content">
-
-		<div class="popup-content top-game__details">
-
-			<p class="popup__title text-center">beyond medusa’s gate</p>
-			<p class="game__category text-center">VR Квест</p>
-
-			<div class="popup__description">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus sed vulputate. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In aliquam sem fringilla ut. Cursus sit amet dictum sit amet justo donec enim. Cras sed felis eget velit. Diam donec adipiscing tristique risus nec feugiat. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget.</p>
-			</div>
-
-			<button class="permalink js-close-popup-btn" type="button">
-				<span>Назад</span>
-				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
-				</svg>
-			</button>
-
-
-			<div class="game-params align-horisontal-center">
-				<span class="game-param game-param__rating">4,5</span>
-				<span class="game-param game-param__quantity">2 — 4</span>
-				<span class="game-param game-param__playtime">60 минут</span>
-			</div>
-
-
-			<div class="top-game__details--btn text-center">
-				<button class="btn btn-sm js-close-popup-btn" type="button"><span>Получить</span></button>
-
-				<span class="game__age">10+</span>
-			</div>
-
-		</div>
-
-
-	</div>
-	<!-- //Details -->
-
-</div>
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									
-									<div class="top-game js-popup-content-parent">
-	<div class="top-game__inner">
-		<a href="video/status.mp4" data-fancybox class="top-game__poster has-trailer">
-			<img src="img/top-game-poster.jpg" alt="">
-		</a>
-		<div class="top-game__content">
-			<h3 class="game__title">beyond medusa’s gate</h3>
-			<p class="game__category">VR Квест</p>
-
-			<div class="game__description">
-				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
-			</div>
-
-			<button class="permalink js-open-popup-template-btn" type="button" data-popup-lightmode="true" data-popup-outer="true">
-				<span>Подробнее</span>
-				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
-				</svg>
-			</button>
-
-			<div class="game-params align-horisontal-between">
-				<span class="game-param game-param__rating">4,5</span>
-				<span class="game-param game-param__quantity">2 — 4</span>
-				<span class="game-param game-param__playtime">60 минут</span>
-			</div>
-
-			<div class="top-game__btn">
-				<button class="btn-default" type="button">Записаться</button>
+				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
 
 
 				<span class="game__age">10+</span>
@@ -838,7 +762,86 @@
 			</div>
 
 			<div class="top-game__btn">
-				<button class="btn-default" type="button">Записаться</button>
+				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
+
+
+				<span class="game__age">10+</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Details -->
+	<div class="hidden-popup-content js-popup-content">
+
+		<div class="popup-content top-game__details">
+
+			<p class="popup__title text-center">beyond medusa’s gate</p>
+			<p class="game__category text-center">VR Квест</p>
+
+			<div class="popup__description">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus sed vulputate. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In aliquam sem fringilla ut. Cursus sit amet dictum sit amet justo donec enim. Cras sed felis eget velit. Diam donec adipiscing tristique risus nec feugiat. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget.</p>
+			</div>
+
+			<button class="permalink js-close-popup-btn" type="button">
+				<span>Назад</span>
+				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+				</svg>
+			</button>
+
+
+			<div class="game-params align-horisontal-center">
+				<span class="game-param game-param__rating">4,5</span>
+				<span class="game-param game-param__quantity">2 — 4</span>
+				<span class="game-param game-param__playtime">60 минут</span>
+			</div>
+
+
+			<div class="top-game__details--btn text-center">
+				<button class="btn btn-sm js-close-popup-btn" type="button"><span>Получить</span></button>
+
+				<span class="game__age">10+</span>
+			</div>
+
+		</div>
+
+
+	</div>
+	<!-- //Details -->
+
+</div>
+									<!-- //Slide -->
+
+									<!-- Slide -->
+									
+									<div class="top-game js-popup-content-parent">
+	<div class="top-game__inner">
+		<a href="video/status.mp4" data-fancybox class="top-game__poster has-trailer">
+			<img src="img/top-game-poster.jpg" alt="">
+		</a>
+		<div class="top-game__content">
+			<h3 class="game__title">beyond medusa’s gate</h3>
+			<p class="game__category">VR Квест</p>
+
+			<div class="game__description">
+				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
+			</div>
+
+			<button class="permalink js-open-popup-template-btn" type="button" data-popup-lightmode="true" data-popup-outer="true">
+				<span>Подробнее</span>
+				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+				</svg>
+			</button>
+
+			<div class="game-params align-horisontal-between">
+				<span class="game-param game-param__rating">4,5</span>
+				<span class="game-param game-param__quantity">2 — 4</span>
+				<span class="game-param game-param__playtime">60 минут</span>
+			</div>
+
+			<div class="top-game__btn">
+				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
 
 
 				<span class="game__age">10+</span>
@@ -977,7 +980,7 @@
 									
 								</div>
 
-								<div class="catalog-games gutter-bottom">
+								<div class="catalog-games">
 									<!-- GAMES BLOCK -->
 									<div class="catalog-games__slider slider js-catalog-games-block" data-index="0">
 										
@@ -1065,7 +1068,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1169,7 +1172,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1273,7 +1276,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1377,7 +1380,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1481,7 +1484,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1585,7 +1588,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1689,7 +1692,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1793,7 +1796,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -1897,7 +1900,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2023,7 +2026,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2127,7 +2130,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2231,7 +2234,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2335,7 +2338,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2439,7 +2442,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2565,7 +2568,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2669,7 +2672,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2773,7 +2776,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2877,7 +2880,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -2981,7 +2984,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3085,7 +3088,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3189,7 +3192,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3293,7 +3296,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3397,7 +3400,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3501,7 +3504,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3627,7 +3630,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3731,7 +3734,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3835,7 +3838,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -3939,7 +3942,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4043,7 +4046,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4147,7 +4150,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4251,7 +4254,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4378,7 +4381,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4482,7 +4485,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4586,7 +4589,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4690,7 +4693,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4794,7 +4797,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -4898,7 +4901,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5002,7 +5005,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5106,7 +5109,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5210,7 +5213,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5314,7 +5317,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5418,7 +5421,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5545,7 +5548,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5649,7 +5652,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5753,7 +5756,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5857,7 +5860,7 @@
 					</div>
 
 					<div class="catalog-game-card__btn">
-						<button class="btn-default js-close-popup-btn" type="button"><span>Записаться</span></button>
+						<button class="btn-default js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 					</div>
 
 
@@ -5919,7 +5922,7 @@
 								<!-- //Video link -->
 
 								<div class="gallery-btn">
-									<button class="btn" type="button"><span>Записаться</span></button>
+									<button class="btn js-open-popup-order-btn" type="button"><span>Записаться</span></button>
 								</div>
 
 								<div class="gallery-slider-thumbnails__wrapper">
@@ -6591,7 +6594,7 @@
 									<div class="faq-slider js-faq-slider">
 										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6602,7 +6605,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6625,7 +6628,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6636,7 +6639,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6657,7 +6660,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6668,7 +6671,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6691,7 +6694,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6702,7 +6705,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6723,7 +6726,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6734,7 +6737,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6757,7 +6760,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6768,7 +6771,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6789,7 +6792,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6800,7 +6803,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6823,7 +6826,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6834,7 +6837,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6855,7 +6858,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6866,7 +6869,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6889,7 +6892,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6900,7 +6903,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6921,7 +6924,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6932,7 +6935,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6955,7 +6958,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -6966,7 +6969,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -6987,7 +6990,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -6998,7 +7001,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7021,7 +7024,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -7032,7 +7035,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7053,7 +7056,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -7064,7 +7067,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7087,7 +7090,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -7098,7 +7101,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7119,7 +7122,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -7130,7 +7133,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7153,7 +7156,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -7164,7 +7167,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7185,7 +7188,7 @@
 </div>
 										<!-- //Slide -->										<!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg faq-slide__overlay js-open-popup-template-btn" style="background-image: url('img/faq.jpg');" data-popup-close-offset="true">
 		<h3>Безобасно ли это?</h3>
 	</div>
 
@@ -7196,7 +7199,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Безобасно ли это?</h4>
+					<p class="popup__title">Безобасно ли это?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -7219,7 +7222,7 @@
 
 <!-- Slide -->
 <div class="faq-slide js-popup-content-parent" >
-	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-lightmode="true">
+	<div class="faq-slide__content bg js-open-popup-template-btn" style="background-image: url('img/faq-2.jpg');" data-popup-close-offset="true">
 		<h3>Как часто бывают скидки?</h3>
 	</div>
 
@@ -7230,7 +7233,7 @@
 
 			<div class="row row-nowrap faq-details__row">
 				<div class="faq-details__content">
-					<h4 class="popup__title">Как часто бывают скидки?</h4>
+					<p class="popup__title">Как часто бывают скидки?</p>
 
 					<div class="popup__description">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -8003,17 +8006,193 @@
 </div>
 <!-- //Popup -->
 <!-- Popup -->
-<div class="popup js-popup">
-	<div class="popup__overflow">
+<div class="popup js-popup js-popup-order">
+	<div class="popup__overflow js-custom-scroll">
+
 		<div class="popup__body text-center">
-			<button class="btn-close js-close-popup-btn" type="button"></button>
-			<!-- Popup content-->
-			<div class="popup__content">
-				<h3 class="popup__title">Popup</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero, odio, amet.</p>
+			
+			<div class="popup-inner">
+
+				<!-- Close -->
+				<button class="btn-close js-close-popup-btn" type="button">
+					<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+						<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+						<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+					</svg>
+				</button>
+				<!-- Close -->
+
+
+				<div class="popup-content">
+					<div class="order-controls">
+						<button class="btn-tab js-order-tab-btn is-active" type="button">Записаться</button>
+						<button class="btn-tab js-order-tab-btn" type="button">Консультация</button>
+					</div>
+
+					<div class="order-content">
+						<div class="order-content__block js-order-tab-content">
+							<form  class="order-form form">
+
+								<div class="form-groups__row row align-horisontal-start">
+									<div class="form-group col-w-33">
+										<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="email" name="email" class="form-input " placeholder="Введите email">
+									</div>
+								</div>
+
+								<div class="order-form__services">
+
+									<div class="row align-vertical-center row-nowrap form-radios__row align-horisontal-between ">
+										
+										<p class="form-label">Услуга</p>
+
+										<div class="form-radios">
+											<label  class="form-radio">
+												<input type="radio" name="service" value="Игровой сеанс" checked>
+												<span class="form-radio__item">Игровой сеанс</span>
+											</label>
+
+											<label  class="form-radio">
+												<input type="radio" name="service" value="Аренда клуба">
+												<span class="form-radio__item">Аренда клуба</span>
+											</label>
+										</div>
+
+
+									</div>
+
+
+									<div class="row align-vertical-center row-nowrap row-gutters form-time__row align-horisontal-between">
+										<div class="form-row__col col-gutters">
+											<div class="row align-horisontal-between row-nowrap align-vertical-start">
+												<p class="form-label form-label__with-ic ic-calendar">Дата</p>
+
+												<div class="form-group form-group__short">
+													<input type="text" class="form-input form-input-ui js-input-date" name="date" placeholder="02/12/2021">
+												</div>
+											</div>
+										</div>
+										<div class="form-row__col col-gutters">
+											<div class="row align-horisontal-between row-nowrap align-vertical-start">
+												<p class="form-label">Время<br> посещения</p>
+
+												<div class="form-group form-group__short">
+													<select name="Время"  class="form-input form-select js-select">
+														<option value="10:00" selected>10:00</option>
+														<option value="11:00">11:00</option>
+														<option value="12:00">13:00</option>
+														<option value="13:00">13:00</option>
+														<option value="14:00">14:00</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-ranges__row">
+										<div class="form-range__group col-w-100">
+											<div class="row align-vertical-center align-horisontal-between">
+												<p class="form-label form-label__with-ic ic-time">Время игры</p>
+
+												<input type="hidden" name="Время игры" class="js-duration-range-value">
+
+												<div class="form-range">
+													<div class="form-range__input js-duration-range"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-range__group col-w-100">
+											<div class="row align-vertical-center align-horisontal-between">
+												<p class="form-label form-label__with-ic ic-people">Количество человек</p>
+												<input type="hidden" name="Кол-во человек" class="js-people-range-value">
+												<div class="form-range">
+
+													<div class="form-range__input js-people-range"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="form-checkboxes__row row align-vertical-center row-nowrap">
+									<p class="form-label">Что предпочитаете?</p>
+
+									<div class="form-checkboxes row-gutters">
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name="VR Арена">
+												<span class="form-checkbox__item">VR Арена</span>
+											</label>
+										</div>
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name="VR Аркады">
+												<span class="form-checkbox__item">VR Аркады</span>
+											</label>
+										</div>
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name=" VR Квесты">
+												<span class="form-checkbox__item">VR Квесты</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-submit order-form__submit text-center">
+									<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+								</div>
+
+							</form>
+						</div>
+
+						<div class="order-content__block js-order-tab-content">
+							<form  class="order-form form">
+
+								<div class="form-groups__row row align-horisontal-start">
+									<div class="form-group col-w-33">
+										<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="email" name="email" class="form-input " placeholder="Введите email">
+									</div>
+								</div>
+
+
+								<div class="form-submit order-form__submit text-center">
+									<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+								</div>
+
+							</form>
+						</div>
+
+
+						
+					</div>
+				</div>
+				
 			</div>
-			<!-- //Popup content-->
+
 		</div>
+
 	</div>
 </div>
 <!-- //Popup -->

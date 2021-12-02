@@ -359,3 +359,169 @@
 			
 .fancybox-caption, .fancybox-infobar, .fancybox-navigation .fancybox-button, .fancybox-toolbar
 	opacity 1 !important
+
+
+// Ui
+
+.ui-widget.ui-widget-content
+	z-index 999 !important
+	background-color #D7E8F1
+	border-radius 5px
+	border none
+	padding 25px
+	box-sizing border-box
+	
+.ui-datepicker 
+	.ui-datepicker-header
+		background transparent
+		border-radius 0
+		padding 0
+		height 20px
+		display flex
+		align-items center
+		justify-content center
+		border none
+		margin-bottom 20px
+
+		
+	.ui-datepicker-title
+		font 14px $Bold
+		color $accent-color
+
+		
+	.ui-datepicker-prev,
+	.ui-datepicker-next
+		width 20px
+		height 20px
+		vertical-center()
+		
+		span
+			display none
+			
+		&:before
+			pseudo()
+			position absolute
+			position-center()
+			width 7px
+			height 12px
+			background-position 50%
+			background-size contain
+			background-repeat no-repeat
+			
+		&:hover
+			border none
+			background transparent
+			margin 0
+			cursor pointer
+			
+			
+	.ui-datepicker-prev
+		&:before
+			background-image url('../img/icons/svg/date-arrow.svg')
+	.ui-datepicker-next
+		&:before
+			background-image url('../img/icons/svg/date-arrow-next.svg')
+			
+
+	th
+		color $accent-color
+		font 14px $Bold
+		
+	td
+		background none
+		border none
+		
+		.ui-state-default
+			border none
+			background none
+			font 14px $Reg
+			color $accent-color
+			flex-col-center()
+			border-radius 50%
+			width 26px
+			height 26px
+			&:hover
+				color $secondary-color
+			
+		&.ui-datepicker-today
+			.ui-state-highlight
+				color $basic-white-color
+				background-color $accent-color
+				
+
+.ui-selectmenu-menu
+	z-index 999 !important
+	
+	.ui-menu
+		padding 0
+		border-radius 5px
+
+	.ui-menu-item-wrapper
+		padding 0
+		
+	.ui-menu-item-wrapper
+		padding 10px
+		font 16px $MBold
+		color $accent-color	
+		&.ui-state-active
+			background $accent-color
+			color $basic-white-color
+			border none
+			
+.ui-selectmenu-button
+	padding 0 0 10px 0
+	&.ui-button
+		width 100%
+		display block
+		background none
+		border none
+		box-shadow none
+		color $accent-color
+		font 16px $MBold
+		padding-bottom 10px
+		border-bottom 1px solid $accent-color
+		border-radius 0
+	&.ui-corner-top
+		.ui-select-menu-icon
+			transform translateY(-50%) rotate(-180deg)
+	
+	
+.ui-select-menu-icon
+	display inline-block
+	
+.ui-button 
+	.ui-icon
+		background url('../img/icons/svg/select-arrow.svg') 50% no-repeat / contain !important
+		
+	&:hover
+		.ui-icon
+			background url('../img/icons/svg/select-arrow.svg') 50% no-repeat / contain !important
+			
+
+		
+
+.ui-front
+	z-index 999 !important
+	
+
+.ui-slider
+	&.form-range__input
+		height 2px
+		background-color $alternate-light-text-color
+		border-radius 10px
+		padding 0
+		
+	.ui-slider-range-min
+		background-color $accent-color
+		border-radius 10px
+		
+	.ui-slider-handle
+		border 2px solid $accent-color
+		border-radius 50%
+		width 20px
+		height 20px
+		background-color $basic-white-color
+		vertical-center()
+		
+		&.ui-state-focus
+			border-color $accent-color
