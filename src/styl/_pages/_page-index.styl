@@ -10,11 +10,20 @@
 .promo-slider
 	height 100%
 	
+	.slick-active,
+	.slick-current
+		.promo-slide
+			opacity 1
+			visibility visible
+	
 .promo-slide
 	position relative
 	padding-top 165px
 	height 100vh
-	
+	transition all .23s ease-in-out
+	// opacity 0
+	// visibility hidden
+	overflow hidden
 	.container
 		position relative
 		height 100%
@@ -103,22 +112,26 @@
 .full-height
 	height calc(100vh - 105px)
 	
+.sect__advantages
+	.container
+		padding-right 0
+		height 100%
+			
 .advantages
+	&__row
+		height 100%
 	&-content
-		flex 1
 		padding-top 75px
 		padding-right 30px
 		&__text
 			max-width 700px
 		
 	&-text
-		//width 575px
-		width 1100px
-		flex none
+		flex 1
 		background-position left center
 		display flex
 		align-items flex-end
-		padding 0 95px 140px
+		padding 0 95px 140px 140px
 		font 20px $Bold
 		line-height 24px
 		color #F4F2F5
@@ -141,10 +154,7 @@
 		// 	background url('../img/decor/advantages-decor.svg') 50% no-repeat / 100% auto
 		// 	left -10px
 		
-	&-wrapper
-		.container
-			padding-right 0
-			
+	
 
 .advantages-items
 	position relative
@@ -158,9 +168,11 @@
 	width 200px
 	height 200px
 	flex-col-center()
+	color #8EC8E1
 	&__inner
 		width 82.5%
 		height 82.5%
+		outline 1px solid red
 	&:nth-child(1)
 		left 0
 		top 100px
@@ -193,14 +205,15 @@
 		background-size contain
 		width 55px
 		height 55px
-		margin-bottom 10px
+		display block
+		margin 0 auto 10px auto
 	&__inner
 		border-radius 50%
 		overflow hidden
 		flex-col-center()
 		position relative
-		width 165px
-		height 165px
+		// width 165px
+		// height 165px
 		&:after
 			pseudo()
 			position absolute
@@ -333,7 +346,7 @@
 	&:before
 		pseudo()
 		position absolute
-		z-index 2
+		z-index 1
 		bottom 0
 		left 0
 		width 100%
@@ -465,6 +478,8 @@
 .simple-sections
 	height auto 
 	
+
+	
 	section
 		overflow visible
 		
@@ -474,6 +489,175 @@
 		margin-bottom 15px
 	
 
+// Contacts
+.sect__contacts
+	padding 75px 0
+	
+.contacts-addresses
+	width fit-content
+	margin 0 auto
+	position relative	
+	&.is-active
+		.contacts-addresses
+			&__dropdown
+				opacity 1
+				visibility visible
+				margin-top 5px
+			&__current
+				svg
+					transform translateY(-50%) rotate(-180deg)
+					
+	&__wrapper
+		margin-bottom 30px
+		width calc(100% - 475px)
+		
+	&__current
+		position relative	
+		padding-right 85px
+		svg
+			svg()
+			fill none
+			width 30px
+			height 18px
+			stroke $secondary-color
+			fill $secondary-color
+			position absolute	
+			right 0
+			vertical-center()
+			margin-top 	2px
+		&--title
+			color $secondary-color
+			font 44px $MBold
+			line-height 1
+		&:hover
+			cursor pointer
+			
+	&__dropdown
+		position absolute	
+		top 100%
+		border-radius 5px
+		horisontal-center()
+		z-index 5
+		background-color #D7E8F1
+		width 100%
+		overflow hidden
+		transition all .17s ease-in-out
+		opacity 0
+		visibility hidden
+		margin-top 20px
+		
+		li
+			display block
+			padding 10px
+			font 16px $MBold
+			color $accent-color	
+			transition all .17s ease-in-out
+			&:hover
+				cursor pointer
+				color $basic-white-color
+				background-color $accent-color
+				
+
+.contacts-block
+	&__content
+		display flex
+		flex-wrap nowrap
+		
+	&__map
+		&--col
+			flex 1
+			
+	&__addresses
+		width 475px
+		padding-left 55px
+		> div
+			height 205px
+			padding-right 15px
+		
+	&__address
+		margin-bottom 55px
+		&.is-active
+			.contacts-block__address--value
+				svg
+					transform rotate(-180deg)
+		&:hover
+			cursor pointer
+		&:last-child
+			margin-bottom 0
+			
+		&--value
+			display flex
+			flex-wrap nowrap
+			align-items flex-start
+			svg
+				svg()
+				width 23px
+				height 13px
+				fill currentColor
+				margin-top 6px
+			&_title
+				position relative
+				font 26px $MBold
+				line-height 28px
+				padding-left 20px
+				flex 1
+				margin-right 30px
+				
+				
+
+				&:before
+					pseudo()
+					position absolute
+					top 11px
+					left 0
+					width 8px
+					height 8px
+					border-radius 50%
+					background-color currentColor
+					
+		&--information
+			padding-left 20px
+			padding-top 35px
+			display none
+			
+			&_list
+				margin-bottom 50px
+				font 14px $Bold
+				
+				li
+					margin-bottom 20px
+					a
+						color inherit
+						&:hover
+							color $accent-color
+					&:last-child
+						margin-bottom 0
+		
 
 
 			
+.contacts-block__map
+	flex 1
+	position relative
+	padding-top 40%
+	iframe
+		display block
+		width 100%
+		height 100%
+		position absolute
+		position-center()
+	&--col
+		display flex
+		flex-direction column
+		
+
+.contacts-block__gallery
+	display flex
+	flex-wrap wrap
+	justify-content flex-start
+	margin-top 30px
+	&--item
+		width 25%
+		.thumbnail
+			display block
+			border-radius 5px

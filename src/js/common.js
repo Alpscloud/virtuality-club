@@ -60,6 +60,17 @@ $(document).ready(function() {
 	});
 
 
+	$(document).on('click', function (e) {
+		var container = $('.search-wrapper');
+			if (container.has(e.target).length === 0){
+				if ($('.search-form').hasClass('is-opened')) {
+					$('.search-form').removeClass('is-opened');
+				}
+				
+			}
+	});
+
+
 	// Popups
 
 
@@ -155,16 +166,21 @@ $(document).ready(function() {
 	$('.js-custom-scroll').each(function() {
 
 
-	$(this).niceScroll({
-		cursorwidth: "4px",
-		autohidemode: true,
-		background: '#ADC9D6',
-		cursorcolor: "#0095D9",
-		cursorborder: "none", // css definition for cursor border
-		cursorborderradius: "5px"
-	});
+			$(this).niceScroll({
+				cursorwidth: "4px",
+				autohidemode: true,
+				background: '#ADC9D6',
+				cursorcolor: "#0095D9",
+				cursorborder: "none", // css definition for cursor border
+				cursorborderradius: "5px"
+			});
+
+
+
 
 		});
+
+
 	//=============
 
 
@@ -183,8 +199,8 @@ $(document).ready(function() {
 			menu: '#pageNav',
 			lockAnchors: true,
 			anchors: anchorsArr,
-			fitToSection: false,
-			scrollOverflow: true
+			// fitToSection: false,
+			// scrollOverflow: true
 			
 			
 			
@@ -318,6 +334,15 @@ $(document).ready(function() {
 			slidesToShow: 1,
 			nextArrow: $('.js-stocks-slider-btn-next'),
 			prevArrow: $('.js-stocks-slider-btn-prev'),
+			responsive: [
+				{
+					breakpoint: 2000,
+					settings: {
+						rows: 3,
+						slidesToShow: 1
+					}
+				}
+			]
 		});
 	}
 
@@ -361,7 +386,41 @@ $(document).ready(function() {
 			prevArrow: $('.js-feedbacks-slider-btn-prev'),
 		});
 	}
-	
+
+	// contacts
+	$('.js-contacts-addresses').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+	});
+
+	$('.js-contacts-addresses-dropdown').on('click', 'li', function(e) {
+		e.preventDefault();
+
+		var value = $(this).attr('data-address');
+
+		$(this).parents('.contacts-addresses').find('.contacts-addresses__current--title').text(value);
+
+	});
+
+	$(document).on('click', function (e) {
+		var container = $('.js-contacts-addresses');
+			if (container.has(e.target).length === 0){
+				if (container.hasClass('is-active')) {
+					container.removeClass('is-active');
+				}
+				
+			}
+	});
+
+
+	$('.contacts-block__address--value').on('click', function(e) {
+		$(this).parents('.contacts-block__address').toggleClass('is-active');
+		$(this).next('.contacts-block__address--information').stop().slideToggle(200);
+
+		$('.contacts-block__addresses > div').niceScroll();
+	});
+
 
 	// forms
 	$('.js-required-input').on('focus',function() {

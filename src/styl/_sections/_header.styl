@@ -25,14 +25,23 @@
 	
 	.container
 		max-width 100%
+		
+	&-logo
+		width 255px
+		margin-right 30px
+		flex none
 	
 	
 	&-tools
 		flex 1
+		flex-wrap nowrap
+		
 		&__nav
 			flex 1
 		&__contacts
 			margin-left 65px
+			white-space nowrap
+			flex-wrap nowrap !important
 	
 			.phone-link
 				margin-left 20px

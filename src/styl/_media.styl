@@ -10,25 +10,34 @@
 */
 
 +max-screen-height(700px)
-	.promo-slide
-		padding-top 125px
-		&__img
-			&:before
-				width 450px
-				height 450px
+	// .promo-slide
+	// 	padding-top 75px
+	// 	&__img
+	// 		&:before
+	// 			width 450px
+	// 			height 450px
 		
-	.section-content
-		padding-top 125px
+	// .section-content
+	// 	padding-top 75px
 		
-	.sect__advantages
-		.section-content
-			padding-top 105px
+	// .sect__advantages
+	// 	.section-content
+	// 		padding-top 105px
 			
-	.sect-gutter-top
-		padding-top 15px
+	// .sect-gutter-top
+	// 	padding-top 15px
 		
-	.advantages-content
-		padding-top 15px
+	// .advantages-content
+	// 	padding-top 15px
+		
+	// Page nav
+	.page-nav
+		padding-bottom 50px
+		left 10px
+		&:before
+			height 25px
+		&__item
+			margin-bottom 10px
 		
 +max-screen(1920px)
 	// Menu
@@ -37,11 +46,482 @@
 			
 			li
 				width 20%
+	
++max-screen(1919px)			
+	body
+		font-size 14px
+		line-height 17px
+		
+	.page-nav
+		left 10px
+		
+	.section-content
+		padding-top 75px
+		
+	.full-height
+		height calc(100vh - 75px)
+		
+	.menu-aside
+		padding-top 120px
+		width 280px
+		padding-left 30px
+		
+		
+	.menu-content
+		padding-top 120px
+		padding-right 60px
+		padding-left 60px
+		
+		.btn-close
+			top 120px
+			right 10px
+			
+
+			
+	.menu-categories
+		> ul 
+			margin-left -15px
+			margin-right -15px
+			li
+				padding-left 15px
+				padding-right 15px
+				
+	// Header
+	.header
+		padding 15px 0
+		min-height 75px
+		&:before
+			width 280px
+		.container
+			padding-left 30px
+			padding-right 30px
+			
+	.section-content
+		padding-top 75px
 				
 +max-screen(1660px)
+	.btn
+		span
+			padding 20px 50px
+			
+	.container
+		padding-left 60px
+		padding-right 60px
+		
+	.title
+		&-h2-size
+			font-size 30px
+			line-height 37px
+			
+		&-h3-size
+			font-size 20px
+			line-height 26px
+			
 	// Menu
 	.menu-categories
 		> ul
 			
 			li
 				width 25%
+				
+
+	// promo
+	.promo-slide__right-offset 
+		.video-link
+			margin-left 0
+			
+	.promo-slide
+		.btn
+			left 60px
+			
+			&-arrow
+				right 60px
+				
+	.video-link
+		width 170px
+		height 170px
+			
+
+	// Advantages
+	.advantages
+		&-content
+			padding-top 40px
+			flex 1
+		&-text
+			width 525px
+			padding-left 90px
+			flex none
+			padding-bottom 40px
+			font-size 18px
+			
+		&-items
+			height 370px
+			width 510px
+			
+	.advantage-item
+		width 120px 
+		height 120px
+		font-size 12px
+		line-height 14px
+		p
+			max-width 100px
+		&__inner
+			padding 5px
+		&__ic
+			width 35px
+			height 35px
+			margin-bottom 5px
+		&:nth-child(1)
+			width 130px
+			height 130px
+		&:nth-child(2),
+		&:nth-child(5)
+			width 150px
+			height 150px
+		&:nth-child(3)
+			width 140px
+			height 140px
+		&:nth-child(5)
+			bottom 0
+		
+
+
++max-screen(1280px)
+	.header
+		padding-top 7.5px
+		padding-bottom 7.5px
+		min-height 60px
+		
+	.section-content
+		padding-top 60px
+	// Menu
+	.menu-categories
+		> ul
+			li
+				width 33.3333%
+				
+	// Promo
+	.promo-slide
+		padding-top 80px
+				
++max-screen(1100px)
+	
+
+		
+	.tooltip-content
+		left auto
+		transform none
+		right -50px
+		&:before
+			left auto
+			transform none
+			right 53px
+	// Header
+	.header
+		.container
+			padding-left 20px
+			padding-right 20px
+		&__row
+			flex-wrap nowrap
+		.phone-link
+			width 22px
+			height 22px
+			padding 0
+			&:before
+				position-center()
+			span
+				display none
+				
+		&-tools
+			&__contacts
+				margin-left 30px
+				
+	.menu
+		&-aside
+			padding-top 90px
+			&__title
+				font-size 18px
+				margin-bottom 25px
+				
+			&__list
+				a
+					font-size 18px
+					
+		&-content
+			padding-top 90px
+			padding-left 30px
+			padding-right 30px
+			
+			.btn-close
+				display none
+				
+	.menu-categories
+		> ul 
+			li
+				width 50%
+				margin-bottom 25px
+				
+	// Promo
+	.promo-slide
+		.container
+			display flex
+			flex-direction column
+			
+		&__content
+			text-align center
+			flex none
+			position static
+			
+		&__img
+			position relative
+			transform none
+			left auto
+			bottom auto
+			top auto
+			flex 1
+			display flex
+			align-items flex-end
+			justify-content center
+			width 100%
+			
+			img
+				height 100%
+				width auto
+				display block
+				position absolute
+				bottom 0
+				horisontal-center()
+			
+		.video-link
+			position absolute
+			right 60px
+			bottom 30px
+			z-index 2
+			margin-top 0
+			margin-left 0
+			margin-right 0
+		
+		.btn
+			bottom 30px
+			&-arrow
+				background-color $basic-white-color
+			
+	.promo-slide__row.align-horisontal-between .promo-slide__text
+		max-width 100%
+		width 100%
+		text-align center
+		
+	.title-h2-size
+		font-size 30px
+		line-height 36px
+		
+	.title-h3-size
+		font-size 20px
+		line-height 26px
+		
+	.promo-slide__right-offset 
+		.promo-slide__img
+			margin-left 0
+			
+		.btn
+			margin-left 0
+			
+	// Advantages
+	.sect__advantages
+		.container
+			padding-right 60px
+	.advantages
+		&-content
+			padding-right 0
+			padding-top 20px
+			display flex
+			flex-direction column
+			&__text
+				max-width none
+				text-align center
+				
+		&-items
+			width 100%
+			height auto
+			flex 1
+			display flex
+			flex-wrap wrap
+			padding-bottom 20px
+			margin-top 20px
+		&-text
+			display none
+			
+	.advantage
+		&-item
+			outline 1px solid green
+			flex 1 0 33%
+			position relative
+			transform none
+			left auto !important
+			top auto !important
+			bottom auto !important
+			right auto !important
+			width auto !important
+			height auto !important
+			padding 10px
+			
+			&__inner
+				position relative
+				height 100%
+				width 50%
+				
+			&__content
+				position absolute
+				position-center()
+			
+	.section
+		.title
+			text-align center
+			
++max-screen(767px)
+	.page-nav
+		display none
+		
+	.container,
+	.sect__advantages .container
+		padding-left 20px
+		padding-right 20px
+		
+	// promo
+	.promo-slide
+		.btn
+			left 20px
+			bottom 20px
+			&-arrow
+				right 20px
+			
+		.video-link
+			right 20px
+			bottom 20px
+			width 100px
+			height 100px
+			
+	.btn-arrow
+		width 50px
+		height 50px
+		svg
+			width 10px
+			
+
+				
++max-screen(700px)
+
+	.title-h2-size
+		font-size 24px
+		line-height 30px
+		
+	.title-h3-size
+		font-size 16px
+		line-height 22px
+			
+	.hidden-mobile
+		display none
+		
+	.header
+		&:before
+			display none
+		&.is-opened
+			background-color transparent
+			&:before
+				display none
+			
+		&-logo
+			width auto
+			margin-right 20px
+		
+			
+		&-tools
+			flex 1
+			&__contacts
+				margin-left 20px
+			
+		.logo
+			max-width none
+			width auto
+			margin-right 0
+			img
+				width 40px
+	// Menu
+	.menu
+		background-color $menu-aside-bg
+		&-content
+			display none
+		&-aside
+			width 100%
+			padding-left 20px
+			padding-right 20px
+
+			.decor-circles
+				width 400px
+				height 400px
+				position-center()
+				animation rotate 15s linear infinite forwards
+				
+
+	.visible-mobile
+		display block
+		
+	// Promo
+	.promo-slide
+		.video-link
+			display none
+			
+		.btn
+			horisontal-center()
+			
+		
+		
+		.subtitle
+			margin-top 5px
+			
+		.decor-circles
+			width 330px
+			height 330px
+			
+	.btn
+		font-size 18px
+		span
+			padding 15px 40px
+			
+	.iScrollVerticalScrollbar.iScrollLoneScrollbar
+		display none !important
+
++max-screen(500px)
+	// Header
+
+	.search
+		&-wrapper
+			width 22px
+			height 22px
+			position static
+			
+			.btn-search
+				position relative
+				transform none
+				left auto
+				top auto
+				right auto
+				bottom auto
+				
+		&-form
+			position absolute
+			top 100%
+			left 0
+			z-index 999
+			width 100%
+			padding 10px 20px
+			background-color $alternate-light-text-color
+			.btn-search
+				vertical-center()
+				right 30px
+				position absolute
+				
+
+	.header.is-opened
+		.search-form
+			background-color $menu-aside-bg

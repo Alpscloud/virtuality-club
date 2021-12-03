@@ -21,7 +21,33 @@
 		color $text-color
 		.svg-ic
 			fill $text-color
-			
+
+
+.ic
+	position relative
+	padding-left 32px
+	&:before
+		pseudo()
+		position absolute
+		top 1px
+		left 0
+		width 18px
+		height 18px
+		background-repeat no-repeat
+		background-size contain
+		background-position 50%
+	&-time
+		&:before
+			background-image url('../img/icons/svg/clock.svg')
+	&-phone
+		&:before
+			background-image url('../img/icons/svg/phone.svg')
+	&-square
+		&:before
+			background-image url('../img/icons/svg/square.svg')
+	&-hash
+		&:before
+			background-image url('../img/icons/svg/hash.svg')
 // Tooltip
 .tooltip
 	position relative
