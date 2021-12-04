@@ -233,7 +233,24 @@ $(document).ready(function() {
 			variableWidth: true,
 			nextArrow: $('.js-includes-slider-btn-next'),
 			prevArrow: $('.js-includes-slider-btn-prev'),
-			dots: false
+			dots: false,
+			responsive: [
+				{
+					breakpoint: 1660,
+					settings: {
+						slidesToShow: 3,
+						variableWidth: true
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						variableWidth: false
+					}
+				}
+
+			]
 		});
 
 	}
@@ -245,6 +262,16 @@ $(document).ready(function() {
 			variableWidth: true,
 			nextArrow: $('.js-top-games-slider-btn-next'),
 			prevArrow: $('.js-top-games-slider-btn-prev'),
+			responsive: [
+				{
+					breakpoint: 1365,
+					settings: {
+						centerMode: false,
+						variableWidth: false,
+						slidesToShow: 1
+					}
+				}
+			]
 		});
 
 	}
@@ -270,7 +297,7 @@ $(document).ready(function() {
 
 		$('.js-catalog-games-categories-slider').slick({
 			infinite: true,
-			slidesToShow: 8,
+			slidesToShow: 6,
 			nextArrow: $('.js-catalog-games-categories-slider-btn-next'),
 			prevArrow: $('.js-catalog-games-categories-slider-btn-prev'),
 		});

@@ -583,7 +583,25 @@
 				<section class="section sect__top-games ">
 					<div class="section-content">
 						<div class="container full-height sect-gutter-top top-games__wrapper">
-							<h2 class="title title-h2-size">ТОП ИГРЫ</h2>
+							<div class="top-games__title row align-vertical-center align-horisontal-between row-nowrap">
+								<h2 class="title title-h2-size">ТОП ИГРЫ</h2>
+
+								<div class="slider-controls">
+									<button class="btn-arrow btn-arrow__prev js-top-games-slider-btn-prev  btn-arrow__fill" type="button">
+										<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+										</svg>
+
+									</button>
+
+									<button class="btn-arrow btn-arrow__next js-top-games-slider-btn-next btn-arrow__fill" type="button">
+										<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							
 
 							<div class="top-games-slider__wrapper">
 								<div class="top-games-slider js-top-games-slider">
@@ -596,8 +614,10 @@
 			<img src="img/top-game-poster.jpg" alt="">
 		</a>
 		<div class="top-game__content">
-			<h3 class="game__title">beyond medusa’s gate</h3>
-			<p class="game__category">VR Квест</p>
+			<div class="top-game__title">
+				<h3 class="game__title">beyond medusa’s gate</h3>
+				<p class="game__category">VR Квест</p>
+			</div>
 
 			<div class="game__description">
 				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
@@ -675,87 +695,10 @@
 			<img src="img/top-game-poster.jpg" alt="">
 		</a>
 		<div class="top-game__content">
-			<h3 class="game__title">beyond medusa’s gate</h3>
-			<p class="game__category">VR Квест</p>
-
-			<div class="game__description">
-				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
+			<div class="top-game__title">
+				<h3 class="game__title">beyond medusa’s gate</h3>
+				<p class="game__category">VR Квест</p>
 			</div>
-
-			<button class="permalink js-open-popup-template-btn" type="button" data-popup-lightmode="true" data-popup-outer="true">
-				<span>Подробнее</span>
-				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
-				</svg>
-			</button>
-
-			<div class="game-params align-horisontal-between">
-				<span class="game-param game-param__rating">4,5</span>
-				<span class="game-param game-param__quantity">2 — 4</span>
-				<span class="game-param game-param__playtime">60 минут</span>
-			</div>
-
-			<div class="top-game__btn">
-				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
-
-
-				<span class="game__age">10+</span>
-			</div>
-		</div>
-	</div>
-
-	<!-- Details -->
-	<div class="hidden-popup-content js-popup-content">
-
-		<div class="popup-content top-game__details">
-
-			<p class="popup__title text-center">beyond medusa’s gate</p>
-			<p class="game__category text-center">VR Квест</p>
-
-			<div class="popup__description">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus sed vulputate. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In aliquam sem fringilla ut. Cursus sit amet dictum sit amet justo donec enim. Cras sed felis eget velit. Diam donec adipiscing tristique risus nec feugiat. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget.</p>
-			</div>
-
-			<button class="permalink js-close-popup-btn" type="button">
-				<span>Назад</span>
-				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
-				</svg>
-			</button>
-
-
-			<div class="game-params align-horisontal-center">
-				<span class="game-param game-param__rating">4,5</span>
-				<span class="game-param game-param__quantity">2 — 4</span>
-				<span class="game-param game-param__playtime">60 минут</span>
-			</div>
-
-
-			<div class="top-game__details--btn text-center">
-				<button class="btn btn-sm js-close-popup-btn" type="button"><span>Получить</span></button>
-
-				<span class="game__age">10+</span>
-			</div>
-
-		</div>
-
-
-	</div>
-	<!-- //Details -->
-
-</div>
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									
-									<div class="top-game js-popup-content-parent">
-	<div class="top-game__inner">
-		<a href="video/status.mp4" data-fancybox class="top-game__poster has-trailer">
-			<img src="img/top-game-poster.jpg" alt="">
-		</a>
-		<div class="top-game__content">
-			<h3 class="game__title">beyond medusa’s gate</h3>
-			<p class="game__category">VR Квест</p>
 
 			<div class="game__description">
 				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
@@ -833,8 +776,91 @@
 			<img src="img/top-game-poster.jpg" alt="">
 		</a>
 		<div class="top-game__content">
-			<h3 class="game__title">beyond medusa’s gate</h3>
-			<p class="game__category">VR Квест</p>
+			<div class="top-game__title">
+				<h3 class="game__title">beyond medusa’s gate</h3>
+				<p class="game__category">VR Квест</p>
+			</div>
+
+			<div class="game__description">
+				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
+			</div>
+
+			<button class="permalink js-open-popup-template-btn" type="button" data-popup-lightmode="true" data-popup-outer="true">
+				<span>Подробнее</span>
+				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+				</svg>
+			</button>
+
+			<div class="game-params align-horisontal-between">
+				<span class="game-param game-param__rating">4,5</span>
+				<span class="game-param game-param__quantity">2 — 4</span>
+				<span class="game-param game-param__playtime">60 минут</span>
+			</div>
+
+			<div class="top-game__btn">
+				<button class="btn-default js-open-popup-order-btn" type="button">Записаться</button>
+
+
+				<span class="game__age">10+</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Details -->
+	<div class="hidden-popup-content js-popup-content">
+
+		<div class="popup-content top-game__details">
+
+			<p class="popup__title text-center">beyond medusa’s gate</p>
+			<p class="game__category text-center">VR Квест</p>
+
+			<div class="popup__description">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at quis risus sed vulputate. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. In aliquam sem fringilla ut. Cursus sit amet dictum sit amet justo donec enim. Cras sed felis eget velit. Diam donec adipiscing tristique risus nec feugiat. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Viverra nam libero justo laoreet sit amet cursus. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Nunc sed id semper risus in hendrerit gravida. Ut tellus elementum sagittis vitae et. Vehicula ipsum a arcu cursus. Consectetur libero id faucibus nisl tincidunt eget nullam non. Lobortis mattis aliquam faucibus purus. Sit amet venenatis urna cursus eget.</p>
+			</div>
+
+			<button class="permalink js-close-popup-btn" type="button">
+				<span>Назад</span>
+				<svg  viewBox="0 0 12 9"  xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 3.9668C0.723858 3.9668 0.5 4.19065 0.5 4.4668C0.5 4.74294 0.723858 4.9668 1 4.9668V3.9668ZM11.5986 4.82035C11.7938 4.62509 11.7938 4.30851 11.5986 4.11324L8.41661 0.931263C8.22134 0.736001 7.90476 0.736001 7.7095 0.931263C7.51424 1.12653 7.51424 1.44311 7.7095 1.63837L10.5379 4.4668L7.7095 7.29522C7.51424 7.49049 7.51424 7.80707 7.7095 8.00233C7.90476 8.19759 8.22134 8.19759 8.41661 8.00233L11.5986 4.82035ZM1 4.9668H11.245V3.9668H1V4.9668Z" />
+				</svg>
+			</button>
+
+
+			<div class="game-params align-horisontal-center">
+				<span class="game-param game-param__rating">4,5</span>
+				<span class="game-param game-param__quantity">2 — 4</span>
+				<span class="game-param game-param__playtime">60 минут</span>
+			</div>
+
+
+			<div class="top-game__details--btn text-center">
+				<button class="btn btn-sm js-close-popup-btn" type="button"><span>Получить</span></button>
+
+				<span class="game__age">10+</span>
+			</div>
+
+		</div>
+
+
+	</div>
+	<!-- //Details -->
+
+</div>
+									<!-- //Slide -->
+
+									<!-- Slide -->
+									
+									<div class="top-game js-popup-content-parent">
+	<div class="top-game__inner">
+		<a href="video/status.mp4" data-fancybox class="top-game__poster has-trailer">
+			<img src="img/top-game-poster.jpg" alt="">
+		</a>
+		<div class="top-game__content">
+			<div class="top-game__title">
+				<h3 class="game__title">beyond medusa’s gate</h3>
+				<p class="game__category">VR Квест</p>
+			</div>
 
 			<div class="game__description">
 				<p>Действие происходит в Греции, полуостров Пелопоннес, 445 год до нашей эры. Эра богов, героев и философов. По вашим данным, именно в ней спрятан корабль аргонавтов… Самое время с помощью базы данных генетических воспоминаний и технологии виртуальной реальности отправиться в Древнюю Грецию, чтобы найти легендарный Арго.</p>
@@ -940,6 +966,40 @@
 									<div class="catalog-categories-slider js-catalog-games-categories-slider">
 										
 										
+										<div class="catalog-category js-catalog-category-btn is-active" data-index="0">
+											<h3 class="catalog-category__title">VR Квесты</h3>
+										</div>
+
+
+										
+										<div class="catalog-category js-catalog-category-btn" data-index="1">
+											<h3 class="catalog-category__title">VR Arena</h3>
+										</div>
+
+
+										
+										<div class="catalog-category js-catalog-category-btn" data-index="2">
+											<h3 class="catalog-category__title">VR Аркады</h3>
+										</div>
+										
+
+										
+										<div class="catalog-category js-catalog-category-btn" data-index="3">
+											<h3 class="catalog-category__title">Шутеры</h3>
+										</div>
+
+
+										
+										<div class="catalog-category js-catalog-category-btn" data-index="4">
+											<h3 class="catalog-category__title">Симуляторы</h3>
+										</div>
+
+
+										
+										<div class="catalog-category js-catalog-category-btn" data-index="5">
+											<h3 class="catalog-category__title">Спорт</h3>
+										</div>
+
 										<div class="catalog-category js-catalog-category-btn is-active" data-index="0">
 											<h3 class="catalog-category__title">VR Квесты</h3>
 										</div>
@@ -8160,7 +8220,7 @@
 <!-- //Popup -->
 <!-- Popup -->
 <div class="popup js-popup js-popup-order">
-	<div class="popup__overflow js-custom-scroll">
+	<div class="popup__overflow">
 
 		<div class="popup__body text-center">
 			
@@ -8351,7 +8411,7 @@
 <!-- //Popup -->
 <!-- Popup -->
 <div class="popup js-popup js-popup-template">
-	<div class="popup__overflow js-custom-scroll">
+	<div class="popup__overflow ">
 		<div class="popup__body text-center">
 			
 			<div class="popup-outer">

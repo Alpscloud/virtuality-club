@@ -58,6 +58,9 @@
 	.section-content
 		padding-top 75px
 		
+	.sect-gutter-top
+		padding-top 30px
+		
 	.full-height
 		height calc(100vh - 75px)
 		
@@ -98,11 +101,35 @@
 			
 	.section-content
 		padding-top 75px
+		
+	// Top games
+	.top-game
+		&__content
+			width 55%
+		&__poster
+			width 45%
+			
+	.btn-arrow
+		width 40px
+		height 40px
+		svg
+			width 10px
 				
 +max-screen(1660px)
 	.btn
 		span
 			padding 20px 50px
+			
+	.slider-controls 
+		height 40px
+		width 100px
+		.btn-arrow
+			width 40px
+			height 40px
+			svg
+				width 8px
+			
+
 			
 	.container
 		padding-left 60px
@@ -110,11 +137,11 @@
 		
 	.title
 		&-h2-size
-			font-size 30px
+			font-size 28px
 			line-height 37px
 			
 		&-h3-size
-			font-size 20px
+			font-size 19px
 			line-height 26px
 			
 	// Menu
@@ -174,6 +201,9 @@
 		&:nth-child(1)
 			width 130px
 			height 130px
+			.advantage-item__ic
+				width 35px
+				height 35px
 		&:nth-child(2),
 		&:nth-child(5)
 			width 150px
@@ -183,8 +213,133 @@
 			height 140px
 		&:nth-child(5)
 			bottom 0
+			
+	// Includes
+	.includes
+		&-img
+			img
+				width 350px
+				height auto
+			
+		&__row
+			justify-content flex-start
+			
+		&-slider
+			padding-bottom 30px
+			&:before
+				height 170px
+			
+			.slick-slide
+				width 320px
+			
+			&__wrapper
+				margin-right -60px
+				
+				.slider-controls
+					bottom 10px
+					
+	.include-slide
+		&__img
+			p
+				font-size 18px
+				line-height 26px
+		&__title
+			font-size 16px
+			line-height 19px
+			
+	// How to play
+	.how-to-play
+		&__imgs
+			max-width 700px
+			.btn-skew
+				left 100px
+		&__scheme
+			width 400px
+			height 400px
+		&__dude
+			left 400px
+			
+	.btn-skew
+		width 170px
+		height 58px
+		
+	// Top games
+	.top-games-slider__wrapper
+		margin-left -60px
+		margin-right -60px
+		margin-top 20px
+		.btn-arrow
+			&__prev
+				left 50px
+			&__next
+				right 50px
+				
+	.top-games-slider 
+		.slick-slide
+	
+			padding-left 35px
+			padding-right 35px
+		
++max-screen(1440px)
+	// How to play
+	.how-to-play
+		&__imgs
+			max-width 700px
+			.btn-skew
+				left 95px
+		&__scheme
+			width 380px
+			height 380px
+		&__dude
+			left 380px
+			
+	.btn-skew
+		width 160px
+		height 58px
 		
 
++max-screen(1365px)
+	.btn-default
+		font-size 16px
+		padding 11px 30px
+	// Top games
+	.top-games-slider
+		.slick-slide
+			padding-left 10px
+			padding-right 10px
+			width 100%
+		&__wrapper
+			margin-left 0
+			margin-right 0
+			padding-left 80px
+			padding-right 80px
+			
+			.btn-arrow
+				&__prev
+					left 0
+				&__next
+					right 0
+					
+	.game
+		&__title
+			font-size 22px
+			line-height 27px
+			margin-bottom 10px
+			
+		&__category
+			font-size 18px
+			line-height 24px
+			margin-bottom 10px
+			
+		&__age
+			width 40px
+			height 40px
+			font-size 15px
+			
+	.top-game 
+		padding 7.5px
+		.permalink
+			margin-bottom 20px
 
 +max-screen(1280px)
 	.header
@@ -192,8 +347,17 @@
 		padding-bottom 7.5px
 		min-height 60px
 		
+	.full-height
+		height calc(100vh - 60px)
+		
 	.section-content
 		padding-top 60px
+		
+	.btn-arrow
+		width 50px
+		height 50px
+		svg
+			width 10px
 	// Menu
 	.menu-categories
 		> ul
@@ -203,6 +367,43 @@
 	// Promo
 	.promo-slide
 		padding-top 80px
+		
+	// Advantages
+	.advantages
+		&-items
+			height 340px
+			
+	.advantage-item
+		&:nth-child(1)
+			top 0
+			left 0
+		&:nth-child(2)
+			right 0
+			top 0
+		&:nth-child(3)
+			position-center()
+		&:nth-child(4)
+			bottom 0
+			left 0
+		&:nth-child(5)
+			right 0
+			bottom 0
+			
+	// How to play
+	.how-to-play
+		&__imgs
+			.btn-skew
+				bottom -25px
+				left 75px
+		&__scheme
+			width 300px
+			height 300px
+		&__dude
+			left 300px
+			
+	.btn-skew
+		width 125px
+		height 45px
 				
 +max-screen(1100px)
 	
@@ -216,6 +417,10 @@
 			left auto
 			transform none
 			right 53px
+			
+	.section
+		.title
+			text-align center
 	// Header
 	.header
 		.container
@@ -342,41 +547,83 @@
 				
 		&-items
 			width 100%
-			height auto
-			flex 1
-			display flex
-			flex-wrap wrap
+			max-width 700px
+			height 400px
 			padding-bottom 20px
-			margin-top 20px
+			margin 20px auto 0
 		&-text
 			display none
 			
 	.advantage
 		&-item
-			outline 1px solid green
-			flex 1 0 33%
-			position relative
-			transform none
-			left auto !important
-			top auto !important
-			bottom auto !important
-			right auto !important
-			width auto !important
-			height auto !important
-			padding 10px
-			
-			&__inner
-				position relative
-				height 100%
-				width 50%
-				
-			&__content
-				position absolute
+		
+			&:nth-child(1)
+				top 0
+				left 0
+			&:nth-child(2)
+				right 0
+				top 0
+			&:nth-child(3)
 				position-center()
+			&:nth-child(4)
+				left 0
+				bottom 0
+			&:nth-child(5)
+				right 0
+				bottom 0
+		
 			
-	.section
-		.title
-			text-align center
+	
+	// Includes
+	.includes
+		&-img
+			display none
+			
++max-screen(992px)
+	// How to play
+	.how-to-play
+		&__dude
+			display none
+		&__scheme
+			width 100%
+			height auto
+			img
+				width 100%
+				
+		&__imgs
+			.btn-skew
+				left 26%
+				bottom -8%
+				
+	.btn-skew
+		width 40%
+		height 110px
+		
+
+	// Popup
+	.popup-inner
+		padding 20px
+		
+	.order-form
+		padding-left 0
+		padding-right 0
+		
+	// Top game
+	.top-games-slider
+		&__wrapper
+			padding-bottom 30px
+			flex none
+			
+	.top-game
+		&__inner
+			flex-wrap wrap
+		&__poster
+			width 100%
+			padding-top 56.15%
+		&__content
+			width 100%
+			
+	
 			
 +max-screen(767px)
 	.page-nav
@@ -407,6 +654,251 @@
 		svg
 			width 10px
 			
+	// Includes
+	.includes
+		&-slider
+			padding-left 20px
+			padding-right 20px
+		
+			.slick-slide
+				width 100%
+				margin-right 0
+				padding-left 10px
+				padding-left 10px
+			&__wrapper
+				width 100%
+				margin-right 0
+				flex none
+				
+				.slider-controls
+					horisontal-center()
+					
+	.include-slide
+		&__img 
+			p
+				font-size 15px
+				line-height 24px
+				
+				
+	.includes__row
+		padding-right 0
+		margin-left -20px
+		margin-right -20px
+		width auto
+			
+
+	// How to play
+	.how-to-play
+		&__scheme
+			width 620px
+			margin 0 auto
+			horisontal-center()
+			
+
+	// Popup
+	.popup-inner
+		padding 15px
+		
+		.btn-close
+			top 10px
+			right 10px
+		
+	.order-form
+		padding-left 0
+		padding-right 0
+		
+	.form-groups__row 
+		.form-group
+			width 100%
+			padding-bottom 20px
+			
+	.order-controls, 
+	.order-form__services .row,
+	.form-range__group
+		margin-bottom 25px
+		
+	.form-checkboxes
+		margin-left -15px
+		flex-wrap wrap
+		&__row
+			flex-wrap wrap
+		
+			.form-label
+				width 100%
+				max-width 100%
+				margin-bottom 20px
+				
+	.form-radios
+		padding-right 0
+		
+	.form-range__tooltip
+		font-size 12px
+		height 15px
+		margin-bottom 0
+		bottom auto
+		top 100%
+		margin-top 3px
+		
+	.form-time__row
+		flex-wrap nowrap
+		
+		.form-row__col
+			max-width 50%
+			
+		.form-label
+			min-height 30px
+			display flex
+			align-items center
+			
+	.order-form__services
+		margin-bottom 25px
+		
+	.order-controls
+		text-align left
+		display flex
+		flex-wrap nowrap
+		justify-content space-between
+		
+		.btn-tab
+			width auto
+			flex 1
+			padding-left 10px
+			padding-right 10px
+			font-size 16px
+		
+	.form-checkbox__col
+		width 100%
+		margin-bottom 15px
+		&:last-child
+			margin-bottom 0
+			
+	.popup__overflow
+		padding 60px 20px
+		background-color $color-bg
+		&:before
+			display none
+			
+	.popup__body
+		display block
+		padding 0
+		
+	.popup-inner
+		padding 0
+		
+		.btn-close
+			top -50px
+			right 0
+			width 35px
+			height 35px
+			svg
+				width 12px
+				height 12px
+				
+		.btn-close-simple
+			width 20px
+			height 20px
+			top -50px
+			right 0
+				
+	.popup
+		&.is-outer
+			.popup-outer
+				border-radius 0
+				border none
+				padding 0
+				
+		.game__category
+			font-size 18px
+			line-height 24px
+			margin-bottom 10px
+			
+	
+				
+	.popup.is-lightmode 
+		.popup__overflow
+			background-color $color-bg
+			
+	.popup__title
+		font-size 24px
+		line-height 29px
+		margin-bottom 10px
+		
+
+	.catalog-game-card__info
+		margin-top 30px
+		position relative
+		
+		.game__age
+			position absolute
+			bottom 0
+			right 0
+		.row
+			flex-wrap wrap
+			justify-content center
+		
+		.game-params
+			width auto
+			margin-right 40px
+			&:nth-child(1)
+				order 1
+			&:nth-child(3)
+				order 2
+				.game-param
+					margin-right 0
+	
+			
+
+	.catalog-game-card__btn
+		order 3
+		width 100%
+		margin-top 20px
+		text-align center
+		
+	// Top game
+	.top-games-slider
+		&__wrapper
+			padding-left 0
+			padding-right 0
+			flex 1
+			
+			.btn-arrow
+				&__prev
+					left -10px
+				&__next
+					right -10px
+			
+	.top-game
+		position relative
+		&__inner
+			flex-wrap wrap
+			display flex
+			flex-direction column
+
+		&__content
+			padding 10px 30px
+			
+		&__poster
+			height auto
+			padding-top 0
+			flex 1
+			
+		// &__poster
+		// 	width 120px
+		// 	height 180px
+		// 	padding-top 0
+		// 	border-radius 5px
+		// 	position absolute
+		// 	top 20px
+		// 	left 20px
+
+		// &__title
+		// 	padding-left 140px
+		// 	min-height 180px
+			
+
+		
+
+				
 
 				
 +max-screen(700px)
@@ -490,6 +982,181 @@
 			
 	.iScrollVerticalScrollbar.iScrollLoneScrollbar
 		display none !important
+		
+	// Advantages
+	.advantage-item
+		width 110px
+		height 110px
+		font-size 10px
+		&__ic
+			width 30px
+			height 30px
+			
+
+			
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5)
+			width 120px
+			height 120px
+			.advantage-item__ic
+				width 30px
+				height 30px
+	
+	// Popup
+	.order-form__services 
+		.row
+			flex-wrap wrap
+			
+		.form-label
+			width 100%
+			max-width 100%
+			margin-bottom 15px
+			
+	.form-label
+		font-size 15px
+	
+	.form-row__col .form-group
+		margin-left 0
+		
+	.form-range
+		margin-left 0
+		width 100%
+		padding-left 15px
+		padding-right 15px
+		flex none
+		
+	.form-radio__item
+		font-size 15px
+		padding 12px 20px
+		
+	.form-checkbox
+		&__item
+			font-size 15px
+			padding-left 25px
+			
+
+
+
+				
++max-screen(550px)
+	// How to play
+	.how-to-play
+		&__imgs
+			margin-top 0
+			.btn-skew
+				bottom -12%
+		&__scheme
+			width 460px
+			
+
+
+	.catalog-game-card__gallery
+		margin-bottom 20px
+		flex-wrap wrap
+		&--col
+			width 100%
+		
+		&--imgs
+			display none
+			&_col
+				order 1
+				width 100%
+				text-align center
+				
+				.popup__title
+					max-width 100%
+		&--video
+			&_col
+				order 2
+				margin-top 20px
+				
+	.catalog-game-card__btn
+		text-align left
+		
+	.catalog-game-card__info .row
+		justify-content space-between
+		
+	.catalog-game-card__info .game-params
+	
+		margin-right 10px
+		justify-content space-between
+		&:last-child
+			margin-right 0
+			
+	.catalog-game-card__details .game-param
+		margin-right 10px
+		
+	.catalog-game-card__gallery--poster
+		width 100px
+		
+	// Top game
+	.top-games__title
+		.slider-controls
+			display flex
+	.top-games__wrapper
+		padding-bottom 0
+	.top-games-slider__wrapper
+		.btn-arrow
+			display none !important
+	.top-game
+		border none
+		padding 0
+		&__content
+			position relative
+			padding 15px
+			
+		.game
+			&__description
+				height 50px
+				overflow hidden
+				position relative
+				&:before
+					pseudo()
+					position absolute
+					width 100%
+					bottom 0
+					height 20px
+					background rgb(183,218,236)
+					background -moz-linear-gradient(0deg, rgba(183,218,236,1) 0%, rgba(255,255,255,0) 100%)
+					background -webkit-linear-gradient(0deg, rgba(183,218,236,1) 0%, rgba(255,255,255,0) 100%)
+					background linear-gradient(0deg, rgba(183,218,236,1) 0%, rgba(255,255,255,0) 100%)
+					z-index 1
+			&__title
+				font-size 18px
+				line-height 24px
+				margin-bottom 5px
+			&__category
+				font-size 14px
+				line-height 1
+				
+			&-params
+				
+				justify-content space-between
+				align-items flex-end
+				
+				.game-param
+					padding-left 0
+					padding-top 30px
+					font-size 15px
+					margin-right 0
+					&:before
+						horisontal-center()
+						top 0
+						
+				
+				
+
+			
+	.top-game__poster.has-trailer
+		&:before
+			width 39px
+			height 39px
+			
+	.permalink
+		font-size 14px
 
 +max-screen(500px)
 	// Header
@@ -525,3 +1192,35 @@
 	.header.is-opened
 		.search-form
 			background-color $menu-aside-bg
+			
+	// Popup
+	.top-game__details 
+		.game-params
+			justify-content space-between
+		.game-param
+			margin-right 10px
+			&:last-child
+				margin-right 0
+				
+		&--btn
+			display flex
+			flex-wrap nowrap
+			align-items center
+			justify-content space-between
+			
+			.game__age
+				position relative
+				transform none
+				top auto
+				right auto
+
+			
++max-screen(374px)
+	// How to play
+	.how-to-play
+		&__imgs
+	
+			.btn-skew
+				bottom -16%
+		&__scheme
+			width 350px
