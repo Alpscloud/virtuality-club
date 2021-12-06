@@ -4,6 +4,10 @@
 	
 .fp-tableCell
 	display block !important
+	
+.sect-header
+	.slider-controls
+		display none
 
 
 		
@@ -386,6 +390,10 @@
 	.title
 		margin-bottom 40px
 		
+.stocks-slider__title
+	.slider-controls
+		display none
+		
 .stock
 	margin-bottom 30px
 	border-radius 5px
@@ -404,6 +412,8 @@
 		flex 1
 		padding-left 40px
 		position relative
+		&__row
+			flex-wrap nowrap
 		&:before
 			pseudo()
 			position absolute
@@ -494,7 +504,7 @@
 
 // Contacts
 .sect__contacts
-	padding 75px 0
+	padding-bottom 50px
 	
 .contacts-addresses
 	width fit-content
@@ -574,7 +584,9 @@
 		width 475px
 		padding-left 55px
 		> div
-			height 205px
+			height 100%
+			max-height 625px
+			overflow-y auto
 			padding-right 15px
 		
 	&__address

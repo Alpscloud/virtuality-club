@@ -38,6 +38,22 @@
 			height 25px
 		&__item
 			margin-bottom 10px
+			
++max-screen(2200px)
+	// CAtalog
+	.catalog-game-card__thumbnail
+		width 200px
+		
+	.subscription-slide__img p
+		font-size 22px
+		line-height 26px
+		left auto
+		right auto
+		bottom 0
+		padding 0 10px 10px 10px
+		
+	.gutter-bottom
+		padding-bottom 50px
 		
 +max-screen(1920px)
 	// Menu
@@ -114,11 +130,74 @@
 		height 40px
 		svg
 			width 10px
+			
+	// Catalog
+	.catalog-category__title
+		font-size 20px
+		
+	.catalog-game-card__thumbnail
+		width 190px
+		
+	.catalog-games__slider
+		padding-left 60px
+		padding-right 60px
+		
+	// Stock
+	.stock
+		min-height 160px
+		
+	// subscription
+	.subscription-slide__img p
+		font-size 22px
+		line-height 26px
+		
+	.subscription-slide__title
+		font-size 18px
+		margin-bottom 10px
+		
+	// Faq
+	.faq-slide__content
+		height 170px
+		
+	.feedback-slide__content
+		padding 10px
+		
+	.feedback-slide__text
+		font-size 12px
+		
+	// Contacts
+	.contacts-addresses__current
+		&--title
+			font-size 32px
+		svg
+			width 22px
+			height 15px
+			
+	.contacts-block__address--value_title
+		font-size 20px
+		
+	.contacts-block__address
+		margin-bottom 30px
+		
+	.contacts-block__addresses
+		width 440px
+		padding-left 35px
+		
+	.contacts-addresses__wrapper
+		margin-bottom 15px
+		
+	.contacts-block__gallery
+		justify-content center
+		
+	.contacts-block__addresses>div
+		max-height 320px
+		
 				
 +max-screen(1660px)
 	.btn
+		font-size 16px
 		span
-			padding 20px 50px
+			padding 15px 40px
 			
 	.slider-controls 
 		height 40px
@@ -128,6 +207,10 @@
 			height 40px
 			svg
 				width 8px
+				
+	.slider
+		padding-left 60px
+		padding-right 60px
 			
 
 			
@@ -165,8 +248,8 @@
 				right 60px
 				
 	.video-link
-		width 170px
-		height 170px
+		width 150px
+		height 150px
 			
 
 	// Advantages
@@ -279,8 +362,47 @@
 	
 			padding-left 35px
 			padding-right 35px
+			
+	// Catalog
+	.catalog-categories
+		padding-left 40px
+		padding-right 40px
+		
+	.catalog-category__title
+		font-size 18px
+		padding 10px 30px
+		
+	.catalog-game-card__thumbnail
+		width 130px
+	
+	.catalog-game-card__title
+		font-size 16px
+		line-height 19px
+		
+	.catalog
+		padding-top 25px
+		
+	.catalog-games__slider .slick-slide
+		padding 10px
+		
+	// Gallery
+	.sect__gallery
+		&:after 
+			width 50px
+			top 75px
+			
+	.gallery-slider
+		top 75px
 		
 +max-screen(1440px)
+	.page-nav
+		padding-bottom 50px
+		left 10px
+		&:before
+			height 25px
+		&__item
+			margin-bottom 10px
+			
 	// How to play
 	.how-to-play
 		&__imgs
@@ -296,6 +418,70 @@
 	.btn-skew
 		width 160px
 		height 58px
+		
+	// Stock
+	.stock
+		
+		padding 20px
+		min-height 140px
+		
+	.stocks-slider .slick-slide>div
+		margin-bottom 10px
+		
+	.slider
+		padding-left 60px
+		padding-right 60px
+		
+
+	.stock__title
+		font-size 22px
+		width 180px
+		
+	.stock-content
+		padding-left 20px
+		
+
+	// Sertificates
+	.sertificates-slider 
+		.slick-slide
+			width 400px
+			
+	.sertificate-slide__img p
+		font-size 16px
+		line-height 19px
+		padding 10px
+		
+	// Subscr
+	.subscription-slide__content
+		padding 10px
+		font-size 12px
+		p
+			margin-bottom 10px
+			
+	// Faq
+	.faq-slide
+		width 120px !important
+		
+	.faq-slide__content
+		font-size 16px
+		line-height 18px
+		height 150px
+		
+	.sect__faq
+		padding-bottom 20px
+		
+	.feedback-slide__header
+		height 40px
+		
+	.feedback-slide__gallery
+		margin-top 5px
+		
+	.feedback-slide__author-information_photo
+		width 35px
+		height 35px
+		
+	.feedback-slide__author-information_name
+		font-size 12px
 		
 
 +max-screen(1365px)
@@ -340,6 +526,33 @@
 		padding 7.5px
 		.permalink
 			margin-bottom 20px
+			
+
+	// Catalog
+	.catalog-game-card__thumbnail
+		width 100%
+		
+	.faq-slide__content
+		font-size 14px
+		line-height 17px
+		
+	.feedback-slide__text
+		font-size 10px
+		line-height 12px
+		
+	.feedback-slide__link
+		font-size 12px
+		
+	.feedbacks-slider 
+		.slick-slide
+			padding-left 5px
+			padding-right 5px
+		
+		.slick-track
+			margin-left -5px
+			margin-right -5px
+		
+	
 
 +max-screen(1280px)
 	.header
@@ -367,6 +580,10 @@
 	// Promo
 	.promo-slide
 		padding-top 80px
+		
+	.promo-slide .video-link
+		width 120px
+		height 120px
 		
 	// Advantages
 	.advantages
@@ -404,6 +621,20 @@
 	.btn-skew
 		width 125px
 		height 45px
+		
+	// Gallery
+	.gallery-slider
+		top 60px
+		
+	.sect__gallery:after
+		top 60px
+		
+	.stocks-slider .slick-slide
+		margin-right 10px
+		
+	// Feedbacks
+	.feedback-slide__src
+		padding-right 20px
 				
 +max-screen(1100px)
 	
@@ -579,6 +810,61 @@
 		&-img
 			display none
 			
+
+
+			
+	// Catalog
+	.catalog-games__slider 
+		.slick-slide
+			display block !important
+			
+	// Stock
+	.stock
+		// height 100%
+		// > .row
+		// 	height 100%
+		// 	flex-direction column
+		// 	justify-content space-between
+		&__title
+			width 100%
+			margin-bottom 20px
+		&-content
+			flex 1
+			width 100%
+			padding-left 0
+			
+			&:before
+				display none
+				
+			&__row
+				flex-wrap wrap
+				flex-direction column
+				height 100%
+				
+			&__text
+				width 100%
+				max-width 100%
+				margin-right 0
+				margin-bottom 20px
+				flex 1
+				
+			&__btn
+				width 100%
+				.row
+					justify-content space-between
+					
+	// Sertificates
+	.sertificates__header
+		font-size 14px
+		line-height 17px
+		.title
+			text-align left
+			margin-bottom 10px
+			
+	.sertificate-slide__title
+		font-size 18px
+		margin-bottom 15px
+			
 +max-screen(992px)
 	// How to play
 	.how-to-play
@@ -622,6 +908,48 @@
 			padding-top 56.15%
 		&__content
 			width 100%
+			
+	// Gallery
+	.sect__gallery
+		.video-link
+			position absolute
+			top 10px
+			left 70px
+			z-index 3
+			
+		.container
+			padding-bottom 20px
+			
+	.gallery-btn
+		margin-left 0
+		margin-right 40px
+		
+
+	.stocks-slider 
+		.slick-track
+			display block
+		.slick-slide
+			float left
+			
+	//Sertificates
+	.sertificates-slider 
+		.slick-track
+			left auto
+		.slick-slide
+			width auto
+		
+	.sertificates-slider
+		margin-left 0
+		margin-right 0
+		
+	.feedbacks-slider 
+		.slick-slide
+			float left !important
+			> div
+				margin-bottom 10px
+			
+	.feedbacks-slider .slick-track
+		display block !important
 			
 	
 			
@@ -862,10 +1190,7 @@
 			flex 1
 			
 			.btn-arrow
-				&__prev
-					left -10px
-				&__next
-					right -10px
+				display none !important
 			
 	.top-game
 		position relative
@@ -895,10 +1220,154 @@
 		// 	padding-left 140px
 		// 	min-height 180px
 			
-
+	// Catalog
+	.catalog-games
+		padding-bottom 30px
+		
+	.catalog-games__slider 
+		.slick-slide
+			>div
+				height 100%
+				&:first-child
+					margin-bottom 0
+					
+	.catalog-game-card__content
+		display flex
+		flex-direction column
 		
 
+	// gallery
+	.sect__gallery
+		&:after
+			display none
+			
+		.video-link
+			left 20px
+			
+	.video-link
+		width 100px
+		height 100px
+		
+	.gallery-btn
+		display none
+		
+	.gallery-slider-thumbnails
+		width 100%
+		&__wrapper
+			width 100%
+		
+			.slick-slide
+				padding-right 10px
+			
+
+	.gallery-slider-controls
+		width 120px
+		margin-bottom 10px
+		
+	// Stocks
+	.stock
+		height 100%
+		> .row
+			height 100%
+			flex-direction column
+			justify-content space-between
+		
+					
+	.stocks-slider
+		.slick-track
+			display flex
+			flex-wrap nowrap
+			
+		.slick-slide
+			float none
+			height auto
+			> div
+				height 100%
 				
+
+	.stocks-slider__title
+		justify-content space-between
+		margin-bottom 30px
+		.title
+			margin-bottom 0
+			
+		.slider-controls
+			display flex
+			
+
+	.stocks-slider__wrapper
+		padding-left 0
+		padding-right 0
+		.btn-arrow
+			display none !important
+			
+	.stock-content__btn
+		.row
+			justify-content center
+			text-align center
+			
+	.stock-discount
+		width 100%
+		margin-right 0
+		margin-bottom 15px
+		
+
+	// subscr
+	.sect__contacts, .sertificates, .subscription
+		padding-bottom 20px
+		
+	.subscription-slide__img p
+		font-size 18px
+		line-height 19px
+		
+	.subscription-slide__title
+		font-size 16px
+		
+
+	.sect-header
+		text-align left
+		justify-content space-between
+		margin-bottom 10px
+		.title
+			text-align left
+		.slider-controls
+			display flex
+			
+	.section
+		.sect-header
+			.title,
+			.title-h2-size
+				margin-bottom 0 
+				margin-right 10px
+
+			
+	.section
+		.title-h2-size
+			font-size 20px
+			line-height 24px
+			margin-bottom 10px
+			
+		.title-h3-size,
+		.sect-subtitle
+			font-size 15px
+			line-height 17px
+			
+	.sect-subtitle
+		br
+			display none
+			
+	.faq-slider__wrapper,
+	.feedbacks-slider__wrapper 
+		padding-left 0
+		padding-right 0
+		.btn-arrow
+			display none !important
+			
+	
+
+	.feedback-slide__header
+		display none
+		
 
 				
 +max-screen(700px)
@@ -1037,6 +1506,33 @@
 			font-size 15px
 			padding-left 25px
 			
+	// Catalog
+	.catalog-category__title
+		font-size 14px
+		line-height 16px
+		padding 10px
+		
+	.catalog-games
+		&__slider
+			padding-right 0
+			padding-left 0
+			position relative
+			padding-bottom 60px
+			
+			.btn-arrow
+				position absolute
+				horisontal-center()
+				bottom 10px
+				top auto
+				&__prev
+					margin-left -40px
+				&__next
+					margin-left 40px
+					
+	.catalog-game-card__thumbnail
+		width 85%
+		margin 0 auto 10px auto
+			
 
 
 
@@ -1157,6 +1653,31 @@
 			
 	.permalink
 		font-size 14px
+		
+	// Sertificates
+	.sertificate-slide
+		&__content
+			padding 10px
+		&__img
+			p
+				display none
+				
+	.sertificates__header
+		font-size 12px
+		br
+			display none
+			
+		.row
+			align-items flex-start
+			
+	.sertificates-slider 
+		margin-left -5px
+		margin-right -5px
+		.slick-slide
+			padding-left 5px
+			padding-right 5px
+			
+
 
 +max-screen(500px)
 	// Header
@@ -1224,3 +1745,11 @@
 				bottom -16%
 		&__scheme
 			width 350px
+			
+	// Top games
+	.top-game
+		.game__description
+			display none
+			
+		.game-params
+			margin-bottom 10px
