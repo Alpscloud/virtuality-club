@@ -19,7 +19,16 @@ $(document).ready(function() {
 				arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
 					'<svg viewBox="0 0 12 20"  xmlns="http://www.w3.org/2000/svg"><path d="M9.34607 9.81978L1.11903 1.59274C0.834613 1.30828 0.834613 0.847105 1.11903 0.562646C1.40353 0.278272 1.86467 0.278272 2.14913 0.562646L10.8912 9.30473C11.1756 9.58919 11.1756 10.0504 10.8912 10.3348L2.14913 19.0769C1.85972 19.3564 1.39854 19.3484 1.11903 19.059C0.846394 18.7767 0.846394 18.3291 1.11903 18.0468L9.34607 9.81978Z" /></svg>' +
 					"</button>",
+			},
+			clickOutside: "close",
+			mobile : {
+				clickContent : "close",
+				clickSlide : "close",
+				clickOutside: "close"
 			}
+			// clickContent : function( current, event ) {
+			// 	return current.type === 'image' ? 'zoom' : 'close';
+			// }
 		});
 	}
 
@@ -162,6 +171,17 @@ $(document).ready(function() {
 
 		$('.js-popup-order').stop().fadeIn(300);
 	});
+
+	$('.js-open-popup-callback-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$('html').addClass('is-fixed');
+
+		$('.js-popup-callback').stop().fadeIn(300);
+	});
+
+
+	
 
 
 	// custom scroll

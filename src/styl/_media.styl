@@ -186,11 +186,12 @@
 	.contacts-addresses__wrapper
 		margin-bottom 15px
 		
-	.contacts-block__gallery
-		justify-content center
+
 		
 	.contacts-block__addresses>div
-		max-height 320px
+		max-height 500px
+		
+
 		
 				
 +max-screen(1660px)
@@ -308,7 +309,7 @@
 			justify-content flex-start
 			
 		&-slider
-			padding-bottom 30px
+			padding-bottom 50px
 			&:before
 				height 170px
 			
@@ -319,7 +320,7 @@
 				margin-right -60px
 				
 				.slider-controls
-					bottom 10px
+					bottom 40px
 					
 	.include-slide
 		&__img
@@ -488,6 +489,12 @@
 	.btn-default
 		font-size 16px
 		padding 11px 30px
+		
+	.sect__faq
+		padding-bottom 0
+		
+	.feedback-slide__gallery--item
+		width 20%
 	// Top games
 	.top-games-slider
 		.slick-slide
@@ -635,6 +642,32 @@
 	// Feedbacks
 	.feedback-slide__src
 		padding-right 20px
+		
+	// contacts
+	.contacts-block__gallery--item
+		width 50%
+		
+	.contacts-addresses__current
+		padding-right 50px
+		
+	.contacts-block__content
+		align-items flex-start
+		
+	.contacts-block__map
+		padding-top 75%
+		
+	.contacts-addresses__wrapper
+		width 100%
+		margin-bottom 20px
+		
+	.contacts-block__addresses
+		width 365px
+		
+	.contacts-block__address--information
+		padding-top 15px
+		
+	.contacts-block__address--information_list
+		margin-bottom 25px
 				
 +max-screen(1100px)
 	
@@ -950,6 +983,45 @@
 			
 	.feedbacks-slider .slick-track
 		display block !important
+		
+	// Footer
+	.footer-col:nth-child(2)
+		width auto
+		
+	.footer-col:nth-child(2) .footer-col__item:nth-child(1)
+		width 240px
+		
+	.footer-bottom
+		.footer-col
+			width 100%
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
+				
+
+	// Contacts
+	.contacts-block
+		&__content
+			flex-wrap wrap
+		
+		&__map
+			&--col
+				flex none
+				width 100%
+				
+	.contacts-block__addresses
+		display none
+
+
+
+
+
+
+		
+
+		
+	.hidden-tablet
+		display none
 			
 	
 			
@@ -1150,6 +1222,9 @@
 		font-size 24px
 		line-height 29px
 		margin-bottom 10px
+		
+	.callback-title
+		margin-bottom 	30px
 		
 
 	.catalog-game-card__info
@@ -1368,9 +1443,29 @@
 	.feedback-slide__header
 		display none
 		
+	// contacts
+	.contacts-addresses__current--title
+		font-size 22px
+		
+	.contacts-block__gallery
+		margin-top 15px
+		margin-left -7.5px
+		margin-right -7.5px
+		&--item
+			padding-left 7.5px
+			padding-right 7.5px
+	
+	.contacts-block__map
+		padding-top 100%
 
 				
 +max-screen(700px)
+
+	// .section
+	// 	height calc(100vh - 56px) !important
+	// 	.fp-tableCell
+	// 		height calc(100vh - 56px) !important
+			
 
 	.title-h2-size
 		font-size 24px
@@ -1533,6 +1628,45 @@
 		width 85%
 		margin 0 auto 10px auto
 			
+
+	// Footer
+	.footer
+		padding 20px 0
+		
+		&__row
+			flex-wrap wrap
+			flex-direction column
+			justify-content center
+			align-items center
+			margin-bottom 15px
+		
+		&-col
+			width 260px !important
+			text-align center
+			&__row
+				flex-wrap wrap
+			
+			&__item 
+				width 100% !important
+				
+		.logo
+			margin-bottom 10px
+			
+		.btn,
+		.btn-default
+			width 100%
+			padding-left 10px
+			padding-right 10px
+			
+		.simple-phone
+			margin-bottom 10px
+			
+	.footer-bottom
+		margin-top 25px
+		
+				
+	.hidden-mobile-sm
+		display none
 
 
 
@@ -1753,3 +1887,4 @@
 			
 		.game-params
 			margin-bottom 10px
+			

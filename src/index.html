@@ -8002,7 +8002,7 @@
 
 						</div>
 
-						<div class="footer-col__item col-gutters">
+						<div class="footer-col__item col-gutters hidden-tablet">
 
 							<nav class="footer-nav footer-nav__main text-right">
 								<ul>
@@ -8021,7 +8021,7 @@
 
 				<div class="footer-col col-gutters">
 					<div class="row row-nowrap footer-col__row row-gutters">	
-						<div class="footer-col__item col-gutters">	
+						<div class="footer-col__item col-gutters hidden-tablet">	
 							<nav class="footer-nav">
 								<ul>
 									<li><a href="#" class="is-active">VR Клуб</a></li>
@@ -8034,7 +8034,7 @@
 							</nav>
 						</div>
 
-						<div class="footer-col__item row col-gutters">
+						<div class="footer-col__item row col-gutters hidden-tablet">
 							<nav class="footer-nav">
 								<ul>
 									<li><a href="#">VR Академия</a></li>
@@ -8049,7 +8049,7 @@
 
 						<div class="footer-col__item col-gutters">
 							<!-- Search -->
-							<div class="footer-search">
+							<div class="footer-search hidden-mobile-sm">
 								<form class="footer-search-form">
 									<div class="footer-search__group">
 										<input type="text" placeholder="Поиск по сайту" name="s" class="footer-search__input">
@@ -8117,7 +8117,7 @@
 				<div class="footer-col col-gutters">
 					<div class="row row-nowrap footer-col__row row-gutters align-vertical-end">	
 						<div class="footer-col__item col-gutters">	
-							<button class="btn-default btn-default__light btn-wide" type="button">Заказать звонок</button>
+							<button class="btn-default btn-default__light btn-wide js-open-popup-callback-btn" type="button">Заказать звонок</button>
 
 							<a href="tel:8 (499) 112-09-41" class="simple-phone">8 (499) 112-09-41</a>
 						</div>
@@ -8140,7 +8140,7 @@
 				<div class="footer-col col-gutters">
 					<p>&copy; 2015-2021 Virtuality Club Все права защищены</p>
 				</div>
-				<div class="footer-col col-gutters">
+				<div class="footer-col col-gutters hidden-mobile-sm">
 					<nav class="footer-subnav">
 						<li><a href="#">Политика Безопасности</a></li>
 						<li><a href="#">Подписаться на новости</a></li>
@@ -8302,17 +8302,50 @@
 
 
 		<!-- Popup -->
-<div class="popup js-popup">
+<div class="popup js-popup js-popup-callback popup-callback">
 	<div class="popup__overflow">
+
 		<div class="popup__body text-center">
-			<button class="btn-close js-close-popup-btn" type="button"></button>
-			<!-- Popup content-->
-			<div class="popup__content">
-				<h3 class="popup__title">Popup</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure consequuntur cumque, consectetur iste voluptatem totam laudantium et! Libero, odio, amet.</p>
+			
+			<div class="popup-inner">
+
+				<!-- Close -->
+				<button class="btn-close js-close-popup-btn" type="button">
+					<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+						<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+						<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+					</svg>
+				</button>
+				<!-- Close -->
+
+
+				<div class="popup-content">
+					<p class="popup__title callback-title">Обратный звонок</p>
+					<form  class="form">
+
+						<div class="form-groups__row row align-horisontal-start">
+							<div class="form-group col-w-50">
+								<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+								<span class="required-star">*</span>
+							</div>
+							<div class="form-group col-w-50">
+								<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+								<span class="required-star">*</span>
+							</div>
+						</div>
+
+
+						<div class="form-submit order-form__submit text-center">
+							<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+						</div>
+
+					</form>
+				</div>
+				
 			</div>
-			<!-- //Popup content-->
+
 		</div>
+
 	</div>
 </div>
 <!-- //Popup -->
