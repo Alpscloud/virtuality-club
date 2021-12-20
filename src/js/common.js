@@ -135,6 +135,7 @@ $(document).ready(function() {
 
 	$('.js-open-popup-template-btn').on('click', function(e) {
 		e.preventDefault();
+		e.stopPropagation();
 		var popupContentParent = $(this).parents('.js-popup-content-parent');
 		var popupContent = popupContentParent.find('.js-popup-content .popup-content').clone();
 
@@ -643,6 +644,27 @@ $(document).ready(function() {
 		});
 	}
 
+
+	if ($('.js-benefits-slider').length > 0) {
+		$('.js-benefits-slider').slick({
+			slidesToShow: 7,
+			infinite: true,
+			centerMode: false,
+			slidesToScroll: 1,
+			dots: false,
+			nextArrow: $('.js-benefits-slider-btn-next'),
+			prevArrow: $('.js-benefits-slider-btn-prev'),
+			// responsive: [
+			// 	{
+			// 		breakpoint: 550,
+			// 		settings: {
+			// 			slidesToShow: 3
+			// 		}
+			// 	}
+			// ]
+		});
+	}
+
 	// contacts
 	$('.js-contacts-addresses').on('click', function(e) {
 		e.preventDefault();
@@ -697,34 +719,49 @@ $(document).ready(function() {
 	$('.js-select').selectmenu();
 
 
-	var durationTooltip = $('<span class="form-range__tooltip"></span>');
-	var peopleTooltip = $('<span class="form-range__tooltip"></span>');
+	
+	
 
-	$('.js-duration-range').slider({
-		animate: "slow",
-		range: "min",
-		min: 10,
-		max: 100,
-		steps: 20,
-		value: 10,
-		slide: function(event, ui) {
-			$('.js-duration-range-value').val(ui.value).trigger('change');
-			durationTooltip.text(ui.value + ' минут(ы)');
-		}
-	}).find('.ui-slider-handle').append(durationTooltip);
+	$('.js-duration-range').each(function() {
+		var durationTooltip = $('<span class="form-range__tooltip"></span>');
 
-	$('.js-people-range').slider({
-		animate: "slow",
-		range: "min",
-		min: 10,
-		max: 100,
-		steps: 5,
-		value: 10,
-		slide: function(event, ui) {
-			$('.js-people-range-value').val(ui.value).trigger('change');
-			peopleTooltip.text(ui.value + ' человек(а)');
-		}
-	}).find('.ui-slider-handle').append(peopleTooltip);
+		var self = $(this);
+
+		self.slider({
+			animate: "slow",
+			range: "min",
+			min: 10,
+			max: 100,
+			steps: 20,
+			value: 10,
+			slide: function(event, ui) {
+				$(this).prev('.js-duration-range-value').val(ui.value).trigger('change');
+				durationTooltip.text(ui.value + ' минут(ы)');
+			}
+		}).find('.ui-slider-handle').append(durationTooltip);
+	});
+
+	
+	$('.js-people-range').each(function() {
+		var peopleTooltip = $('<span class="form-range__tooltip"></span>');
+
+		var self = $(this);
+
+		self.slider({
+			animate: "slow",
+			range: "min",
+			min: 10,
+			max: 100,
+			steps: 5,
+			value: 10,
+			slide: function(event, ui) {
+				$(this).prev('.js-people-range-value').val(ui.value).trigger('change');
+				peopleTooltip.text(ui.value + ' человек(а)');
+			}
+		}).find('.ui-slider-handle').append(peopleTooltip);
+
+	});
+	
 
 
 	$('.js-order-tab-content').not(":first").hide();
@@ -735,6 +772,25 @@ $(document).ready(function() {
 		$('.js-order-tab-content').removeClass('is-active');
 		$('.js-order-tab-btn').removeClass('is-active').eq($(this).index()).addClass('is-active');
 		$('.js-order-tab-content').hide().eq($(this).index()).fadeIn().addClass('is-active');
+	}).eq(0).addClass('is-active');
+
+
+	// Tab calculator and prices
+	$('.js-tab-content').not(":first").hide();
+	$('.tab-controls__item:first .js-tab-controls').addClass('is-active');
+
+	$('.tab-controls__item').on('click', '.js-tab-controls', function(e) {
+		e.preventDefault();
+
+		var btnWrapper = $(this).parents('.tab-controls__item');
+
+		$('.js-tab-content').removeClass('is-active');
+		$('.tab-controls__item .js-tab-controls').removeClass('is-active');
+
+		btnWrapper.eq($(this).index()).find('.js-tab-controls').addClass('is-active');
+
+		$('.js-tab-content').hide().eq(btnWrapper.index()).fadeIn().addClass('is-active');
+
 	}).eq(0).addClass('is-active');
 
 
