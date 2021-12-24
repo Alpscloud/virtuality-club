@@ -33,6 +33,24 @@
 			
 .slick-slide .slick-slide
 	padding 0 !important
+	
+.slick-dots 
+	margin-top 20px
+	bottom auto
+	position relative
+	li 
+		&.slick-active
+			button
+				opacity 1
+		button
+			padding 0
+			background-color $accent-color
+			border-radius 50%
+			width 10px
+			height 10px
+			opacity .25
+			&:before
+				display none
 			
 .swiper-container
 	*
@@ -198,7 +216,48 @@
 			float none
 			display block !important
 		
-	
+.formats-slider
+	&__wrapper
+		position relative
+		margin-top 55px
+		margin-left -130px
+		margin-right -130px
+		flex 1
+		
+		.btn-arrow
+			position absolute
+			vertical-center()
+			z-index 2
+			&__prev
+				left 120px
+			&__next
+				right 120px
+				
+	.slick-slide
+		height auto
+		width 1070px
+		padding-left 75px
+		padding-right 75px	
+		
+		&:not(.slick-center),
+		&:not(.slick-current)
+			.format
+				opacity .4
+				pointer-events none
+					
+		&.slick-current,
+		&.slick-center
+			.format
+				opacity 1
+				pointer-events auto
+				
+	.slick-track
+		flex-wrap nowrap
+		display flex
+		
+		.slick-slide
+			float none
+			display block !important
 		
 	
 .top-game

@@ -132,4 +132,43 @@
 			.menu-aside
 				transform translateX(0)
 				opacity 1
-	
+				
+
+.menu-main__list
+	margin-bottom 50px
+	li
+		display block
+		position relative
+		margin-bottom 25px
+		&:last-child
+			margin-bottom 0
+			
+		
+		
+
+			
+	a
+		text-transform uppercase
+		color #F4F2F5
+		font 18px $MBold
+		&:hover,
+		&.is-active
+			color $accent-color
+
+.menu-item-divider
+	&:before
+		pseudo()
+		position absolute
+		vertical-center()
+		right 100%
+		margin-right 10px
+		height 2px
+		background-color $accent-color
+		width 90px
+		
+	&__md
+		&:before
+			width 60px
+	&__sm
+		&:before
+			width 30px

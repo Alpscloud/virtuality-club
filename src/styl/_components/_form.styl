@@ -121,6 +121,8 @@ input[type="search"]::-webkit-search-results-decoration
 			
 	&-textarea
 		min-height 200px
+		&__sm
+			min-height 50px
 		
 
 	&-label
@@ -259,7 +261,8 @@ input[type="search"]::-webkit-search-results-decoration
 		
 			
 		&__item
-			display block
+			height 100%
+			flex-col-center()
 			text-align center
 			text-align center
 			font 18px $MBold
@@ -291,3 +294,37 @@ input[type="search"]::-webkit-search-results-decoration
 			margin-right 0
 
 
+.form-radio-default
+	input
+		display none
+	&__item
+		display inline-block
+		position relative
+		font 18px $Bold
+		color $text-color
+		padding-left 45px
+		&:before,
+		&:after
+			pseudo()
+			position absolute
+			border-radius 50%
+		&:before
+			width 25px
+			height 25px
+			border 1px solid $accent-color
+			left 0
+			vertical-center()
+		&:after
+			width 17px
+			height 17px
+			background-color $accent-color
+			opacity 0
+			transition opacity .17s ease-in-out
+			vertical-center()
+			left 4px
+		&:hover
+			cursor pointer
+			
+	input:checked + span
+		&:after
+			opacity 1

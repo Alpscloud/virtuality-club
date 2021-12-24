@@ -6,6 +6,7 @@
 
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
+		{% include '../parts/components/menu/menu-inner.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
@@ -64,7 +65,7 @@
 				<section class="section section-center sect__benefits">
 					<h2 class="w3c">Преимущества</h2>
 					<div class="section-content">
-						<div class="container">
+						<div class="container sect-gutter-top">
 							<div class="benefits-wrapper">
 								<!-- Slider -->
 								<div class="benefits-slider js-benefits-slider">
@@ -137,7 +138,7 @@
 
 
 								<div class="benefits">
-									<div class="benefits__row row align-horisontal-start row-gutters">
+									<div class="benefits__row row align-horisontal-start row-gutters js-benefits-cards-slider">
 										<div class="benefit__wrapper col-gutters">
 											<div class="benefit top-left-bg">
 												<span class="benefit__ic" style="background-image: url('img/icons/svg/benefits/1.svg');"></span>
@@ -228,7 +229,7 @@
 
 							<div class="calculator tab-block">
 
-								<div class="tab-controls color-bg b-radius-5">
+								<div class="tab-controls tab-controls__desktop color-bg b-radius-5">
 									<div class="tab-controls__row row align-horisontal-between row-nowrap">
 										<div class="tab-controls__item">
 											<button class="tab-controls__btn js-tab-controls is-active" type="button">Одиночные сеансы</button>
@@ -251,9 +252,33 @@
 									</div>
 								</div>
 
+								<div class="tab-controls tab-controls__devices color-bg b-radius-5">
+									<div class="tab-controls__row row align-horisontal-between row-nowrap">
+										<div class="tab-controls__item">
+											<button class="tab-controls__btn js-tab-controls" type="button">Одиночные сеансы</button>
+										</div>
+										<div class="tab-controls__item">
+											<button class="tab-controls__btn js-tab-controls" type="button">Командные сеансы </button>
+										</div>
+
+										<div class="tab-controls__item">
+											<button class="tab-controls__btn js-tab-controls" type="button">Аренда клуба</button>
+										</div>
+
+										<div class="tab-controls__item">
+											<button class="tab-controls__btn js-tab-controls" type="button">Абонементы </button>
+										</div>
+
+										<div class="tab-controls__item">
+											<button class="tab-controls__btn js-tab-controls" type="button">Подарочные сертификаты</button>
+										</div>
+									</div>
+								</div>
+
 								<div class="tab-content">
 									<!-- Tab item -->
 									<div class="tab-content-item js-tab-content ">
+
 										<form class="form calculator-form">
 											<div class="tab-content-item__body b-radius-5 color-bg">
 
@@ -358,6 +383,7 @@
 												</div>
 											</div>
 										</form>
+										
 									</div>
 									<!-- //Tab item -->
 
@@ -442,12 +468,296 @@
 												<div class="row align-vertical-center align-horisontal-between row-gutters calculator-form-results__row row-nowrap">
 
 													<div class="calculator-form-results__col col-gutters">
-														check
+														<div class="form-group">
+															<label  class="form-radio-default">
+																<input type="radio" name="discount" value="Хочу скидку" checked>
+																<span class="form-radio-default__item">Хочу скидку</span>
+															</label>
+														</div>
+														
 													</div>
 
 													<div class="calculator-form-results__col calculator-form-results__total col-gutters">
 														<span class="calculator-form-results__total-label">Цена:</span>
 														<span class="calculator-form-results__total-price">0 <span>руб</span></span>
+													</div>
+
+													<div class="calculator-form-results__col col-gutters">
+														<button class="btn btn-sm" type="submit"><span>Записаться</span></button>
+													</div>
+
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- //Tab item -->
+
+									<!-- Tab item -->
+									<div class="tab-content-item js-tab-content ">
+										<form class="form calculator-form">
+											<div class="tab-content-item__body b-radius-5 color-bg">
+
+
+
+												<div class="row align-horisontal-between row-gutters calculator-form__row row-nowrap	">
+													<div class="col-gutters calculator-form__col column align-horisontal-between">
+														<div class="row align-vertical-center align-horisontal-between form-range__row ">
+															<p class="form-label form-label__with-ic ic-time">Время игры</p>
+
+															<input type="hidden" name="Время игры" class="js-duration-range-value">
+
+															<div class="form-range">
+																<div class="form-range__input js-duration-range"></div>
+															</div>
+														</div>
+
+														<div class="form-range__row">
+															
+															<p class="form-label form-label__full">Комментарий к брони</p>
+
+															<div class="form-group">
+																<input type="text" name="comment" class="form-input" placeholder="Введите текст">
+
+															</div>
+														</div>
+
+													</div>
+													<!-- //col -->
+
+													<div class="col-gutters calculator-form__col">
+
+														<div class="form-date__group">
+															<p class="form-label form-label__full">Дата</p>
+															<div class="form-group form-group__short">
+																<input type="text" class="form-input form-input-ui js-input-date" name="date" placeholder="02/12/2021">
+															</div>
+														</div>
+
+														<div class="form-select__group">
+															<p class="form-label form-label__full">Время посещения</p>
+
+															<div class="form-group form-group__short">
+																<select name="Время"  class="form-input form-select js-select">
+																	<option value="10:00" selected>10:00</option>
+																	<option value="11:00">11:00</option>
+																	<option value="12:00">13:00</option>
+																	<option value="13:00">13:00</option>
+																	<option value="14:00">14:00</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<!-- //col -->
+												</div>
+												<!-- //row -->
+
+
+											</div>
+											<div class="tab-content-item__footer b-radius-5 color-bg">
+												<div class="row align-vertical-center align-horisontal-between row-gutters calculator-form-results__row row-nowrap">
+
+													<div class="calculator-form-results__col col-gutters">
+														<div class="form-group">
+															<label  class="form-radio-default">
+																<input type="radio" name="discount" value="Хочу скидку" checked>
+																<span class="form-radio-default__item">Хочу скидку</span>
+															</label>
+														</div>
+
+														<div class="form-group">
+															<label  class="form-radio-default">
+																<input type="radio" name="discount" value="День рождения">
+																<span class="form-radio-default__item">День рождения</span>
+															</label>
+														</div>
+														
+													</div>
+
+													<div class="calculator-form-results__col calculator-form-results__total col-gutters">
+														<span class="calculator-form-results__total-label">Цена:</span>
+														<span class="calculator-form-results__total-price">25 000 <span>руб</span></span>
+													</div>
+
+													<div class="calculator-form-results__col col-gutters">
+														<button class="btn btn-sm" type="submit"><span>Записаться</span></button>
+													</div>
+
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- //Tab item -->
+
+									<!-- Tab item -->
+									<div class="tab-content-item js-tab-content ">
+										<form class="form calculator-form">
+											<div class="tab-content-item__body b-radius-5 color-bg">
+
+												<div class="row align-horisontal-between row-gutters calculator-form__row row-nowrap	calculator-form__radios">
+													<div class="col-gutters calculator-form__col">
+														<p class="form-label form-label__full">Вид абонемента</p>
+														<div class="form-radios">
+															<label  class="form-radio">
+																<input type="radio" name="Вид абонемента" value="Ограниченный" checked>
+																<span class="form-radio__item">Ограниченный</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид абонемента" value="Неограниченный">
+																<span class="form-radio__item">Неограниченный</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид абонемента" value="Кошелёк">
+																<span class="form-radio__item">Кошелёк</span>
+															</label>
+														</div>
+													</div>
+													<!-- //col -->
+
+													<div class="col-gutters calculator-form__col">
+														<div class="form-select__group">
+															<p class="form-label form-label__full">Взнос</p>
+
+															<div class="form-group form-group__short">
+																<select name="Взнос"  class="form-input form-select js-select">
+																	<option value="1000 Р" selected>1000 Р</option>
+																	<option value="2000 Р">2000 Р</option>
+																	<option value="3000 Р">3000 Р</option>
+																	<option value="4000 Р">4000 Р</option>
+																	<option value="5000 Р">5000 Р</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<!-- //col -->
+
+
+												</div>
+												<!-- //row -->
+
+												<div class="row align-horisontal-between row-gutters calculator-form__row row-nowrap	">
+													<div class="col-gutters calculator-form__col">
+														<div class="row align-vertical-center align-horisontal-between form-range__row">
+															<p class="form-label form-label__with-ic ic-time">Количество минут</p>
+
+															<input type="hidden" name="Количество минут" class="js-duration-range-value">
+
+															<div class="form-range">
+																<div class="form-range__input js-duration-range"></div>
+															</div>
+														</div>
+
+													</div>
+													<!-- //col -->
+
+													<div class="col-gutters calculator-form__col">
+													</div>
+													<!-- //col -->
+
+													
+												</div>
+												<!-- //row -->
+
+
+											</div>
+											<div class="tab-content-item__footer b-radius-5 color-bg">
+												<div class="row align-vertical-center align-horisontal-between row-gutters calculator-form-results__row row-nowrap">
+
+													<div class="calculator-form-results__col col-gutters"></div>
+
+													<div class="calculator-form-results__col calculator-form-results__total col-gutters">
+														<span class="calculator-form-results__total-label">Цена:</span>
+														<span class="calculator-form-results__total-price">12 200 <span>руб</span></span>
+													</div>
+
+													<div class="calculator-form-results__col col-gutters">
+														<button class="btn btn-sm" type="submit"><span>Записаться</span></button>
+													</div>
+
+												</div>
+											</div>
+										</form>
+									</div>
+									<!-- //Tab item -->
+
+									<!-- Tab item -->
+									<div class="tab-content-item js-tab-content ">
+										<form class="form calculator-form">
+											<div class="tab-content-item__body b-radius-5 color-bg">
+
+												<div class="row align-horisontal-between row-gutters calculator-form__row row-nowrap	calculator-form__radios">
+													<div class="col-gutters calculator-form__col calculator-form__col-full">
+														<p class="form-label form-label__full">Вид сертификата </p>
+														<div class="form-radios">
+															<label  class="form-radio">
+																<input type="radio" name="Вид сертификата " value="Одиночный" checked>
+																<span class="form-radio__item">Одиночный</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид сертификата " value="На двоих">
+																<span class="form-radio__item">На двоих</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид сертификата " value="На четверых">
+																<span class="form-radio__item">На четверых</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид сертификата " value="Аренда клуба">
+																<span class="form-radio__item">Аренда клуба</span>
+															</label>
+
+															<label  class="form-radio">
+																<input type="radio" name="Вид сертификата " value="Аренда клуба MAX">
+																<span class="form-radio__item">Аренда клуба MAX</span>
+															</label>
+														</div>
+													</div>
+													<!-- //col -->
+
+													
+
+
+												</div>
+												<!-- //row -->
+
+												<div class="row align-horisontal-between row-gutters calculator-form__row row-nowrap	">
+
+													<div class="col-gutters calculator-form__col">
+														<div class="row align-vertical-center align-horisontal-between form-range__row">
+															<p class="form-label form-label__with-ic ic-time">Время игры</p>
+
+															<input type="hidden" name="Время игры" class="js-duration-range-value">
+
+															<div class="form-range">
+																<div class="form-range__input js-duration-range"></div>
+															</div>
+														</div>
+
+													</div>
+													<!-- //col -->
+
+													<div class="col-gutters calculator-form__col">
+													</div>
+													<!-- //col -->
+
+													
+												</div>
+												<!-- //row -->
+
+
+											</div>
+											<div class="tab-content-item__footer b-radius-5 color-bg">
+												<div class="row align-vertical-center align-horisontal-between row-gutters calculator-form-results__row row-nowrap">
+
+													<div class="calculator-form-results__col col-gutters"></div>
+
+													<div class="calculator-form-results__col calculator-form-results__total col-gutters">
+														<span class="calculator-form-results__total-label">Цена:</span>
+														<span class="calculator-form-results__total-price">12 200 <span>руб</span></span>
 													</div>
 
 													<div class="calculator-form-results__col col-gutters">
@@ -473,658 +783,72 @@
 				<!-- //sect catalog -->
 
 
-				<section class="section sect__gallery gradient-bg">
-					<div class="section-content">
-						<div class="container full-height row align-vertical-end ">
-
-							<div class="row align-vertical-end gallery__row align-horisontal-between row-nowrap">
-								<!-- Video link -->
-								<a href="video/status.mp4" class="video-link video-link__sm" data-fancybox="video">
-									<span class="video-link__poster bg" style="background-image: url('img/video-poster.png');"></span>
-								</a>
-								<!-- //Video link -->
-
-								<div class="gallery-btn">
-									<button class="btn js-open-popup-order-btn" type="button"><span>Записаться</span></button>
-								</div>
-
-								<div class="gallery-slider-thumbnails__wrapper">
-									<!-- Controls -->
-									<div class="gallery-slider-controls">
-										<button class="btn-arrow btn-arrow__dark btn-arrow__sm btn-arrow__prev js-gallery-slider-thumbnails-btn-prev " type="button">
-											<span></span>
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__dark btn-arrow__sm btn-arrow__next js-gallery-slider-thumbnails-btn-next " type="button">
-											<span></span>
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-									</div>
-									<!-- //Controls -->
-
-									<div class="gallery-slider-thumbnails js-gallery-slider-thumbnails">
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/1.jpg" alt=""></div>
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/2.jpg" alt=""></div>
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/3.jpg" alt=""></div>
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/1.jpg" alt=""></div>
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/2.jpg" alt=""></div>
-										<div class="gallery-slide-thumbnail thumbnail"><img src="img/gallery/3.jpg" alt=""></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- //container -->
-					</div>
-
-					<!-- Gallery slider -->
-					<div class="gallery-slider js-gallery-slider">
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-1.jpg');"></div>
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-2.jpg');"></div>
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-3.jpg');"></div>
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-1.jpg');"></div>
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-2.jpg');"></div>
-						<div class="gallery-slide bg" style="background-image: url('img/gallery/lg-3.jpg');"></div>
-					</div>
-					<!-- //Gallery slider -->
-				</section>
-				<!-- //sect gallery -->
 
 
 				{% include '../parts/sections/sect-stocks.html' %}
 				<!-- //sect stocks -->
 
-				<section class="section sect__sertificates">
-					<div class="section-content">
-						<div class="container full-height">
-							<div class="sertificates sect-gutter-top">
-								<div class="sertificates__header">
-									<div class="row align-vertical-end align-horisontal-between row-nowrap">
-										<div class="serficiates-title__col">
-											<h2 class="title title-h2-size">Сертификаты</h2>
-											<p>Хотите подарить близким незабываемые впечатления виртуальной<br> реальности? Подарочные сертификаты от 1000р до бесконечности! </p>
-										</div>
-
-										<div class="sertificates-slider__controls slider-controls">
-											<button class="btn-arrow  btn-arrow__prev js-sertificates-slider-btn-prev " type="button">
-
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
-
-											</button>
-
-											<button class="btn-arrow  btn-arrow__next js-sertificates-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="sertificates-slider js-sertificates-slider">
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-
-								</div>
-							</div>
-						</div>
-						<!-- //container -->
-					</div>
-				</section>
+				{% include '../parts/sections/sect-sertificates.html' %}
 				<!-- //sect sertificates -->
 
 
-				<section class="section sect__subscription gradient-bg">
+				<section class="section sect__formats section-center gradient-bg ">
 					<div class="section-content">
-						<div class="container full-height">
-							<div class="subscription sect-gutter-top">
-								<h2 class="title title-h2-size">Абонементы</h2>
+						<div class="container">
 
-								<div class="subscription-slider__wrapper">
-									<div class="subscription-slider js-subscription-slider">
-										<!-- Slide -->
-										{% include '../parts/components/sliders/subscribe/slide.html' %}
-										<!-- //Slide -->
+							<div class="sect-header row align-vertical-center align-horisontal-between row-nowrap">
+								<h2 class="title title-h2-size">Другие<br> форматы</h2>
 
-										<!-- Slide -->
-										{% include '../parts/components/sliders/subscribe/slide.html' %}
-										<!-- //Slide -->
+								<div class="slider-controls">
+									<button class="btn-arrow btn-arrow__prev btn-arrow__fill-dark js-formats-slider-btn-prev " type="button">
+										<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+										</svg>
 
-										<!-- Slide -->
-										{% include '../parts/components/sliders/subscribe/slide.html' %}
-										<!-- //Slide -->
+									</button>
 
-										<!-- Slide -->
-										{% include '../parts/components/sliders/subscribe/slide.html' %}
-										<!-- //Slide -->
-
-										<!-- Slide -->
-										{% include '../parts/components/sliders/subscribe/slide.html' %}
-										<!-- //Slide -->
-									</div>
-
-									<!-- Controls -->
-									<div class="slider-controls">
-										<button class="btn-arrow btn-arrow__sm btn-arrow__prev js-subscription-slider-btn-prev " type="button">
-											<span></span>
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-subscription-slider-btn-next " type="button">
-											<span></span>
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-									</div>
-									<!-- //Controls -->
+									<button class="btn-arrow btn-arrow__next btn-arrow__fill-dark js-formats-slider-btn-next" type="button">
+										<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+										</svg>
+									</button>
 								</div>
+							</div>
+
+							<div class="formats-slider__wrapper">
+								<div class="formats-slider js-formats-slider">
+									{% include '../parts/components/sliders/formats/slide.html' %}
+									{% include '../parts/components/sliders/formats/slide.html' %}
+									{% include '../parts/components/sliders/formats/slide.html' %}
+									{% include '../parts/components/sliders/formats/slide.html' %}
+									{% include '../parts/components/sliders/formats/slide.html' %}
+								</div>
+
+								<!-- Slider controls -->
+								<button class="btn-arrow btn-arrow__prev btn-arrow__fill-dark js-formats-slider-btn-prev  " type="button">
+									<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+									</svg>
+
+								</button>
+
+								<button class="btn-arrow btn-arrow__next btn-arrow__fill-dark js-formats-slider-btn-next " type="button">
+									<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+									</svg>
+								</button>
 							</div>
 						</div>
 						<!-- //container -->
 					</div>
 				</section>
+				<!-- //sect formats -->
 
-				<!-- //sect subscription -->
 
 
-				<section class="section simple-sections ">
-					<div class="section-content">
-						<div class="sections">
-							<section class="sect__faq sect-gutter-top gutter-bottom">
 
-								<div class="container">
-									<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
-										<h2 class="title title-h2-size">Часто задаваемые вопросы</h2>
-
-										<div class="slider-controls">
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
-
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
-
-											</button>
-
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-
-									</div>
-
-									<div class="faq-slider__wrapper slider">
-										<div class="faq-slider js-faq-slider">
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-										</div>
-
-										<!-- Controls -->
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
-
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-										<!-- //Controls -->
-									</div>
-								</div>
-								<!-- //container -->
-
-
-							</section>
-							<!-- //sect faqs -->
-
-							<section class="sect__feedbacks gutter-bottom">
-
-								<div class="container">
-									<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
-										<h2 class="title title-h2-size">Эмоции от виртуальной реальности</h2>
-
-										<div class="slider-controls">
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-feedbacks-slider-btn-prev " type="button">
-
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
-
-											</button>
-
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-feedbacks-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-									</div>
-
-									<div class="feedbacks-slider__wrapper slider">
-
-										<div class="feedbacks-slider js-feedbacks-slider">
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-										</div>
-
-
-										<!-- Controls -->
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-feedbacks-slider-btn-prev " type="button">
-
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-feedbacks-slider-btn-next " type="button">
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-										<!-- //Controls -->
-									</div>
-								</div>
-								<!-- //container -->
-
-
-							</section>
-							<!-- //sect feedbacks -->
-
-						</div>
-
-					</div>
-
-
-					
-
-
-
-
-
-				</section>
+				{% include '../parts/sections/sect-feedbacks.html' %}
+				<!-- //sect feedbacks -->
 
 
 				{% include '../parts/sections/sect-contacts.html' %}
@@ -1155,10 +879,10 @@
 					{% include '../parts/components/page-nav/calculator.html' %}
 					{% include '../parts/components/page-nav/top-games.html' %}
 					{% include '../parts/components/page-nav/catalog.html' %}
-					{% include '../parts/components/page-nav/gallery.html' %}
 					{% include '../parts/components/page-nav/stocks.html' %}
 					{% include '../parts/components/page-nav/sertificates.html' %}
-					{% include '../parts/components/page-nav/subscr.html' %}
+					{% include '../parts/components/page-nav/formats.html' %}
+
 				</ul>
 			</div>
 

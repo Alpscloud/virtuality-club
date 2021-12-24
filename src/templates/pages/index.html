@@ -6,6 +6,7 @@
 
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
+		{% include '../parts/components/menu/menu-main.html' %}
 		<!-- //Header -->
 
 		<!-- Main -->
@@ -19,6 +20,7 @@
 
 					<div class="promo-slider js-promo-slider">
 						<!-- Slide -->
+
 						
 						<div class="promo-slide">
 							<div class="container">
@@ -437,67 +439,7 @@
 				{% include '../parts/sections/sect-stocks.html' %}
 				<!-- //sect stocks -->
 
-				<section class="section sect__sertificates">
-					<div class="section-content">
-						<div class="container full-height">
-							<div class="sertificates sect-gutter-top">
-								<div class="sertificates__header">
-									<div class="row align-vertical-end align-horisontal-between row-nowrap">
-										<div class="serficiates-title__col">
-											<h2 class="title title-h2-size">Сертификаты</h2>
-											<p>Хотите подарить близким незабываемые впечатления виртуальной<br> реальности? Подарочные сертификаты от 1000р до бесконечности! </p>
-										</div>
-
-										<div class="sertificates-slider__controls slider-controls">
-											<button class="btn-arrow  btn-arrow__prev js-sertificates-slider-btn-prev " type="button">
-
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
-
-											</button>
-
-											<button class="btn-arrow  btn-arrow__next js-sertificates-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="sertificates-slider js-sertificates-slider">
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-									<!-- Slide -->
-									{% include '../parts/components/sliders/sertificates/slide.html' %}
-									<!-- //Slide -->
-
-
-								</div>
-							</div>
-						</div>
-						<!-- //container -->
-					</div>
-				</section>
+				{% include '../parts/sections/sect-sertificates.html' %}
 				<!-- //sect sertificates -->
 
 
@@ -557,472 +499,74 @@
 
 				<!-- //sect subscription -->
 
+				<section class="section section-center sect__faq gutter-bottom">
 
-				<section class="section simple-sections ">
 					<div class="section-content">
-						<div class="sections">
-							<section class="sect__faq sect-gutter-top gutter-bottom">
 
-								<div class="container">
-									<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
-										<h2 class="title title-h2-size">Часто задаваемые вопросы</h2>
+						<div class="container">
+							<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
+								<h2 class="title title-h2-size">Часто задаваемые вопросы</h2>
 
-										<div class="slider-controls">
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
+								<div class="slider-controls">
+									<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
 
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
+										<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+										</svg>
 
-											</button>
+									</button>
 
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-
-									</div>
-
-									<div class="faq-slider__wrapper slider">
-										<div class="faq-slider js-faq-slider">
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-											{% include '../parts/components/sliders/faq/slides.html' %}
-										</div>
-
-										<!-- Controls -->
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
-
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-										<!-- //Controls -->
-									</div>
+									<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
+										<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+										</svg>
+									</button>
 								</div>
-								<!-- //container -->
 
-
-							</section>
-							<!-- //sect faqs -->
-
-							<section class="sect__feedbacks gutter-bottom">
-
-								<div class="container">
-									<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
-										<h2 class="title title-h2-size">Эмоции от виртуальной реальности</h2>
-
-										<div class="slider-controls">
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-feedbacks-slider-btn-prev " type="button">
-
-												<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-													<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-												</svg>
-
-											</button>
-
-											<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-feedbacks-slider-btn-next " type="button">
-												<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-												</svg>
-											</button>
-										</div>
-									</div>
-
-									<div class="feedbacks-slider__wrapper slider">
-
-										<div class="feedbacks-slider js-feedbacks-slider">
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-											<!-- Slide -->
-											<div class="feedback-slide">
-												<div class="feedback-slide__header">
-													<span class="feedback-slide__src">
-														<img src="img/google.svg" alt="">
-													</span>
-													<div class="feedback-slide__link-wrapper">
-														<a href="#" target="_blank" rel="nofollow" class="feedback-slide__link"><span>Перейти</span></a>
-													</div>
-
-												</div>
-												<div class="feedback-slide__content">
-													<div class="feedback-slide__author">
-														<div class="feedback-slide__author-information">
-															<span class="feedback-slide__author-information_photo bg" style="background-image: url('img/avatar.png');"></span>
-															<h3 class="feedback-slide__author-information_name">Анастасия </h3>
-														</div>
-														<span class="feedback-slide__author-stars">5</span>
-													</div>
-
-													<div class="feedback-slide__text">
-														<p>Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤ Lorem ipsum 😱 dolor sit amet, consectetur adipiscing elit 👊❤</p>
-													</div>
-
-													<div class="feedback-slide__gallery">
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-														<div class="feedback-slide__gallery--item">
-															<a href="img/subscr.jpg" data-fancybox="feedback" class="feedback-slide__gallery--item_link thumbnail">
-																<img src="img/subscr.jpg" alt="">
-															</a>
-														</div>
-
-													</div>
-												</div>
-											</div>
-											<!-- //Slide -->
-
-										</div>
-
-
-										<!-- Controls -->
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-feedbacks-slider-btn-prev " type="button">
-
-											<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
-												<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
-											</svg>
-
-										</button>
-
-										<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-feedbacks-slider-btn-next " type="button">
-											<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
-												<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
-											</svg>
-										</button>
-										<!-- //Controls -->
-									</div>
+							</div>
+
+							<div class="faq-slider__wrapper slider">
+								<div class="faq-slider js-faq-slider">
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
+									{% include '../parts/components/sliders/faq/slides.html' %}
 								</div>
-								<!-- //container -->
 
+								<!-- Controls -->
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-faq-slider-btn-prev " type="button">
 
-							</section>
-							<!-- //sect feedbacks -->
+									<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+									</svg>
 
+								</button>
+
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-faq-slider-btn-next " type="button">
+									<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+									</svg>
+								</button>
+								<!-- //Controls -->
+							</div>
 						</div>
+						<!-- //container -->
 
 					</div>
 
 
-					
-
-
-
-
-
 				</section>
+				<!-- //sect faqs -->
+
+
+				{% include '../parts/sections/sect-feedbacks.html' %}
+				<!-- //sect feedbacks -->
 
 
 				{% include '../parts/sections/sect-contacts.html' %}
