@@ -109,10 +109,11 @@
 	z-index 1
 	width 255px
 	height 170px
-	padding 40px 40px 20px
+	padding 20px
 	font 18px $Bold
 	line-height 21px
 	text-align center
+	flex-col-center()
 	
 	&:before
 		pseudo()
@@ -439,4 +440,58 @@
 		text-transform uppercase
 		font 30px $MBold
 		margin-bottom 10px
+
+
+//VR ARENA
+.vr-arena__label
+	width 255px
+	height 255px
+	margin-top 50px
+	img
+		display block
 		
+.page-arena
+	.promo-inner__content
+		width 100%
+		max-width 520px
+		color $light-accent-color
+		
+		align-items flex-start
+		
+// VR Quest
+.page-quest
+	.sect__promo
+		background-position top center
+		
+
+		
+	.promo-inner__content
+		align-items flex-start
+		
+	.benefit__wrapper:nth-child(4)
+		display flex
+		justify-content center
+		
+	.benefits:before
+		display none
+		
+.benefits-border
+	display block
+	fill none
+	stroke $accent-color
+	position absolute
+	width calc(100% - 260px)
+	left 130px
+	bottom 90px
+	height 190px
+
+	z-index -1
+	
+.benefit
+	p
+		max-width 150px
+		
+.vr-quest__label
+	width 280px
+	img
+		display block

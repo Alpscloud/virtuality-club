@@ -27,13 +27,14 @@
 	.catalog-game-card__thumbnail
 		width 200px
 		
-	.subscription-slide__img p
-		font-size 22px
-		line-height 26px
-		left auto
-		right auto
-		bottom 0
-		padding 0 10px 10px 10px
+	.subscription-slide__img 
+		p, h2
+			font-size 22px
+			line-height 26px
+			left auto
+			right auto
+			bottom 0
+			padding 0 10px 10px 10px
 		
 	.gutter-bottom
 		padding-bottom 50px
@@ -111,6 +112,9 @@
 	.section-content
 		padding-top 75px
 		
+	.page-content .main
+		padding-top 75px
+		
 	// Top games
 	.top-game
 		&__content
@@ -140,9 +144,10 @@
 		min-height 160px
 		
 	// subscription
-	.subscription-slide__img p
-		font-size 22px
-		line-height 26px
+	.subscription-slide__img
+			p, h2
+				font-size 22px
+				line-height 26px
 		
 	.subscription-slide__title
 		font-size 18px
@@ -443,7 +448,11 @@
 			
 	.promo-inner__title-stroke
 		max-width 300px
-	
+		
+	// Arena
+	.vr-arena__label
+		width 175px
+		height 175px
 		
 +max-screen(1440px)
 	.page-nav
@@ -542,6 +551,11 @@
 			
 	.benefits
 		height 300px
+		&-border
+			bottom 50px
+			
+	.vr-quest__label
+		width 220px
 		
 
 +max-screen(1365px)
@@ -659,6 +673,9 @@
 			bottom auto
 			left 30px
 			right 5px
+			
+		&-border
+			display none
 	
 		
 		&__row
@@ -667,6 +684,10 @@
 			.slick-slide
 				width 200px
 				margin-right 30px
+				
+	.page-quest
+		.benefits:before
+			display block
 		
 	.benefit
 		padding 20px 0 0 0
@@ -712,6 +733,9 @@
 		height calc(100vh - 60px)
 		
 	.section-content
+		padding-top 60px
+		
+	.page-content .main
 		padding-top 60px
 		
 	.btn-arrow
@@ -1073,6 +1097,35 @@
 				&:before
 					horisontal-center()
 					width 100%
+					
+
+	.page-arena
+		.promo-inner
+			&__content
+				max-width 100%
+				align-items center
+				text-align center
+				
+			
+			
+
+			
+	.vr-arena__label
+		margin 0
+		position absolute	
+		bottom 30px
+		right 0
+		
+
+	.sect__gallery
+		.title
+			text-align left
+			
+
+	.page-title
+		text-align left
+		br
+			display none
 				
 
 			
@@ -1215,12 +1268,37 @@
 
 
 
-
+	.sect__gallery
+		.sect-header
+			top 10px
+			max-width 200px
+			
+	.page-arena
+		.sect__gallery
+			.video-link
+				right 10px
+				left auto
 		
 
 		
 	.hidden-tablet
 		display none
+		
+	// Subscr
+	.subscription-type__info
+		flex-wrap wrap
+		span
+			display block
+			width 100%
+			margin-bottom 10px
+			&:last-child
+				margin-bottom 0
+				
+	.subscription-type__btn
+		font-size 12px
+		
+	.subscription-type__btns
+		height 42px
 			
 	
 			
@@ -1729,8 +1807,8 @@
 			horisontal-center()
 			
 		&__title
-			font-size 20px
-			line-height 24px
+			font-size 24px
+			line-height 29px
 			margin-bottom 10px
 		&__subtitle
 			font-size 16px
@@ -1841,7 +1919,55 @@
 	.feedback-slide__gallery--item
 		width 25%
 
+	.vr-arena__label
+		display none
+		
+	.page-title
+		font-size 28px
+		line-height 32px
+		margin-bottom 40px
+		text-align center
+		
+	.content
+		h2, h3
+			font-size 24px
+			line-height 30px
+			
+		h4
+			font-size 18px
+			line-height 24px
+			
+		ul, ol
+			margin-bottom 30px
+			
+		p
+			margin-bottom 15px
+		
+	.content-wrapper
+		padding-left 0
+		padding-top 40px
+		
 
+	.gutter-top
+		padding-top 40px
+	
+	.content-border
+		display none
+		
+	.subscription-content
+		padding-top 0
+		
+	.subscription-types-slider__wrapper .sect-header
+		margin-bottom 20px
+		
+	.subscription-type__content
+		padding-left 10px
+		padding-right 10px
+		
+	.page-content
+		.header
+			position fixed
+			background-color $menu-aside-bg
 				
 +max-screen(700px)
 
@@ -1866,7 +1992,7 @@
 		&:before
 			display none
 		&.is-opened
-			background-color transparent
+			background-color $menu-aside-bg
 			&:before
 				display none
 			

@@ -1,0 +1,218 @@
+.page-content
+	.main
+		padding-top 104px
+		
+	// .header
+	// 	background-color $menu-aside-bg
+
+	
+
+	
+.page-title
+	font 48px $MBold
+	line-height 51px
+	margin-bottom 55px
+	text-align right
+	width fit-content
+	
+
+	
+.content-wrapper
+	position relative
+	padding-left 70px
+	padding-top 75px
+	
+	
+.content-border
+	display block
+	fill none
+	position absolute
+	top 0
+	left 0
+	height 100%
+	width auto
+	
+
+.content
+	*
+		&:first-child
+			margin-top 0
+		&:last-child
+			margin-bottom 0
+			
+	h2,h3,h3,h4,h5,h6
+		line-height 1
+		font-family $MBold
+		text-transform uppercase
+		
+	h2, h3
+		font-size 30px
+		line-height 32px
+		margin-bottom 18px
+		
+	h4
+		font-size 24px
+		line-height 28px
+		margin-bottom 15px
+		
+	a
+		color #BA9285
+		border-bottom 1px solid
+		&:hover
+			color $accent-color
+		
+	strong, b
+		color #BA9285
+		
+	img
+		display block
+		width auto
+		max-width 100%
+		margin 30px 0
+		
+	p
+		margin-bottom 30px
+		
+
+	ul, ol
+		margin-bottom 60px
+		li
+			display block
+			position relative
+			margin-bottom 15px
+			
+			&:last-child
+				margin-bottom 0
+				
+		ul, ol
+			margin-bottom 0
+			padding-left 15px
+			padding-top 10px
+			
+		ul
+			li
+				&:before
+					height 1px
+					width 5px
+					border-radius 0
+					
+				
+	ul
+		li
+			&:before
+				pseudo()
+				width 5px
+				height 5px
+				border-radius 50%
+				vertical-align middle
+				margin-bottom 2px
+				margin-right 4px
+				background-color currentColor
+				
+	ol
+		counter-reset list
+		li
+			&:before
+				counter-increment list
+				content counter(list) ". "
+				display inline-block
+				margin-right 4px
+				
+// Subscibes
+.sect__subscription-types
+	padding-top 75px
+	
+.subscription-content
+	padding-top 0
+	
+.subscription-type
+	border 1px solid $accent-color
+	padding 10px
+	width 350px
+	&__inner
+		height 100%
+		border-radius 5px
+		overflow hidden
+		background-color #023459
+	&__content
+		padding 15px 20px 10px
+	.subscription-slide__img
+		flex none
+		width 100%
+		position relative
+		padding-top 79%
+		h2
+			font-size 18px
+			left 50% !important
+			transform translateX(-50%)
+			
+	&__info
+		margin-bottom 20px
+		font 14px $Bold
+	&__term
+		display inline-block
+		position relative
+		padding-left 20px
+		&:before
+			pseudo()
+			left 0
+			position absolute
+			vertical-center()
+			width 13px
+			height 13px
+			background url('../img/icons/svg/sub-clock.svg') 50% no-repeat / contain
+	&__price
+		font 24px $Bold
+		line-height 28px
+		margin-bottom 15px
+		
+	&__btns
+		width 100%
+		height 50px
+		overflow hidden
+		border 1px solid $accent-color
+		border-radius 50px
+		position relative
+		z-index 1
+		&:before
+			pseudo()
+			pointer-events none
+			transition all .17s ease-in-out
+			height 100%
+			width 55%
+			background-color $accent-color
+			border-radius 50px
+			position absolute
+			top 50%
+			transform translateY(-50%)
+			z-index -1
+			left 0
+				
+		.subscription-type__btn:first-child
+			color $basic-white-color
+				
+		&.is-move
+			&:before
+				left 100%
+				transform translate(-100%, -50%)
+
+			.subscription-type__btn:first-child
+				color $light-accent-color
+			.subscription-type__btn:last-child
+				color $basic-white-color
+		
+	&__btn
+		width 55%
+		height 100%
+		flex none
+		flex-col-center()
+		font 14px $Bold
+		color $light-accent-color
+		position absolute
+		vertical-center()
+		border-radius 50px
+		&:first-child
+			left 0
+		&:last-child
+			right 0
+		
