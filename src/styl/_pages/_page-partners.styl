@@ -1,6 +1,158 @@
-.trap
-	width 100px
-	border-top 100px solid red
-	border-left 25px solid transparent
-	border-right 25px solid transparent
-	height 0
+
+
+.partners-result
+	background-color $color-bg
+	padding 40px 95px
+	min-height 560px
+	height 100%
+	.content
+		text-align justify
+	&__row
+		margin-bottom 15px
+		&:last-child
+			margin-bottom 0
+	&__title
+		font-size 36px
+		line-height 39px
+		margin-bottom 0
+		
+	&__col
+		&:first-child
+			width 42%
+		&:last-child
+			width 58%
+			
+	&__logo
+		display block
+		margin 0 auto
+		width auto
+		max-width 100%
+		
+	&__gallery
+		display flex
+		flex-direction column
+		height 420px
+		
+	&__img-lg
+		padding-top 0
+		flex 1
+		min-height 300px
+		&:before
+			pseudo()
+			position absolute
+			vertical-center()
+			right 0
+			pointer-events none
+			width 14px
+			height 150px
+			background url('../img/decor/partners-trapez.svg') 50% no-repeat / contain
+			z-index 2
+			
+	&__imgs
+		margin-top 30px
+		
+	&__img
+		padding-top 58.5%
+		display block
+		
+		&.video-ic
+			&:before
+				opacity 1
+				
+.partners-description
+	&__img
+		padding-top 0
+		min-height 275px
+		
+	.content
+		width 100%
+		max-width 570px
+		padding-right 30px
+		text-align justify
+	
+
+.partners-join
+	position relative
+	@extends .b-radius-5
+	overflow hidden
+	height 100%
+	color #F6F6F6
+	display flex
+	flex-direction column
+	p
+		font-size 16px
+		line-height 19px
+		font-family $SemiBold
+		text-align justify
+	
+	&__content
+		position relative
+		z-index 2
+		display flex
+		flex-direction column
+		justify-content space-between
+		height 100%
+		padding 40px 90px 45px
+		&:before
+			pseudo()
+			position absolute
+			fullSize()
+			z-index -1
+			background-color rgba($secondary-color, .6)
+		&--text
+			margin-bottom 40px
+		
+	.partners-result__title
+		margin-bottom 60px
+		
+.logo-slide
+	flex-col-center()
+	display flex !important
+	position relative
+	width 100%
+	padding-top 100%
+	&:before
+		pseudo()
+		position absolute
+		position-center()
+		width 100%
+		height 100%
+		background url('../img/decor/logo-border.svg') no-repeat 50% / contain
+	img
+		display block
+		position-center()
+		position absolute
+		width auto
+		max-width 140px
+		height auto
+		max-height 90px
+		
+
+.partners-cards__row
+	margin-bottom -30px
+
+.partner-card
+	position relative
+	height 295px
+	display flex
+	flex-direction column
+	justify-content space-between
+	text-align center
+	padding 40px 20px 20px
+	color #f6f6f6
+	&__wrapper
+		margin-bottom 30px
+	&__title
+		font-size 25px
+		line-height 26px
+		position relative
+		z-index 1
+	div
+		position relative
+		z-index 2
+	&:before
+		pseudo()
+		position absolute
+		fullSize()
+		background linear-gradient(180deg, rgba(3, 37, 90, 0) 0%, rgba(3, 37, 90, 0.7) 30.21%, rgba(3, 37, 90, 0.9) 100%)	
+		opacity .6

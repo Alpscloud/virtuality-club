@@ -1,0 +1,63 @@
+{% include '../parts/head.html' %}
+<body class="page-content light-header">
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		{% include '../parts/components/menu/menu-inner.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main ">
+
+
+			<section class="sect__partners-cards gutter-top gutter-bottom">
+				<div class="container">
+					<div class="container-sm">
+						<h2 class="title title-h2-size">Стать партнёром</h2>
+
+						<div class="partners-cards">
+							<div class="row partners-cards__row align-horisontal-start row-gutters">
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+								{% include '../parts/components/partner-card.html' %}
+							
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			
+
+		</main>
+		<!-- //Main -->
+
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+
+
+		{% include '../parts/components/popups/popups.html' %}
+
+		
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>

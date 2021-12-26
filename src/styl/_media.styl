@@ -11,6 +11,11 @@
 +min-screen-height(minHeight)
 */
 
+
++min-screen(2500px)
+	.container
+		max-width 2500px
+		
 +max-screen-height(700px)
 
 	// Page nav
@@ -188,6 +193,16 @@
 		
 	.contacts-block__addresses>div
 		max-height 500px
+		
+	// Formats
+	.sect__formats
+		.sect-header
+			.title
+				br
+					display none
+					
+	.format
+		min-height 450px
 		
 
 		
@@ -834,6 +849,10 @@
 		
 	.contacts-block__address--information_list
 		margin-bottom 25px
+		
+
+	.partner-card__wrapper
+		width 33.3333%
 				
 +max-screen(1100px)
 	
@@ -851,6 +870,8 @@
 	.section
 		.title
 			text-align center
+			
+
 	// Header
 	.header
 		.container
@@ -1019,11 +1040,7 @@
 			
 	// Stock
 	.stock
-		// height 100%
-		// > .row
-		// 	height 100%
-		// 	flex-direction column
-		// 	justify-content space-between
+
 		&__title
 			width 100%
 			margin-bottom 20px
@@ -1067,6 +1084,10 @@
 	.sect__formats
 		.sect-header
 			justify-content center
+			.title
+				margin-bottom 0
+				br
+					display none
 			
 
 	.promo-inner
@@ -1126,6 +1147,14 @@
 		text-align left
 		br
 			display none
+			
+	.partners-result__title
+		font-size 26px
+		line-height 29px
+		
+	.logo-slide img
+		max-width 100px
+		max-height 70px
 				
 
 			
@@ -1300,6 +1329,35 @@
 	.subscription-type__btns
 		height 42px
 			
+
+	// Partners
+	.partners-result
+		&__row
+			flex-wrap wrap
+		&__col
+			width 100% !important
+		&__logo
+			margin 0
+		&__title
+			margin-bottom 10px
+		.content
+			margin-bottom 20px
+			
+		&__gallery
+			height auto
+		&__img-lg
+			&:before
+				display none
+				
+	.partner-card__wrapper
+		width 50%
+		div
+			width 100%
+			.btn
+				width 100%
+				span
+					padding-left 10px
+					padding-right 10px
 	
 			
 +max-screen(767px)
@@ -1578,6 +1636,7 @@
 			flex 1
 			
 		
+
 			
 	// Catalog
 	.catalog-games
@@ -1776,11 +1835,11 @@
 			font-size 20px
 			
 		&-labels
-			bottom 0
-			width 100%
+			&__wrapper
+				bottom 10px
+			
 			
 		&-label
-			width 70px
 			height 90px
 			flex-col-center()
 			padding 0
@@ -1967,8 +2026,106 @@
 	.page-content
 		.header
 			position fixed
-			background-color $menu-aside-bg
+			
+		&.light-header
+			background-color $basic-white-color
+		&.dark-header
+			.header
+				background-color $menu-aside-bg
+				&.is-opened
+					background-color $menu-aside-bg
+					
+	// Partners
+	.partners-results-slider__wrapper
+		margin-left -20px
+		margin-right -20px
+		margin-bottom 40px
+		
+		.slick-slide
+			padding 0
+			
+		.btn-arrow
+			display none !important
+			
+			
+	.partners-result
+		border-radius 0
+		padding-left 15px
+		padding-right 15px
+		
+		&__img
+			&.video-ic
+				&:after
+					width 30px
+					height 30px
+			&--wrapper
+				padding-left 2.5px
+				padding-right 2.5px
+		
+		&__imgs
+			margin-left -2.5px
+			margin-right -2.5px
+			margin-top 5px
+			
+	.sect__partners-results
+		.sect-header
+			margin-bottom 25px
+			.title
+				margin-bottom 0
+				margin-right 20px
 				
+	.sect__companies-partners
+		.sect-header
+			margin-bottom 30px
+		.title
+			margin-bottom 0
+			margin-right 20px
+				
+
+				
+	.partners-result__title
+		font-size 20px
+		
+	.partners-result__logo
+		max-width 120px
+		
+	.partners-description
+		flex-wrap wrap
+		.content
+			padding-right 0
+		&__img
+			height auto
+			padding-top 56.26%
+			margin-top 20px
+			
+	.partners-join-slider
+		.slick-slide
+			width 100%
+		.slick-dots
+			display block !important
+			
+	.partners-join
+		&__content
+			padding 20px
+		p
+			font-size 12px
+			line-height 16px
+		
+		.partners-result__title
+			margin-bottom 30px
+			
+	.logos-slider__wrapper
+		padding-left 0
+		padding-right 0
+		.btn-arrow
+			display none !important
+	
+	.partner-card__title
+		font-size 20px
+		line-height 22px
+
+	.gutter-bottom-sm
+		padding-bottom 40px
 +max-screen(700px)
 
 	// .section
@@ -2228,7 +2385,7 @@
 			display flex
 			flex-direction column
 		.sect-header
-			padding-top 30px
+		
 			flex none
 			
 	.formats-slider
@@ -2478,6 +2635,10 @@
 				transform none
 				top auto
 				right auto
+				
+
+	.partner-card__wrapper
+		width 100%
 
 			
 +max-screen(374px)

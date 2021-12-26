@@ -970,3 +970,72 @@
 			.slider-controls
 				display flex
 				margin-left 40px
+				
+// Partners
+.partners-results-slider__wrapper
+	margin-bottom $gutter-bottom-sm
+	position relative
+	margin-left -15px
+	margin-right -15px
+	.btn-arrow
+		position absolute
+		z-index 2
+		top 220px
+		&__prev
+			left 25px
+		&__next
+			right 25px
+	
+	.slick-track
+		display flex !important
+		flex-wrap nowrap
+	
+	.slick-slide
+		padding-left 15px
+		padding-right 15px
+		float none !important
+		height auto 
+		> div
+			height 100%
+			
+.partners-join-slider
+	.slick-dots
+		display none !important
+	.slick-slide
+		width 760px
+		padding-left 15px
+		padding-right 15px
+		height auto
+		float none !important
+		> div
+			height 100%
+		
+	.slick-track
+		display flex !important
+		flex-wrap nowrap
+		
+.logos-slider
+	.slick-track
+		display flex !important
+		flex-wrap nowrap
+	.slick-slide
+		float none !important
+		height auto
+		display flex
+		flex-direction column
+		padding 2px
+		> div
+			height 50%
+			
+		&:nth-child(odd)
+			> div
+				&:nth-child(2)
+					.logo-slide
+						&:before
+							display none
+		&:nth-child(even)
+			> div
+				&:nth-child(1)
+					.logo-slide
+						&:before
+							display none

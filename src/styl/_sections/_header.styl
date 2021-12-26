@@ -5,6 +5,7 @@
 	padding 30px 0
 	border-bottom 1px solid $accent-color
 	min-height 105px
+	transition background-color .15s ease-in-out
 	.logo
 		position relative
 		z-index 1
@@ -17,11 +18,16 @@
 		width 385px
 		pointer-events none
 		background-color $menu-aside-bg
-		display none
+		opacity 0
+		visibility hidden
+		transform translateX(-105%)
+		transition all .23s ease-in-out
 	&.is-opened
 		background-color $menu-bg
 		&:before
-			display block
+			opacity 1
+			visibility visible
+			transform translateX(0)
 	
 	.container
 		max-width 100%

@@ -26,6 +26,14 @@ $(document).ready(function() {
 
 	}
 
+	$(window).on('scroll', function() {
+		if ($(this).scrollTop() > 0) {
+			$('.header').addClass('is-fill');
+		} else {
+			$('.header').removeClass('is-fill');
+		}
+	});
+
 
 	// Functions
 	function fancyboxInit() {
@@ -364,6 +372,35 @@ $(document).ready(function() {
 			]
 		});
 
+	}
+
+	if ($('.js-format-labels-slider')) {
+		$('.js-format-labels-slider').each(function () {
+			var self = $(this);
+
+
+			self.slick({
+				infinite: true,
+				slidesToShow: 4,
+				nextArrow: self.parents('.format-labels__wrapper').find('.js-format-labels-slider-btn-next'),
+				prevArrow: self.parents('.format-labels__wrapper').find('.js-format-labels-slider-btn-prev'),
+				responsive: [
+				{
+					breakpoint: 1100,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 500,
+					settings: {
+						slidesToShow: 2
+					}
+				}
+			]
+			});
+
+		});
 	}
 
 
@@ -726,6 +763,78 @@ $(document).ready(function() {
 			});
 		});
 	}
+
+
+	if ($('.js-partners-results-slider').length > 0) {
+	
+
+		$('.js-partners-results-slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			nextArrow: $('.js-partners-results-slider-btn-next'),
+			prevArrow: $('.js-partners-results-slider-btn-prev')
+		});
+	
+	}
+
+	if ($('.js-partners-join-slider').length > 0) {
+	
+
+		$('.js-partners-join-slider').slick({
+			infinite: true,
+			slidesToShow: 3,
+			centerMode: true,
+			variableWidth: true,
+			arrows: false,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						centerMode: false,
+						variableWidth: false
+					}
+				}
+			]
+		});
+	
+	}
+
+
+	if ($('.js-logos-slider').length > 0) {
+		$('.js-logos-slider').slick({
+				rows: 2,
+				infinite: true,
+				slidesToShow: 5,
+				nextArrow: $('.js-logos-slider-btn-next'),
+				prevArrow: $('.js-logos-slider-btn-prev'),
+				responsive: [
+					{
+						breakpoint: 1365,
+						settings: {
+							slidesToShow: 4
+						}
+					},
+					{
+						breakpoint: 1100,
+						settings: {
+							slidesToShow: 3
+						}
+					},
+					{
+						breakpoint: 450,
+						settings: {
+							slidesToShow: 2
+						}
+					}
+				]
+			});
+
+	}
+
+
+
 
 	if ($('.js-feedbacks-slider').length > 0) {
 		$('.js-feedbacks-slider').slick({
