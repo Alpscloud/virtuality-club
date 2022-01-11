@@ -1,0 +1,255 @@
+.services-slider
+	height 100%
+	margin-left -15px
+	margin-right -15px
+	&__wrapper
+		height 	100%
+		position relative	
+		.btn-arrow
+			position absolute	
+			vertical-center()
+			z-index 	5
+			&__prev
+				left -50px
+			&__next
+				right -50px
+	
+	.slick-track,
+	.slick-list
+		height 100%
+		display flex !important
+		flex-wrap nowrap
+		
+	.slick-slide
+		display block !important
+		height auto
+		float none !important
+		padding-bottom 50px
+		padding-left 15px
+		padding-right 15px
+		> div
+			height 100%
+			
+.service-slide
+	position relative
+	height 100%
+	z-index 1
+	
+	
+	&__img
+		position absolute
+		top 0
+		width 100%
+		height 100%
+		border-radius 5px
+		z-index -1
+		&:before
+			pseudo()
+			width 100%
+			height 300px
+			position absolute
+			top 0
+			background linear-gradient(180deg, rgba(3, 37, 90, 0) 0%, rgba(3, 37, 90, 0.6292) 67.19%, rgba(3, 37, 90, 0.8) 100%)
+			border-top-left-radius 5px
+			border-top-right-radius 5px
+			z-index 1
+			transform rotate(-180deg)
+
+		&-svg
+			display block
+			fill $basic-white-color
+			position absolute
+			z-index 3
+			&_left
+				left -1px
+				vertical-center()
+				height 324px
+			&_right
+				right -1px
+				bottom -1px
+				//height 490px
+				height 60%
+		
+		
+
+		img
+			display block
+			object-fit cover
+			height 100%
+			width 100%
+			position relative
+			
+			
+			
+	.btn
+		position absolute
+		horisontal-center()
+		z-index 2
+		bottom -36px
+		width 100%
+		max-width 290px
+		span
+			padding 24px 60px
+			
+
+.service-slide__content
+	position relative
+	z-index 5
+	padding 40px 60px
+	color $alternate-light-text-color
+	.title
+		margin-bottom 8px
+		
+.service-slide__text
+	font 20px $Bold
+	line-height 24px
+	
+.service-btns
+	&__row
+		p
+			margin-left 20px
+	&__nav
+		ul
+			display flex
+			flex-wrap nowrap
+		li
+			margin-right 10px
+			&:last-child
+				margin-right 0
+				
+		a
+			width 200px
+			height 70px
+			color $alternate-light-text-color
+			flex-col-center()
+			border-radius 5px
+			border 2px solid 
+			overflow hidden
+			position relative
+			transform skew(-25deg)
+			font 24px $MBold
+			white-space nowrap
+			span
+				display block
+				position relative
+				z-index 2
+				transform skew(25deg)
+			&:after
+				pseudo()
+				position absolute
+				width 110%
+				height 110%
+				background-color $accent-color
+				transition opacity .17s ease-in-out
+				opacity 0
+				z-index 1
+			&:before
+				pseudo()
+				position absolute
+				width 110%
+				height 110%
+				pointer-events none
+				background rgba(246, 246, 246, 0.1)
+				backdrop-filter blur(15px)
+				transition opacity .17s ease-in-out
+			&:hover
+			
+				&:before
+					opacity 0
+				&:after
+					opacity 1
+	
+
+// Game formats
+.game-formats
+	display flex
+	height 100%
+	flex-direction column
+	
+	.sect-header
+		margin-bottom 30px
+		.title
+			margin-bottom 0
+			margin-right 30px
+		.slider-controls
+			display flex
+			
+	&__slider
+		flex 1
+		margin-left -15px
+		margin-right -15px
+		
+		.slick-track,
+		.slick-list
+			height 100%
+			
+		.slick-track
+			display flex !important
+			flex-wrap nowrap
+			
+			.slick-slide
+				height auto
+				float none !important
+				padding-left 15px
+				padding-right 15px
+				
+				> div
+					height 100%
+					
+
+
+.game-format
+	display flex !important
+	flex-direction column
+	height 100%
+	padding-bottom 30px
+	&__img
+		flex 1
+		display flex
+		justify-content space-between
+		flex-direction column
+		align-items center
+		position relative
+		overflow hidden
+		margin-bottom 25px
+		padding 35px 40px 25px
+		&:before
+			pseudo()
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 190px
+			background linear-gradient(180deg, rgba(3, 37, 90, 0) 0%, rgba(3, 37, 90, 0.7) 30.21%, rgba(3, 37, 90, 0.9) 100%)
+			opacity 0.5	
+			transform rotate(-180deg)
+			z-index 1
+			
+		.title, div
+			position relative
+			z-index 2
+		
+		div
+			width 100%
+			
+
+	&__info
+		display flex
+		margin-left -5px
+		margin-right -5px
+		justify-content center
+		&-item
+			font-size 14px
+			line-height 17px
+			&--ic
+				display block
+				margin 0 auto 15px auto
+				width 50px
+				height 50px
+				background-repeat no-repeat
+				background-size contain
+				background-position 50%
+			&--wrapper
+				width 33.3333%
+				padding-left 5px
+				padding-right 5px

@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Virtuality Club</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<!-- Main file with styles -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+	
+	<link rel="stylesheet" href="css/global-blocks.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="page-content dark-header">
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Header -->
+		<header class="header">
+	<div class="container">
+		<div class="row align-vertical-center align-horisontal-between header__row">
+			<div class="header-logo">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="" class="hidden-mobile">
+					<img src="img/logo-sm.svg" alt="" class="hidden-desktop visible-mobile">
+				</a>
+			</div>
+
+
+			<div class="header-tools">
+				<div class="row align-vertical-center align-horisontal-end row-nowrap header-tools__row">
+
+					<div class="header-tools__nav row align-vertical-center align-horisontal-end row-nowrap">
+
+						<div class="search-wrapper">
+							<button class="btn-search js-open-search-form-btn" type="button">
+								<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+									<path d="M9.68833 0C4.34633 0 0 4.34633 0 9.68833C0 15.0306 4.34633 19.3767 9.68833 19.3767C15.0306 19.3767 19.3767 15.0306 19.3767 9.68833C19.3767 4.34633 15.0306 0 9.68833 0ZM9.68833 17.5881C5.33246 17.5881 1.78862 14.0442 1.78862 9.68838C1.78862 5.33251 5.33246 1.78862 9.68833 1.78862C14.0442 1.78862 17.5881 5.33246 17.5881 9.68833C17.5881 14.0442 14.0442 17.5881 9.68833 17.5881Z" />
+									<path d="M21.7381 20.4734L16.6107 15.346C16.2613 14.9966 15.6955 14.9966 15.3461 15.346C14.9968 15.6951 14.9968 16.2615 15.3461 16.6106L20.4735 21.738C20.6482 21.9126 20.8769 22 21.1058 22C21.3344 22 21.5634 21.9126 21.7381 21.738C22.0875 21.3889 22.0875 20.8225 21.7381 20.4734Z" />
+								</svg>
+							</button>
+
+							<div class="search-form js-search-form">
+								<form>
+									<div class="search-form__group">
+										<input type="text" name="s" class="search-form__input" requried>
+										<button class="btn-search btn-search__submit" type="submit">
+											<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+												<path d="M9.68833 0C4.34633 0 0 4.34633 0 9.68833C0 15.0306 4.34633 19.3767 9.68833 19.3767C15.0306 19.3767 19.3767 15.0306 19.3767 9.68833C19.3767 4.34633 15.0306 0 9.68833 0ZM9.68833 17.5881C5.33246 17.5881 1.78862 14.0442 1.78862 9.68838C1.78862 5.33251 5.33246 1.78862 9.68833 1.78862C14.0442 1.78862 17.5881 5.33246 17.5881 9.68833C17.5881 14.0442 14.0442 17.5881 9.68833 17.5881Z" />
+												<path d="M21.7381 20.4734L16.6107 15.346C16.2613 14.9966 15.6955 14.9966 15.3461 15.346C14.9968 15.6951 14.9968 16.2615 15.3461 16.6106L20.4735 21.738C20.6482 21.9126 20.8769 22 21.1058 22C21.3344 22 21.5634 21.9126 21.7381 21.738C22.0875 21.3889 22.0875 20.8225 21.7381 20.4734Z" />
+											</svg>
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<button class="btn-menu js-open-menu-btn" type="button">
+							<span>Меню</span>
+							<span class="btn-menu__lines">
+								<span class="btn-menu__line"></span>
+								<span class="btn-menu__line"></span>
+								<span class="btn-menu__line"></span>
+							</span>
+						</button>
+					</div>
+
+					<div class="header-tools__contacts row align-vertical-center align-horisontal-end">
+						<!-- Worktime -->
+						<div class="worktime-tooltip tooltip">
+
+							<svg  viewBox="0 0 22 22"  xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+								<path d="M14.9216 12.9429L11.8542 10.6423V5.95607C11.8542 5.48488 11.4733 5.104 11.0021 5.104C10.5309 5.104 10.15 5.48488 10.15 5.95607V11.0684C10.15 11.3368 10.2761 11.5899 10.4909 11.7501L13.899 14.3062C14.0524 14.4213 14.2314 14.4766 14.4094 14.4766C14.6693 14.4766 14.9249 14.3599 15.0919 14.135C15.3749 13.7592 15.2982 13.2249 14.9216 12.9429Z" />
+								<path d="M11 0C4.93423 0 0 4.93423 0 11C0 17.0658 4.93423 22 11 22C17.0658 22 22 17.0658 22 11C22 4.93423 17.0658 0 11 0ZM11 20.2959C5.8749 20.2959 1.7041 16.1251 1.7041 11C1.7041 5.8749 5.8749 1.7041 11 1.7041C16.126 1.7041 20.2959 5.8749 20.2959 11C20.2959 16.1251 16.1251 20.2959 11 20.2959Z"/>
+							</svg>
+
+							
+							<div class="worktime-tooltip__content tooltip-content">
+								<p class="tooltip-content__title">Время работы:</p>
+								<p>Пн-Вск: 10:00-23:00</p>
+							</div>
+
+						</div>
+						<!-- //Worktime -->
+
+						<!-- Phone link -->
+						<a href="tel:+8 (499) 112-09-41" class="phone-link">
+							<span>8 (499) 112-09-41</span>
+							<svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="svg-ic">
+								<path d="M20.2347 14.4404C18.8878 14.4404 17.5652 14.2298 16.312 13.8156C15.6979 13.6062 14.9429 13.7983 14.5681 14.1833L12.0945 16.0506C9.22571 14.5193 7.45861 12.7527 5.94818 9.90553L7.76059 7.49631C8.23147 7.02606 8.40037 6.33913 8.19801 5.69461C7.78208 4.43476 7.57079 3.11288 7.57079 1.76538C7.57084 0.791941 6.7789 0 5.80552 0H1.76532C0.791941 0 0 0.791941 0 1.76532C0 12.9228 9.07715 21.9999 20.2347 21.9999C21.2081 21.9999 22 21.208 22 20.2346V16.2057C21.9999 15.2324 21.208 14.4404 20.2347 14.4404Z"/>
+							</svg>
+
+						</a>
+						<!-- //Phone link -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+
+
+
+
+		<div class="menu-wrapper js-menu js-custom-scroll">
+	<div class="menu">
+
+		<div class="menu-aside">
+
+			<div class="menu-aside__content">
+				<p class="menu-aside__title">Vr Клуб</p>
+
+				<nav class="menu-main__list">
+					<ul>
+						<li class="menu-item-divider"><a href="#" class="is-active">VR Клуб</a></li>
+						<li class="menu-item-divider menu-item-divider__md"><a href="#">VR Аркады</a></li>
+						<li class="menu-item-divider menu-item-divider__md"><a href="#">VR Квесты</a></li>
+						<li><a href="#">VR Симуляторы</a></li>
+						<li class="menu-item-divider menu-item-divider__sm"><a href="#">VR Академия</a></li>
+						<li class="menu-item-divider menu-item-divider__sm"><a href="#">VR Кинотеатр</a></li>
+						<li><a href="#">Скидки и Акции</a></li>
+						<li><a href="#">Сертификаты</a></li>
+						<li><a href="#">Партнерство</a></li>
+						<li><a href="#">Компания</a></li>
+					</ul>
+				</nav>
+
+				<nav class="menu-aside__list">
+					<ul>
+						<li><a href="#">Магазин</a></li>
+						<li><a href="#" class="is-active">VR Клуб</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">VR бизнес</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div class="decor-circles"></div>
+		</div>
+
+		
+<div class="menu-content">
+	<!-- Close menu btn -->
+	<button class="btn-close js-close-menu-btn" type="button">
+		<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+			<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+			<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+		</svg>
+
+	</button>
+	<!-- //Close menu btn -->
+
+	<nav class="menu-categories">
+		<ul>
+			<li>
+				<a href="#">
+					<span>О Клубе</span>
+					<img src="img/categories/1.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Цены</span>
+					<img src="img/categories/2.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Услуги</span>
+					<img src="img/categories/3.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Акции</span>
+					<img src="img/categories/4.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Абонементы</span>
+					<img src="img/categories/5.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Подарочные сертификаты</span>
+					<img src="img/categories/6.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>Правила клуба</span>
+					<img src="img/categories/1.jpg" alt="">
+				</a>
+			</li>
+			<li class="has-sublist">
+				<a href="#">Аренда</a>
+
+				<ul>
+					<li><a href="#">Аренда клуба на мероприятие </a></li>
+					<li><a href="#">Аренда клуба на детский праздник</a></li>
+					<li><a href="#">Аренда оборудования на дом</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+	</div>
+</div>
+
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main gradient-bg">
+
+			<h1 class="w3c">Абонементы</h1>
+
+			<section class="sect__subscription-types gutter-top gutter-bottom">
+				<div class="container">
+					<div class="subscription-types-slider__wrapper gutter-bottom">
+						<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
+							<h2 class="title title-h2-size">Work-Week Абонементы</h2>
+
+							<div class="slider-controls">
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-subscription-types-slider-btn-prev " type="button">
+
+									<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+									</svg>
+
+								</button>
+
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-subscription-types-slider-btn-next " type="button">
+									<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+									</svg>
+								</button>
+							</div>
+
+						</div>
+
+						<div class="subscription-types-slider js-subscription-types-slider">
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+						</div>
+					</div>
+					<!-- //slider block -->
+
+					<div class="subscription-types-slider__wrapper gutter-bottom">
+						<div class="sect-header row align-horisontal-start align-vertical-center row-nowrap">
+							<h2 class="title title-h2-size">Work-Week Абонементы</h2>
+
+							<div class="slider-controls">
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__prev js-subscription-types-slider-btn-prev " type="button">
+
+									<svg  viewBox="0 0 16 28" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.95612 13.9676L14.9802 1.94347C15.3959 1.52772 15.3959 0.853686 14.9802 0.437938C14.5644 0.0223149 13.8905 0.0223149 13.4747 0.437938L0.697826 13.2148C0.282203 13.6306 0.282203 14.3046 0.697826 14.7204L13.4747 27.4973C13.8977 27.9058 14.5717 27.894 14.9802 27.471C15.3787 27.0584 15.3787 26.4043 14.9802 25.9917L2.95612 13.9676Z"/>
+									</svg>
+
+								</button>
+
+								<button class="btn-arrow btn-arrow__sm  btn-arrow__next js-subscription-types-slider-btn-next " type="button">
+									<svg  viewBox="0 0 16 28"  xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.0439 13.9674L1.01975 1.94322C0.604068 1.52747 0.604068 0.853442 1.01975 0.437694C1.43556 0.0220707 2.10953 0.0220707 2.52528 0.437694L15.3022 13.2146C15.7178 13.6303 15.7178 14.3044 15.3022 14.7201L2.52528 27.497C2.1023 27.9055 1.42826 27.8938 1.01975 27.4708C0.621286 27.0582 0.621286 26.404 1.01975 25.9915L13.0439 13.9674Z" />
+									</svg>
+								</button>
+							</div>
+
+						</div>
+
+						<div class="subscription-types-slider js-subscription-types-slider">
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+
+							<div class="subscription-type b-radius-5">
+	<div class="subscription-type__inner">
+		<div class="subscription-slide__img thumbnail text-center">
+			<img src="img/subscr.jpg" alt="">
+			<h2>Заголовок</h2>
+		</div>
+		<div class="subscription-type__content">
+			<div class="row align-horisontal-between subscription-type__info">
+				<span>Work-Week абонемент</span>
+				<span class="subscription-type__term">10 часов</span>
+			</div>
+			<p class="subscription-type__price text-center">11000 руб</p>
+			<div class="subscription-type__btns">
+				<button class="subscription-type__btn" type="button">Купить</button>
+				<button class="subscription-type__btn" type="button" data-hover-direction="is-right">Подробнее</button>
+			</div>
+		</div>
+	</div>
+</div>
+							<!-- //slide -->
+						</div>
+					</div>
+					<!-- //slider block -->
+				</div>
+				<!-- //container -->
+			</section>
+
+
+
+			<section class="sect__content">
+				<div class="container">
+
+					<h2 class="title title-h2-size">Правила использования абонементов</h2>
+
+					<div class="content-wrapper gutter-bottom subscription-content">
+						
+
+						<div class="content">
+							<h3>Термины и определения</h3>
+							<ul>
+								<li>Клуб – клуб виртуальной реальности под брендом Virtuality Club, расположенный в Москве по адресу Проспект Андропова 22, ТРЦ Нора;</li>
+								<li>Тариф – количество игровых часов Абонемента;</li>
+								<li>Абонемент – договор оказания услуг на игру в Клубе в количестве игровых часов оплаченных по тарифу;</li>
+								<li>Акт – акт подтверждающий факт выполненных услуг в указанном количестве игровых часов</li>
+								<li>Вид абонемента – абонементы могут быть двух видов: 1) для игр в рабочие дни (с Пн. по Пт.); 2) Для игр в любой день в том числе выходной и праздничный;</li>
+								<li>Карточка абонемента – пластиковая карта с номером и информацией о виде абонемента, выдаваемая клиенту после оплаты абонемента.</li>
+							</ul>
+
+							<h3>1. Общие правила</h3>
+							<ul>
+								<li>Игра в Клубе проводятся по предварительной записи;</li>
+								<li>Клуб оставляет за собой право изменять время и период записи при предварительном согласовании с клиентом;</li>
+								<li>Клуб обязан проинформировать клиентов о любых изменениях в расписании путём Рассылки уведомлений на Email либо лично при телефонном звонке;</li>
+								<li>При нарушении Правил посещения клуба администрация оставляет за собой право аннулировать абонемент без возвращения денег;</li>
+								<li>Администрация Клуба оставляет за собой право введения новых пунктов правил и изменения действующих;</li>
+								<li>Клуб обязан проинформировать клиентов о любых изменениях пунктов правил, либо же добавлению новых путём рассылки уведомлений на Email, либо лично при телефонном звонке.</li>
+							</ul>
+
+							<h3>2. Порядок оплаты и оформления абонемента.</h3>
+
+							<ul>
+								<li>Абонементы могут быть приобретены и оформлены:
+									<ul>
+										<li>У администратора в Клубе. Администратор ознакомит с условиями абонементов и правилами посещения клуба;</li>
+										<li>Через Интернет-магазин «Virtuality Club». Все условия по использованию абонементов и правилам посещения клуба будут представлены на страницах магазина и сайта Virtuality Club.</li>
+									</ul>
+
+								</li>
+								<li>Для оформления абонемента клиенту необходимо указать e-mail и телефонный номер за которыми этот абонемент будет закреплен;</li>
+								<li>При покупке абонемента клиент автоматически соглашается с правилами посещения клуба и правилами использования абонементов;</li>
+								<li>Оплата абонементов производится в любое время работы Клуба или Интернет-магазина «Virtuality Club»;</li>
+								<li>В случае утери абонемента необходимо сообщить об утере в Клуб, позвонив по номеру на сайте, отправив e-mail сообщение на почту hello@virtuality.club или сообщив лично Администратору в Клубе.</li>
+							</ul>
+
+							<h3>3. Абонемент: правила использования</h3>
+							<ul>
+								<li>Абонемент (договор) – документ, дающий право на игру в Клубе с фиксированным количеством часов, в зависимости от оплаченного тарифа (10 часов, 20 часов или 30 часов) в течение его периода действия;</li>
+								<li>Абонемент оформляется персонально на Клиента, однако может быть передан и использован другими Лицами, если эти Лица будут иметь при себе абонемент (или знать номер абонемента) и смогут подтвердить на какой номер телефона и адрес электронной почты этот абонемент зарегистрирован;</li>
+								<li>Процесс использования игровых часов каждого абонемента фиксируется в программе управления Клубом. После каждого посещения клиентом Клуба, с использованием абонемента, администратор клуба сообщает Клиенту о количестве оставшихся игровых часов (минут) в абонементе. Информацию о количестве оставшихся игровых часов (минут) абонемента Клиент может так же узнать обратившись в клуб лично, позвонив по номеру телефону на сайте или отправив электронное сообщение на почту <a href="#">hello@virtuality.club</a>.</li>
+								<li>Карточка абонемента остаётся активной и после использования всех игровых часов абонемента с обязательным подтверждением данного факта в Акте. Для использования карточки абонемента в дальнейшем, необходимо оплатить любой тариф данного вида абонемента.</li>
+								<li>Вид абонемента не может быть изменен. Чтобы воспользоваться другим видом абонемента, необходимо приобрести соответствующий абонемент.</li>
+							</ul>
+
+							<h3>4. Срок действия абонементов</h3>
+							<ul>
+								<li>Обязательства по Абонементам действительны один календарный год с момента оплаты Тарифа.</li>
+							</ul>
+
+							<h3>5. Возврат</h3>
+							<ul>
+								<li>Клиент не имеет право требовать возврат денежных средств в случае отказа от оплаченного Абонемента, согласно условиям Абонемента;</li>
+								<li>Решение по возврату уже оплаченных денежных средств за Абонемент принимается Управляющим клуба на основе внутренних правил Клуба.</li>
+							</ul>
+
+						</div>
+
+						<svg  viewBox="0 0 34 1695"  xmlns="http://www.w3.org/2000/svg" class="content-border" preserveAspectRatio="none">
+							<path d="M33.5 263.5L1 238.5V247L33.5 272V263.5Z" fill="#2DA0D2" stroke="#2DA0D2"/>
+							<path d="M1 1694.5V1327L33.5 1302V263.5L1 238.5V0" stroke="#2DA0D2"/>
+						</svg>
+
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+
+
+		</main>
+		<!-- //Main -->
+
+
+		<!-- Footer -->
+		<footer class="section footer fp-auto-height">
+
+	<div class="container">
+		<div class="footer-top">
+			<div class="row align-vertical-start align-horisontal-between footer__row row-gutters">
+				<div class="footer-col col-gutters">
+					<div class="row align-horisontal-between row-nowrap footer-col__row row-gutters">	
+
+						<div class="footer-col__item col-gutters">
+
+							<div>	
+								<a href="index.html" class="logo">
+									<img src="img/logo.svg" alt="Virtuality CLub">
+								</a>
+							</div>
+
+							<button class="btn-default btn-default__dark" type="button">Оставить отзыв</button>
+
+							<p class="support">Задать вопрос 
+								<a href="#" target="_blank" class="support__link">
+									<svg  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10 20C15.5242 20 20 15.5242 20 10C20 4.47583 15.5242 0 10 0C4.47583 0 0 4.47583 0 10C0 15.5242 4.47583 20 10 20ZM4.57583 9.78333L14.2175 6.06583C14.665 5.90417 15.0558 6.175 14.9108 6.85167L14.9117 6.85083L13.27 14.585C13.1483 15.1333 12.8225 15.2667 12.3667 15.0083L9.86667 13.1658L8.66083 14.3275C8.5275 14.4608 8.415 14.5733 8.15667 14.5733L8.33417 12.0292L12.9675 7.84333C13.1692 7.66583 12.9225 7.56583 12.6567 7.7425L6.93083 11.3475L4.4625 10.5775C3.92667 10.4075 3.915 10.0417 4.57583 9.78333Z" />
+									</svg>
+									<span>VC_Support</span>
+								</a>
+							</p>
+
+						</div>
+
+						<div class="footer-col__item col-gutters hidden-tablet">
+
+							<nav class="footer-nav footer-nav__main text-right">
+								<ul>
+									<li><a href="#" class="is-active">Клуб</a></li>
+									<li><a href="#">Магазин</a></li>
+									<li><a href="#">Сервис</a></li>
+									<li><a href="#">VR Бизнес</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- //col -->
+
+
+
+				<div class="footer-col col-gutters">
+					<div class="row row-nowrap footer-col__row row-gutters">	
+						<div class="footer-col__item col-gutters hidden-tablet">	
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#" class="is-active">VR Клуб</a></li>
+									<li><a href="#">VR Аркады </a></li>
+									<li><a href="#">VR Арена</a></li>
+									<li><a href="#">VR Квесты</a></li>
+									<li><a href="#">VR Симуляторы</a></li>
+									<li><a href="#">VR Кинотеатр</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="footer-col__item row col-gutters hidden-tablet">
+							<nav class="footer-nav">
+								<ul>
+									<li><a href="#">VR Академия</a></li>
+									<li><a href="#">VR Кинотеатр</a></li>
+									<li><a href="#">Скидки и Акции</a></li>
+									<li><a href="#">Сертификаты</a></li>
+									<li><a href="#">Партнерство</a></li>
+									<li><a href="#">Компания</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="footer-col__item col-gutters">
+							<!-- Search -->
+							<div class="footer-search hidden-mobile-sm">
+								<form class="footer-search-form">
+									<div class="footer-search__group">
+										<input type="text" placeholder="Поиск по сайту" name="s" class="footer-search__input">
+										<button class="btn-search" type="submit">
+											<svg  viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.7678 17.6484L13.3648 12.2454C14.4113 10.9526 15.0415 9.3099 15.0415 7.52076C15.0415 3.37406 11.6674 0 7.52073 0C3.37402 0 0 3.37402 0 7.52073C0 11.6674 3.37406 15.0415 7.52076 15.0415C9.3099 15.0415 10.9526 14.4113 12.2454 13.3648L17.6484 18.7678C17.8028 18.9222 18.0055 18.9998 18.2081 18.9998C18.4108 18.9998 18.6135 18.9222 18.7679 18.7678C19.0774 18.4583 19.0774 17.958 18.7678 17.6484ZM7.52076 13.4582C4.24645 13.4582 1.58333 10.795 1.58333 7.52073C1.58333 4.24642 4.24645 1.58329 7.52076 1.58329C10.7951 1.58329 13.4582 4.24642 13.4582 7.52073C13.4582 10.795 10.795 13.4582 7.52076 13.4582Z" />
+											</svg>
+										</button>
+									</div>
+								</form>
+							</div>
+							<!-- //Search -->
+
+							<ul class="socials">
+								<li>
+									<a href="#" target="_blank" rel="nofollow">
+										<svg width="43" height="24" viewBox="0 0 43 24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M41.842 21.6746C41.7911 21.5649 41.7436 21.4738 41.6995 21.4009C40.9697 20.0864 39.575 18.473 37.5163 16.5602L37.4728 16.5164L37.451 16.495L37.429 16.4729H37.4069C36.4726 15.5823 35.8809 14.9834 35.6331 14.6768C35.1798 14.0927 35.0782 13.5015 35.326 12.9024C35.501 12.4498 36.1586 11.494 37.2971 10.0337C37.896 9.25974 38.3703 8.63946 38.7206 8.17214C41.2468 4.81373 42.342 2.66767 42.006 1.7331L41.8755 1.5147C41.7878 1.38322 41.5615 1.26294 41.1969 1.15324C40.8315 1.04378 40.3644 1.02567 39.7948 1.09863L33.4873 1.1422C33.3851 1.10599 33.2392 1.10936 33.0491 1.15324C32.8593 1.19712 32.7643 1.21914 32.7643 1.21914L32.6545 1.27399L32.5674 1.33988C32.4944 1.38345 32.414 1.46009 32.3264 1.56963C32.2391 1.67879 32.1662 1.8069 32.1079 1.95288C31.4212 3.71961 30.6404 5.36222 29.7641 6.88063C29.2239 7.78605 28.7277 8.57073 28.2746 9.23512C27.822 9.89928 27.4424 10.3886 27.136 10.7023C26.8292 11.0163 26.5523 11.2678 26.3036 11.4578C26.0552 11.6479 25.8657 11.7282 25.7344 11.6988C25.6029 11.6695 25.479 11.6403 25.3617 11.6112C25.1574 11.4797 24.9931 11.3009 24.8692 11.0746C24.7448 10.8483 24.661 10.5634 24.6172 10.2203C24.5736 9.87696 24.5479 9.58162 24.5405 9.33331C24.5337 9.0853 24.5368 8.7345 24.5516 8.28191C24.5668 7.82909 24.5736 7.5227 24.5736 7.36207C24.5736 6.80714 24.5845 6.20489 24.6062 5.55514C24.6283 4.9054 24.6461 4.3906 24.6611 4.01134C24.676 3.63169 24.6829 3.23004 24.6829 2.80659C24.6829 2.38315 24.6571 2.05107 24.6062 1.81004C24.5559 1.56932 24.4786 1.33566 24.3768 1.10913C24.2744 0.882837 24.1245 0.707783 23.9278 0.583511C23.7307 0.459393 23.4857 0.360896 23.1942 0.287714C22.4202 0.112583 21.4347 0.0178448 20.2372 0.00311629C17.5215 -0.0260339 15.7766 0.149327 15.0027 0.528969C14.6961 0.689372 14.4187 0.908534 14.1706 1.18577C13.9077 1.50711 13.871 1.68247 14.0608 1.71132C14.937 1.84257 15.5573 2.15654 15.9223 2.65294L16.0539 2.91598C16.1562 3.10577 16.2584 3.44176 16.3607 3.9235C16.4628 4.40525 16.5287 4.93816 16.5577 5.52193C16.6305 6.58798 16.6305 7.50053 16.5577 8.25966C16.4846 9.0191 16.4155 9.61031 16.3496 10.0338C16.2837 10.4572 16.1852 10.8003 16.0539 11.0631C15.9223 11.3259 15.8348 11.4865 15.7909 11.5448C15.7471 11.6031 15.7106 11.6399 15.6816 11.6543C15.4918 11.727 15.2945 11.764 15.0902 11.764C14.8856 11.764 14.6375 11.6617 14.3456 11.4572C14.0537 11.2527 13.7507 10.9718 13.4368 10.614C13.1228 10.2561 12.7687 9.75606 12.3743 9.11369C11.9802 8.47131 11.5714 7.7121 11.1479 6.83606L10.7976 6.20074C10.5786 5.79203 10.2794 5.1969 9.89977 4.41591C9.5199 3.63461 9.18414 2.87885 8.89225 2.1488C8.77557 1.84218 8.60029 1.60875 8.3667 1.44812L8.25708 1.38222C8.18421 1.32392 8.06723 1.26202 7.90675 1.19605C7.74604 1.13015 7.57835 1.0829 7.40299 1.05382L1.40197 1.0974C0.788741 1.0974 0.372662 1.23632 0.153575 1.51378L0.0658947 1.64504C0.0220927 1.71814 0 1.8349 0 1.99561C0 2.15624 0.0438019 2.35338 0.131482 2.58682C1.00752 4.64574 1.96019 6.6314 2.9895 8.54411C4.01881 10.4568 4.91326 11.9976 5.67231 13.1649C6.43152 14.3332 7.20538 15.4357 7.99389 16.4721C8.7824 17.5089 9.30434 18.1732 9.55971 18.4651C9.81539 18.7576 10.0162 18.9762 10.1622 19.1222L10.7098 19.6477C11.0603 19.9982 11.5748 20.418 12.2538 20.907C12.9329 21.3963 13.6848 21.8781 14.5097 22.353C15.3348 22.8271 16.2947 23.2141 17.3899 23.5133C18.4849 23.8129 19.5508 23.9331 20.5875 23.8751H23.1062C23.6171 23.831 24.0041 23.6703 24.2671 23.3931L24.3543 23.2833C24.4129 23.1962 24.4677 23.0608 24.5183 22.8786C24.5696 22.6961 24.595 22.4951 24.595 22.2764C24.5801 21.6486 24.6279 21.0829 24.7371 20.5792C24.8463 20.0757 24.9707 19.696 25.1099 19.4404C25.2489 19.1849 25.4059 18.9693 25.5806 18.7946C25.7556 18.6195 25.8803 18.5134 25.9535 18.4769C26.0262 18.4401 26.0843 18.4152 26.1281 18.4002C26.4785 18.2835 26.8909 18.3965 27.3659 18.74C27.8405 19.0831 28.2857 19.5068 28.7021 20.0103C29.1182 20.5143 29.6182 21.0797 30.2022 21.7075C30.7865 22.3354 31.2974 22.8022 31.7352 23.1093L32.1731 23.3721C32.4655 23.5475 32.8452 23.7081 33.3125 23.8541C33.779 24 34.1877 24.0365 34.5386 23.9635L40.1452 23.8761C40.6997 23.8761 41.1312 23.7843 41.4373 23.6021C41.744 23.4196 41.9262 23.2185 41.985 22.9998C42.0436 22.7809 42.0467 22.5325 41.9961 22.2548C41.9441 21.9778 41.893 21.7841 41.842 21.6746Z"/>
+										</svg>
+
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" rel="nofollow">
+										<svg width="27" height="26" viewBox="0 0 27 26"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.5618 0H3.56901C1.63407 0 0.0654297 1.56857 0.0654297 3.50355V22.4963C0.0654297 24.4313 1.63401 25.9999 3.56901 25.9999H12.9362L12.9521 16.7089H10.5383C10.2246 16.7089 9.97003 16.4553 9.96882 16.1416L9.95724 13.1467C9.95603 12.8313 10.2114 12.575 10.5268 12.575H12.9362V9.68121C12.9362 6.32299 14.9872 4.49442 17.983 4.49442H20.4413C20.7558 4.49442 21.0108 4.7494 21.0108 5.06398V7.58926C21.0108 7.90371 20.756 8.15863 20.4416 8.15882L18.933 8.15952C17.3038 8.15952 16.9883 8.93369 16.9883 10.0698V12.5751H20.5682C20.9093 12.5751 21.174 12.8729 21.1338 13.2117L20.7788 16.2065C20.7448 16.4931 20.5018 16.7091 20.2132 16.7091H17.0043L16.9883 26H22.5619C24.4968 26 26.0654 24.4314 26.0654 22.4965V3.50355C26.0654 1.56857 24.4968 0 22.5618 0Z" />
+										</svg>
+
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" rel="nofollow">
+										<svg width="28" height="27" viewBox="0 0 28 27"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M26.9917 7.9381C26.9284 6.50348 26.6964 5.51719 26.3641 4.66256C26.0212 3.75539 25.4938 2.9432 24.8028 2.26803C24.1276 1.58235 23.31 1.04954 22.4134 0.712055C21.5538 0.379722 20.5727 0.147727 19.138 0.0844741C17.6927 0.0158646 17.2339 0 13.5681 0C9.90234 0 9.4435 0.0158646 8.00353 0.0791173C6.56891 0.14237 5.58262 0.374571 4.7282 0.706698C3.82082 1.04954 3.00863 1.57699 2.33346 2.26803C1.64777 2.9432 1.11518 3.76075 0.777485 4.65741C0.445151 5.51719 0.213156 6.49812 0.149904 7.93274C0.0812943 9.37807 0.0654297 9.83691 0.0654297 13.5027C0.0654297 17.1684 0.0812943 17.6273 0.144547 19.0673C0.2078 20.5019 0.44 21.4882 0.772334 22.3428C1.11518 23.25 1.64777 24.0622 2.33346 24.7373C3.00863 25.423 3.82618 25.9558 4.72284 26.2933C5.58262 26.6256 6.56355 26.8576 7.99838 26.9209C9.43815 26.9843 9.89719 27 13.563 27C17.2287 27 17.6876 26.9843 19.1275 26.9209C20.5622 26.8576 21.5484 26.6256 22.4029 26.2933C24.2174 25.5918 25.652 24.1571 26.3536 22.3428C26.6857 21.483 26.9179 20.5019 26.9812 19.0673C27.0444 17.6273 27.0603 17.1684 27.0603 13.5027C27.0603 9.83691 27.0549 9.37807 26.9917 7.9381ZM24.5603 18.9618C24.5022 20.2804 24.2807 20.9924 24.0961 21.4671C23.6424 22.6434 22.7088 23.5769 21.5326 24.0306C21.0579 24.2152 20.3407 24.4367 19.0272 24.4946C17.6031 24.5581 17.176 24.5737 13.5735 24.5737C9.97095 24.5737 9.53848 24.5581 8.11952 24.4946C6.8009 24.4367 6.08885 24.2152 5.61414 24.0306C5.0288 23.8143 4.496 23.4715 4.06353 23.0231C3.6152 22.5853 3.27236 22.0578 3.05602 21.4725C2.87141 20.9978 2.64993 20.2804 2.59203 18.9671C2.52857 17.543 2.51291 17.1157 2.51291 13.5132C2.51291 9.91067 2.52857 9.47821 2.59203 8.05945C2.64993 6.74083 2.87141 6.02878 3.05602 5.55407C3.27236 4.96852 3.6152 4.43592 4.06889 4.00325C4.5065 3.55492 5.03395 3.21208 5.6195 2.99595C6.09421 2.81134 6.81162 2.58985 8.12488 2.53175C9.54899 2.4685 9.97631 2.45264 13.5786 2.45264C17.1865 2.45264 17.6136 2.4685 19.0326 2.53175C20.3512 2.58985 21.0632 2.81134 21.5379 2.99595C22.1233 3.21208 22.6561 3.55492 23.0885 4.00325C23.5369 4.44107 23.8797 4.96852 24.0961 5.55407C24.2807 6.02878 24.5022 6.74598 24.5603 8.05945C24.6235 9.48356 24.6394 9.91067 24.6394 13.5132C24.6394 17.1157 24.6235 17.5377 24.5603 18.9618Z" />
+											<path d="M13.5685 6.56738C9.73936 6.56738 6.63257 9.67397 6.63257 13.5033C6.63257 17.3327 9.73936 20.4393 13.5685 20.4393C17.3979 20.4393 20.5045 17.3327 20.5045 13.5033C20.5045 9.67397 17.3979 6.56738 13.5685 6.56738ZM13.5685 18.0025C11.0844 18.0025 9.06934 15.9877 9.06934 13.5033C9.06934 11.019 11.0844 9.00415 13.5685 9.00415C16.0529 9.00415 18.0677 11.019 18.0677 13.5033C18.0677 15.9877 16.0529 18.0025 13.5685 18.0025Z" />
+											<path d="M22.3975 6.29367C22.3975 7.1882 21.6722 7.91352 20.7774 7.91352C19.8829 7.91352 19.1576 7.1882 19.1576 6.29367C19.1576 5.39893 19.8829 4.67383 20.7774 4.67383C21.6722 4.67383 22.3975 5.39893 22.3975 6.29367Z" />
+										</svg>
+
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" rel="nofollow">
+										<svg width="38" height="26" viewBox="0 0 38 26"  xmlns="http://www.w3.org/2000/svg">
+											<path d="M36.2982 4.05366C35.8718 2.46855 34.6221 1.21903 33.0372 0.792213C30.1418 0 18.5601 0 18.5601 0C18.5601 0 6.97886 0 4.08349 0.762178C2.5291 1.18855 1.24887 2.46878 0.822499 4.05366C0.0605469 6.9488 0.0605469 12.953 0.0605469 12.953C0.0605469 12.953 0.0605469 18.9874 0.822499 21.8523C1.24932 23.4371 2.49861 24.6867 4.08372 25.1135C7.00935 25.9059 18.5606 25.9059 18.5606 25.9059C18.5606 25.9059 30.1418 25.9059 33.0372 25.1437C34.6223 24.7171 35.8718 23.4676 36.2987 21.8828C37.0604 18.9874 37.0604 12.9834 37.0604 12.9834C37.0604 12.9834 37.0909 6.9488 36.2982 4.05366ZM14.8728 18.4998V7.40611L24.5035 12.953L14.8728 18.4998Z" />
+										</svg>
+
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //col -->
+
+			</div>
+
+			<div class="row align-vertical-start align-horisontal-between footer__row row-gutters">
+				<div class="footer-col col-gutters">
+					
+				</div>
+				<!-- //col -->
+
+
+
+				<div class="footer-col col-gutters">
+					<div class="row row-nowrap footer-col__row row-gutters align-vertical-end">	
+						<div class="footer-col__item col-gutters">	
+							<button class="btn-default btn-default__light btn-wide js-open-popup-callback-btn" type="button">Заказать звонок</button>
+
+							<a href="tel:8 (499) 112-09-41" class="simple-phone">8 (499) 112-09-41</a>
+						</div>
+
+						<div class="footer-col__item row col-gutters">
+							<div class="footer-contacts">
+								<p>E-mail: <a href="mailto:info@virtuality.club">info@virtuality.club</a></p>
+								<p>VR клуб: ежедневно с 10:00 до 22:00<br> Магазин: Пн-Пт с 10:00-19:00, Сб-Вс: 10:00-20:00</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- //col -->
+
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="row align-vertical-start align-horisontal-between footer__row row-gutters">
+				<div class="footer-col col-gutters">
+					<p>&copy; 2015-2021 Virtuality Club Все права защищены</p>
+				</div>
+				<div class="footer-col col-gutters hidden-mobile-sm">
+					<nav class="footer-subnav">
+						<li><a href="#">Политика Безопасности</a></li>
+						<li><a href="#">Подписаться на новости</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+
+
+		<!-- //Footer -->
+
+
+
+		<!-- Popup -->
+<div class="popup js-popup js-popup-callback popup-callback">
+	<div class="popup__overflow">
+
+		<div class="popup__body text-center">
+			
+			<div class="popup-inner">
+
+				<!-- Close -->
+				<button class="btn-close js-close-popup-btn" type="button">
+					<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+						<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+						<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+					</svg>
+				</button>
+				<!-- Close -->
+
+
+				<div class="popup-content">
+					<p class="popup__title callback-title">Обратный звонок</p>
+					<form  class="form">
+
+						<div class="form-groups__row row align-horisontal-start">
+							<div class="form-group col-w-50">
+								<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+								<span class="required-star">*</span>
+							</div>
+							<div class="form-group col-w-50">
+								<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+								<span class="required-star">*</span>
+							</div>
+						</div>
+
+
+						<div class="form-submit order-form__submit text-center">
+							<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+						</div>
+
+					</form>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+</div>
+<!-- //Popup -->
+<!-- Popup -->
+<div class="popup js-popup js-popup-order">
+	<div class="popup__overflow">
+
+		<div class="popup__body text-center">
+			
+			<div class="popup-inner">
+
+				<!-- Close -->
+				<button class="btn-close js-close-popup-btn" type="button">
+					<svg  viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+						<line x1="1.35355" y1="0.646447" x2="13.3536" y2="12.6464" />
+						<line y1="-0.5" x2="16.9706" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 13 1)" />
+					</svg>
+				</button>
+				<!-- Close -->
+
+
+				<div class="popup-content">
+					<div class="order-controls">
+						<button class="btn-tab js-order-tab-btn is-active" type="button">Записаться</button>
+						<button class="btn-tab js-order-tab-btn" type="button">Консультация</button>
+					</div>
+
+					<div class="order-content">
+						<div class="order-content__block js-order-tab-content">
+							<form  class="order-form form">
+
+								<div class="form-groups__row row align-horisontal-start">
+									<div class="form-group col-w-33">
+										<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="email" name="email" class="form-input " placeholder="Введите email">
+									</div>
+								</div>
+
+								<div class="order-form__services">
+
+									<div class="row align-vertical-center row-nowrap form-radios__row align-horisontal-between ">
+										
+										<p class="form-label">Услуга</p>
+
+										<div class="form-radios">
+											<label  class="form-radio">
+												<input type="radio" name="service" value="Игровой сеанс" checked>
+												<span class="form-radio__item">Игровой сеанс</span>
+											</label>
+
+											<label  class="form-radio">
+												<input type="radio" name="service" value="Аренда клуба">
+												<span class="form-radio__item">Аренда клуба</span>
+											</label>
+										</div>
+
+
+									</div>
+
+
+									<div class="row align-vertical-center row-nowrap row-gutters form-time__row align-horisontal-between">
+										<div class="form-row__col col-gutters">
+											<div class="row align-horisontal-between row-nowrap align-vertical-start">
+												<p class="form-label form-label__with-ic ic-calendar">Дата</p>
+
+												<div class="form-group form-group__short">
+													<input type="text" class="form-input form-input-ui js-input-date" name="date" placeholder="02/12/2021">
+												</div>
+											</div>
+										</div>
+										<div class="form-row__col col-gutters">
+											<div class="row align-horisontal-between row-nowrap align-vertical-start">
+												<p class="form-label">Время<br> посещения</p>
+
+												<div class="form-group form-group__short">
+													<select name="Время"  class="form-input form-select js-select">
+														<option value="10:00" selected>10:00</option>
+														<option value="11:00">11:00</option>
+														<option value="12:00">13:00</option>
+														<option value="13:00">13:00</option>
+														<option value="14:00">14:00</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row form-ranges__row">
+										<div class="form-range__group col-w-100">
+											<div class="row align-vertical-center align-horisontal-between">
+												<p class="form-label form-label__with-ic ic-time">Время игры</p>
+
+												<input type="hidden" name="Время игры" class="js-duration-range-value">
+
+												<div class="form-range">
+													<div class="form-range__input js-duration-range"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-range__group col-w-100">
+											<div class="row align-vertical-center align-horisontal-between">
+												<p class="form-label form-label__with-ic ic-people">Количество человек</p>
+												<input type="hidden" name="Кол-во человек" class="js-people-range-value">
+												<div class="form-range">
+
+													<div class="form-range__input js-people-range"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="form-checkboxes__row row align-vertical-center row-nowrap">
+									<p class="form-label">Что предпочитаете?</p>
+
+									<div class="form-checkboxes row-gutters">
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name="VR Арена">
+												<span class="form-checkbox__item">VR Арена</span>
+											</label>
+										</div>
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name="VR Аркады">
+												<span class="form-checkbox__item">VR Аркады</span>
+											</label>
+										</div>
+
+										<div class="form-checkbox__col col-w-33 col-gutters">
+											<label class="form-checkbox">
+												<input type="checkbox" name=" VR Квесты">
+												<span class="form-checkbox__item">VR Квесты</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-submit order-form__submit text-center">
+									<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+								</div>
+
+							</form>
+						</div>
+
+						<div class="order-content__block js-order-tab-content">
+							<form  class="order-form form">
+
+								<div class="form-groups__row row align-horisontal-start">
+									<div class="form-group col-w-33">
+										<input type="text" name="name" class="form-input js-required-input is-error" placeholder="Введите имя">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="tel" name="tel" class="form-input js-required-input" placeholder="Введите телефон">
+										<span class="required-star">*</span>
+									</div>
+									<div class="form-group col-w-33">
+										<input type="email" name="email" class="form-input " placeholder="Введите email">
+									</div>
+								</div>
+
+
+								<div class="form-submit order-form__submit text-center">
+									<button class="btn btn-sm" type="submit"><span>Отправить</span></button>
+								</div>
+
+							</form>
+						</div>
+
+
+						
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+</div>
+<!-- //Popup -->
+<!-- Popup -->
+<div class="popup js-popup js-popup-template">
+	<div class="popup__overflow ">
+		<div class="popup__body text-center">
+			
+			<div class="popup-outer">
+				<div class="popup-inner">
+
+					<!-- Close -->
+					<button class="btn-close-simple js-close-popup-btn" type="button"><svg viewBox="0 0 36 36"  xmlns="http://www.w3.org/2000/svg"><path d="M35 35L1 0.999999"/><path d="M35 0.999997L1 35"/></svg></button>
+					<!-- Close -->
+
+					<div class="popup-content">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Popup -->
+
+		
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	<!-- jQuery IF NEEDED-->
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- Google map -->
+<!-- <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script> -->
+<!-- All libs scripts -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous"></script>
+
+<script src="js/libs.min.js"></script>
+<script src="js/libs/jquery.nicescroll.min.js"></script>
+
+<!-- Main file with scripts -->
+<script src="js/common.min.js"></script>
+
+</body>
+
+</html>
