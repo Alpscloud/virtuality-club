@@ -7,21 +7,88 @@ $(document).ready(function() {
 
 
 	// Fullpage
-	if ($('#fullpage').length > 0) {
-		var anchorsArr = [];
+	 if ($('#fullpage').length > 0) {
+
+	 var anchorsArr = [];
 
 		$('.page-nav__link').each(function() {
 			anchorsArr.push($(this).attr('data-menuanchor'));
 		});
 
+		$('.last_page_nav').unbind().click(function (){
+			$('body').addClass('overflowed');
+			$('html').addClass('overflowed');
+			var element = $('#fullpage').next('.section');
+			$('body,html').animate({scrollTop: element.offset().top}, 500);
+			fullpage_api.moveTo($('#fullpage .section:last-child').index()+1);
+			$('.page-nav__link.active').removeClass('active');
+			 return false;
+		})
 
+		var lastY=0;
+		var lastY2=0;
 
 		$('#fullpage').fullpage({
 			licenseKey: '338CA11B-1E654BF4-BE710B3A-9F49D13A',
 			menu: '#pageNav',
 			lockAnchors: true,
-			anchors: anchorsArr
-		});
+			anchors: anchorsArr,
+			afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+			if(index.isLast) {
+				$('body').addClass('overflowed');
+				$('html').addClass('overflowed');
+				var initLastSliderTouch = function(){
+					$('#fullpage .section:last-child').unbind('touchmove').bind('touchmove', function (e){
+						var currentY = e.originalEvent.touches[0].clientY;
+						if(lastY > 0 && currentY+40 < lastY){
+							$(this).unbind('touchmove');
+							var element = $('#fullpage').next('.section');
+							$('body,html').animate({scrollTop: element.offset().top}, 500);
+							$('.page-nav__link.active').removeClass('active');
+							lastY=0;
+							$(element).unbind('touchmove').bind('touchmove', function (e) {
+								var currentY = e.originalEvent.touches[0].clientY;
+								if (lastY2>0 && currentY-40 > lastY2) {
+									$(this).unbind('touchmove');
+									lastY2 = 0;
+									$('body,html').animate({scrollTop: $('#fullpage .section:last-child').offset().top}, 500);
+									fullpage_api.moveTo($('#fullpage .section:last-child').index()+1);
+									initLastSliderTouch();
+									return;
+								}
+								if (lastY2==0) lastY2 = currentY;
+							});
+							return;
+						}
+						if (lastY==0) lastY = currentY;
+					});
+				};
+				initLastSliderTouch();
+			} else {
+				$('body').removeClass('overflowed');
+				$('html').removeClass('overflowed');
+			}
+		},
+		onLeave: function(index, nextIndex, direction) {
+			if(nextIndex.isLast){
+				$(window).scroll(function () {
+					if($(window).scrollTop() < 10){
+						$.fn.fullpage.setMouseWheelScrolling(true);
+						$.fn.fullpage.setAllowScrolling(true);
+					} else {
+						$.fn.fullpage.setMouseWheelScrolling(false);
+						$.fn.fullpage.setAllowScrolling(false);
+					}
+				})
+			}
+
+			if(index.isLast && direction == "up"){
+				$('body').removeClass('overflowed');
+				$('html').removeClass('overflowed');
+			}
+		},
+	});
+
 
 
 	}
