@@ -1027,7 +1027,91 @@ $(document).ready(function() {
 			infinite: true,
 			slidesToShow: 4,
 			nextArrow: $('.js-game-formats-slider-btn-next'),
-			prevArrow: $('.js-game-formats-slider-btn-prev')
+			prevArrow: $('.js-game-formats-slider-btn-prev'),
+			responsive: [
+				{
+					breakpoint: 1365,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 620,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+	
+	}
+
+	if ($('.js-celebration-slider').length > 0) {
+	
+
+		$('.js-celebration-slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			nextArrow: $('.js-celebration-slider-btn-next'),
+			prevArrow: $('.js-celebration-slider-btn-prev')
+		});
+	
+	}
+
+	if ($('.js-rent-slider').length > 0) {
+
+	
+
+		$('.js-rent-slider').slick({
+			infinite: true,
+			slidesToShow: 3,
+			nextArrow: $('.js-rent-slider-btn-next'),
+			prevArrow: $('.js-rent-slider-btn-prev'),
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 700,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+
+		$('.js-rent-custom-slider').slick({
+			infinite: true,
+			slidesToShow: 3,
+			nextArrow: $('.js-rent-custom-slider-btn-next'),
+			prevArrow: $('.js-rent-custom-slider-btn-prev'),
+			asNavFor: '.js-rent-information-slider',
+			responsive: [
+				{
+					breakpoint: 1100,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+
+		$('.js-rent-information-slider').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.js-rent-custom-slider',
+			nextArrow: $('.js-rent-information-slider-btn-next'),
+			prevArrow: $('.js-rent-information-slider-btn-prev')
 		});
 	
 	}
@@ -1182,6 +1266,16 @@ $(document).ready(function() {
 		$('.js-order-tab-content').removeClass('is-active');
 		$('.js-order-tab-btn').removeClass('is-active').eq($(this).index()).addClass('is-active');
 		$('.js-order-tab-content').hide().eq($(this).index()).fadeIn().addClass('is-active');
+	}).eq(0).addClass('is-active');
+
+	$('.js-education-course').not(":first").hide();
+	$('.js-education-controls-btn:first').addClass('is-active');
+
+	$('.js-education-controls-btn').on('click', function(e) {
+		e.preventDefault();
+		$('.js-education-course').removeClass('is-active');
+		$('.js-education-controls-btn').removeClass('is-active').eq($(this).index()).addClass('is-active');
+		$('.js-education-course').hide().eq($(this).index()).fadeIn().addClass('is-active');
 	}).eq(0).addClass('is-active');
 
 

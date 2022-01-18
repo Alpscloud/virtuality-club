@@ -471,14 +471,108 @@
 		width 175px
 		height 175px
 		
+
+	// Services
+	.service-slide__img-svg,
+	.rent-slider-custom__svg
+		height 200px
+		
+	.service-btns__nav a
+		width 170px
+		height 55px
+		font-size 18px
+		
+	.service-slide 
+		&__text
+			font-size 17px
+		.btn
+			max-width 230px
+			bottom -30px
+			span
+				padding-top 16px
+				padding-bottom 16px
+				
+	.services-slider__wrapper
+		.btn-arrow
+			margin-top -20px
+			&__prev
+				left -20px
+				
+
+	.rent-slider__wrapper
+		.btn-arrow
+			&__prev
+				left -20px
+			&__next
+				right -20px
+				
+	.rent-slide-information
+		font-size 15px
+		line-height 18px
+		
+	.services-slider .slick-slide
+		padding-bottom 40px
+		
+	.game-format__info-item
+		font-size 12px
+		line-height 14px
+		&--ic
+			width 35px
+			height 35px
+			margin-bottom 10px
+			
+	.celebration-content__link
+		height 110px
+		font-size 18px
+		line-height 18px
+		
+	.celebration-img__svg-left
+		height 60px
+		
+	.celebration-img__svg-right
+		height 180px
+		
+	.education
+		&-img
+			min-height 400px
+			width 50%
+			
+			&__main
+				width 390px
+				
+			&__svg
+				height 230px
+		&-content
+			width 50%
+			
+			.title
+				margin-bottom 20px
+			
+	.education-controls
+		margin-bottom 30px
+		&__btn
+			width 140px
+			height 40px
+			font-size 16px
+	
+	.education-course
+		font-size 16px
+		line-height 19px
+		.permalink
+			font-size 16px
+			
 +max-screen(1440px)
 	.page-nav
 		padding-bottom 50px
 		left 10px
-		&:before
-			height 25px
+	
+			
 		&__item
 			margin-bottom 10px
+			
+	
+	.last_page_nav
+		height 25px
 			
 	// How to play
 	.how-to-play
@@ -858,6 +952,56 @@
 
 	.partner-card__wrapper
 		width 33.3333%
+		
+	// Servces
+	.service-slide
+		&__img
+			&-svg
+				&_right
+					display none
+					&-tablet
+						display block
+						vertical-center()
+						right -1px
+						height 200px
+		
+		&__text
+			flex none
+			width 100%
+			margin-left 0 !important
+			text-align center
+						
+		&__content
+			padding 20px 40px
+			text-align center
+			.title
+				text-align center
+			.row
+				flex-wrap wrap
+				
+	.service-btns__nav
+		margin 0 auto 20px auto
+						
+	.services-slider__wrapper
+		.btn-arrow
+			&__prev
+				left -20px
+			&__next
+				right -20px
+				
+	.game-format
+		
+		&__img
+			padding 20px
+			.title
+				font-size 20px
+				
+		&__info
+			&-item
+				&--ic
+					width 27px
+					height 27px
+		 	
 				
 +max-screen(1100px)
 	
@@ -1160,6 +1304,17 @@
 	.logo-slide img
 		max-width 100px
 		max-height 70px
+		
+
+	.celebration-img .video-link
+		bottom auto
+		top 20px
+		left 20px
+		
+
+	.rent-slide-information
+		padding-left 30px
+		padding-right 30px
 				
 
 			
@@ -1363,6 +1518,113 @@
 				span
 					padding-left 10px
 					padding-right 10px
+					
+
+	.celebration
+		position relative
+		&-img
+			width 100%
+			&:before
+				height 100%
+				transform rotate(-180deg)
+				
+			&__svg
+				&-left
+					display none
+					&-tablet
+						display block
+				&-right
+					display none
+					&-tablet
+						display block
+		&-content
+			width 100%
+			padding-left 0
+			position absolute
+			padding 20px
+			color $basic-white-color
+			z-index 2
+			text-align center
+			height 100%
+			&__bottom
+				margin-left 0
+				max-width 500px
+				margin 25px auto 0
+			
+		.video-link
+			display none
+			
+		&-slider
+			&__wrapper
+				position relative
+				padding-bottom 30px
+				
+				.btn-arrow
+					pointer-events auto
+			
+						
+			&__controls
+				width 100%
+				pointer-events none
+				position absolute
+				vertical-center()
+				left 0
+				margin-left 0
+				right 0
+				height 40px
+				margin-top 0
+				margin-top -10px
+				
+				.celebration-content
+					padding 0
+				
+				.slider-controls
+					margin-left 0
+					width 100%
+					
+
+	.rent-slider__custom
+		.slick-slide
+			width 100% !important
+			padding-left 15px
+			padding-right 15px
+		
+		.slick-current
+			width 100% !important
+		
+	.rent-slide-custom
+		.rent-slide__content
+			.btn
+				transform translateX(-50%)
+				bottom 20px
+				top auto
+				
+	.rent-slider-information
+		position-center()
+		p
+			max-width 100%
+			padding-left 30px
+			padding-right 30px
+			text-align center
+		
+	.rent-slide-information__gallery
+		display none
+		
+	.rent-slider__custom 
+		.slick-current 
+			.rent-slide-custom 
+				.rent-slide__content:before
+					opacity 1
+					transform rotate(-180deg)
+					
+	.rent-slider__wrapper 
+		.btn-arrow
+			&__prev
+				left -15px
+			&__next
+				right -15px
+			
+	
 	
 			
 +max-screen(767px)
@@ -2131,13 +2393,40 @@
 
 	.gutter-bottom-sm
 		padding-bottom 40px
+		
+	// Services
+	.services-slider
+		&__wrapper
+			.btn-arrow
+				&__next
+					right -15px
+				&__prev
+					left -15px
+	
+	.service-slide
+		&__text
+			font-size 14px
+			line-height 17px
+		&__content
+			padding-left 25px
+			padding-right 25px
+			
+
+	.education-img
+		display none
+		
+	.education-content
+		margin 0 auto
+		padding-left 0
+		width 100%
+		
+	.education-course .btn-wrapper
+		margin-top 40px
+			
+
+			
 +max-screen(700px)
 
-	// .section
-	// 	height calc(100vh - 56px) !important
-	// 	.fp-tableCell
-	// 		height calc(100vh - 56px) !important
-			
 
 	.title-h2-size
 		font-size 24px
@@ -2442,6 +2731,42 @@
 		
 	.form-date__group
 		margin-bottom 20px
+		
+	.service-btns__nav
+		ul
+			flex-wrap wrap
+			justify-content center
+		
+		li
+			width 100%
+			margin-right 0
+			margin-bottom 10px
+			text-align center
+			&:last-child
+				margin-right 0
+				
+		a
+			width 160px
+			height 50px
+			font-size 16px
+				
+		.btn-figure
+			margin 0 auto
+			
+	.service-slide__img:before
+		height 75%
+		
+	.service-slide__text
+		padding-left 30px
+		padding-right 30px
+		
+	.celebration-content__link
+		font-size 12px
+		line-height 14px
+		height 80px
+		width 140px
+		&--wrapper
+			margin-right 10px
 				
 +max-screen(550px)
 	// How to play
@@ -2645,7 +2970,16 @@
 	.partner-card__wrapper
 		width 100%
 
-			
++max-screen(400px)
+	.celebration-content__link
+		font-size 11px
+		height 65px
+		width 120px
+		
+	.celebration-img__svg-left-tablet,		
+	.celebration-img__svg-right-tablet
+		height 170px
+		
 +max-screen(374px)
 	// How to play
 	.how-to-play
